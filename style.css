@@ -272,3 +272,10 @@ footer {
   font-size: 0.95rem;
   color: var(--secondary-color);
 }
+
+@media (max-width: 600px) {
+  main {
+    margin-top: 140px;
+  }
+}
+
