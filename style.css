@@ -274,8 +274,9 @@ footer {
 }
 
 @media (max-width: 600px) {
-  main {
-    margin-top: 140px;
+  .hero {
+    padding-top: 8rem; /* adds space below the header */
   }
 }
+
 
