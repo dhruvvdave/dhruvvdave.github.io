@@ -273,10 +273,9 @@ footer {
   color: var(--secondary-color);
 }
 
-@media (max-width: 600px) {
-  .hero {
-    padding-top: 1rem; /* adds space below the header */
-  }
+.hero {
+  padding-top: calc(1rem + 60px); /* header padding + nav height */
 }
+
 
 
