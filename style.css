@@ -275,7 +275,7 @@ footer {
 
 @media (max-width: 600px) {
   .hero {
-    padding-top: 5rem; /* adds space below the header */
+    padding-top: 3rem; /* adds space below the header */
   }
 }
 
