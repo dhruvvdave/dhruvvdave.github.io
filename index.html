@@ -30,7 +30,7 @@
     </section>
 
     
-<section id="about" class="fade-section">
+<section id="about" class="fade-in" class="fade-section">
   <h2>About Me</h2>
   <p>I'm a detail-oriented developer studying Computer Science student at Queen’s University who loves to code, 
     collaborate, and keep learning. I’m fluent in languages like HTML, CSS, JavaScript, Java, Python, C++, and more. 
@@ -41,7 +41,8 @@
 </section>
 
 
-    <section id="projects" class="fade-section">
+    <p class="project-note">📌 Click on a project to view it</p>
+<section id="projects" class="fade-in" data-aos="fade-up" class="fade-section">
       <h2>Some Things I've Built</h2>
       <div class="projects-grid">
         <div class="project-card" data-title="Minesweeper Java Game" data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." data-tech="Java · CSS · Markdown" data-image="project1.jpg">
@@ -116,7 +117,7 @@ participants.</li>
     </section>
 
 
-<section id="skills" class="fade-section">
+<section id="skills" class="fade-in" class="fade-section">
   <h2>Skills & Strengths</h2>
   <p>Through academic, research, and leadership experiences, I've developed a diverse skillset in development, communication, and problem-solving.</p>
   <div class="skills-grid">
@@ -157,7 +158,7 @@ participants.</li>
 
     
 
-<section id="contact" class="fade-section">
+<section id="contact" class="fade-in" class="fade-section">
   <h2>Get In Touch</h2>
   <p>I'm always open to new opportunities or interesting collaborations. Feel free to reach out!</p>
   <div class="contact-icons">
@@ -200,4 +201,6 @@ participants.</li>
   </style>
 </noscript>
 <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 1000 });</script>
 </body>
