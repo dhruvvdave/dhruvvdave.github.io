@@ -278,3 +278,20 @@ footer {
 }
 
 
+
+
+.project-card::after {
+  content: "Click to view";
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
