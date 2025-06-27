@@ -279,7 +279,6 @@ footer {
 
 
 
-
 .project-card::after {
   content: "Click to view";
   position: absolute;
@@ -294,4 +293,8 @@ footer {
   transition: opacity 0.3s ease;
   font-size: 0.85rem;
   pointer-events: none;
+}
+
+.project-card:hover::after {
+  opacity: 1;
 }
