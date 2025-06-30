@@ -102,6 +102,7 @@ section {
 .hero h2 {
     font-size: 1.75rem;
     color: var(--accent-color);
+    margin-bottom: 0.5rem;
 }
 
 .projects-grid {
@@ -653,4 +654,11 @@ nav a::after {
   white-space: normal;
   display: inline;
   line-height: 1.5;
+}
+
+.animated-text-wrapper {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
