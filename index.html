@@ -23,7 +23,7 @@
   </header>
 
   <main>
-    <section class="hero" data-aos="fade-up">
+    <section class="hero fade-in">
       <h1>Hi, I’m Dhruv</h1>
       <h2 class="animated-text">
       <span id="typed-text"></span><span class="cursor">|</span>
@@ -32,15 +32,24 @@
     </section>
 
     
-<section id="about" class="fade-in fade-section" data-aos="fade-up">
+
+<section id="about" class="about-section" data-aos="fade-up">
   <h2>About Me</h2>
-  <p>I'm a detail-oriented developer studying Computer Science at Queen’s University who loves to code, 
-    collaborate, and keep learning. I’m fluent in languages like HTML, CSS, JavaScript, Java, Python, C++, and more. 
-    I’m super driven, a big believer in teamwork, and always excited to take on new challenges. </p>
-  <p>I’m always looking for ways to grow, whether it’s picking up a new skill, diving into a challenge, 
-    or finding better ways to work with others to get things done. Outside of coding, I love hiking,
-     hockey, and travelling.</p>
+  <div class="about-content">
+    <div class="about-image">
+      <img src="images/profile.jpg" alt="Profile picture of Dhruv" />
+    </div>
+    <div class="about-text">
+      <p>I'm a detail-oriented developer studying Computer Science at Queen’s University who loves to code, 
+      collaborate, and keep learning. I’m fluent in languages like HTML, CSS, JavaScript, Java, Python, C++, and more. 
+      I’m super driven, a big believer in teamwork, and always excited to take on new challenges.</p>
+      <p>I’m always looking for ways to grow, whether it’s picking up a new skill, diving into a challenge, 
+      or finding better ways to work with others to get things done. Outside of code, I love hiking,
+      hockey, and travelling.</p>
+    </div>
+  </div>
 </section>
+
 
 
     <p class="project-note">📌 Click on a project to view it</p>
@@ -82,18 +91,18 @@
           <h3>Website Developer <span>@ Digitera</span></h3>
           <p class="date">Sep 2022 – Feb 2023</p>
           <ul>
-            <li data-aos="fade-up" data-aos-delay="100">Built accessible and performant websites</li>
-            <li data-aos="fade-up" data-aos-delay="200">Collaborated with designers and clients to deliver new designs.</li>
-            <li data-aos="fade-up" data-aos-delay="300">Utilized both front-end and back-end technologies to enhance site performance and functionality.</li>
+            <li>Built accessible and performant websites</li>
+            <li>Collaborated with designers and clients to deliver new designs.</li>
+            <li>Utilized both front-end and back-end technologies to enhance site performance and functionality.</li>
           </ul>
         </div>
         <div class="job">
           <h3>Research Assistant <span>@ COBWEB</span></h3>
           <p class="date">Summer 2022</p>
           <ul>
-            <li data-aos="fade-up" data-aos-delay="100">Designed and implemented agent-based models to simulate complex adaptive systems, focusing on ecosystems
+            <li>Designed and implemented agent-based models to simulate complex adaptive systems, focusing on ecosystems
               and urban environments.</li>
-            <li data-aos="fade-up" data-aos-delay="200">Collaborated with interdisciplinary teams to apply innovative research methodologies, enhancing problem-
+            <li>Collaborated with interdisciplinary teams to apply innovative research methodologies, enhancing problem-
             solving and project management skills.</li>
           </ul>
         </div>
@@ -101,25 +110,25 @@
           <h3>Skate Instructor <span>@ City of Brampton</span></h3>
           <p class="date">Mar 2023 – Sep 2024</p>
           <ul>
-            <li data-aos="fade-up" data-aos-delay="100">Provided personalized instruction to skaters of all ages and skill levels, adapting lesson plans to individual needs
+            <li>Provided personalized instruction to skaters of all ages and skill levels, adapting lesson plans to individual needs
                 and goals.</li>
-            <li data-aos="fade-up" data-aos-delay="200">Taught foundational and advanced skating techniques, including balance, posture, and speed control.</li>
+            <li>Taught foundational and advanced skating techniques, including balance, posture, and speed control.</li>
           </ul>
         </div>
         <div class="job">
           <h3>Skate Guard <span>@ City of Brampton</span></h3>
           <p class="date">Nov 2022 – Mar 2025</p>
           <ul>
-            <li data-aos="fade-up" data-aos-delay="100">Ensured rink safety by monitoring activities, enforcing rules, and maintaining a secure environment for all
+            <li>Ensured rink safety by monitoring activities, enforcing rules, and maintaining a secure environment for all
 participants.</li>
-            <li data-aos="fade-up" data-aos-delay="200">Responded promptly and effectively to emergencies, administering first aid when required.</li>
+            <li>Responded promptly and effectively to emergencies, administering first aid when required.</li>
           </ul>
         </div>
       </div>
     </section>
 
 
-<section id="skills" data-aos="fade-up" class="fade-in" class="fade-section">
+<section id="skills" class="fade-in" class="fade-section">
   <h2>Skills & Strengths</h2>
   <p>Through academic, research, and leadership experiences, I've developed a diverse skillset in development, communication, and problem-solving.</p>
   <div class="skills-grid">
@@ -160,7 +169,7 @@ participants.</li>
 
     
 
-<section id="contact" data-aos="fade-up" class="fade-in" class="fade-section">
+<section id="contact" class="fade-in" class="fade-section">
   <h2>Get In Touch</h2>
   <p>I'm always open to new opportunities or interesting collaborations. Feel free to reach out!</p>
   <div class="contact-icons">
@@ -236,29 +245,4 @@ participants.</li>
 
   document.addEventListener("DOMContentLoaded", () => type());
 </script>
-
-<script>
-  // Scroll progress bar
-  const scrollProgress = document.createElement('div');
-  scrollProgress.id = 'scroll-progress';
-  document.body.prepend(scrollProgress);
-
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    scrollProgress.style.width = scrollPercent + "%";
-  });
-
-  // Navbar scroll shadow
-  const nav = document.querySelector("nav");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
-</script>
 </body>
-

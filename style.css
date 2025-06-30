@@ -326,41 +326,102 @@ footer {
 }
 
 
-/* Project hover animation */
-.project:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
 
-/* Navbar scroll effect */
-nav.scrolled {
-  background-color: rgba(17, 24, 39, 0.95);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-/* Scroll progress bar */
-#scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: #66fcf1;
-  width: 0%;
-  z-index: 9999;
-}
-
-/* Smooth animation for list items */
-li[data-aos] {
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s;
 }
 
-.animated-text {
-  display: inline-block;
-  white-space: normal;  /* Allow line breaks */
-  word-break: break-word; /* Prevent long words from overflowing */
-  line-height: 1.3;
-  max-width: 100%;
+.about-image {
+  flex: 1 1 260px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-height: 640px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+  flex: 1 1 500px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
+.about-image {
+  flex: 1 1 260px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+  flex: 2 1 480px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #d1d5db;
+  padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .about-text {
+    padding-right: 0;
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
