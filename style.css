@@ -382,6 +382,9 @@ footer {
   }
 }
 
+}
+
+
 .about-image {
   flex: 1 1 260px;
   max-width: 300px;
@@ -424,4 +427,11 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+.about-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
 }
