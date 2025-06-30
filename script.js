@@ -1,46 +1,57 @@
 
-// === GSAP Scroll Animations (Element-wise) ===
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    threshold: 0.1
+  };
 
-document.querySelectorAll("section").forEach(section => {
-  section.querySelectorAll("h2, h3, p, .job, .skill-card, .project-card").forEach(el => {
-    gsap.fromTo(el,
-      { opacity: 0, y: 40 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-          toggleActions: "restart none none reverse",
-          once: false
-        }
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      } else {
+        entry.target.classList.remove("in-view");
       }
-    );
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".fade-section").forEach((el) => {
+    fadeObserver.observe(el);
   });
-});
 
-// === ScrollSpy Highlight Active Nav Link ===
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("nav a");
+  AOS.init({
+    once: false, // Allow AOS to animate on scroll up and down
+    duration: 800,
+    easing: "ease-in-out"
+  });
 
-window.addEventListener("scroll", () => {
-  let scrollY = window.pageYOffset;
+  const modal = document.getElementById("modal");
+  const modalContent = document.querySelector(".modal-content");
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    const sectionHeight = section.offsetHeight;
-    const sectionId = section.getAttribute("id");
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const title = card.querySelector("h3")?.textContent || "";
+      const desc = card.querySelector("p")?.textContent || "";
+      const tech = card.querySelector(".tech")?.textContent || "";
+      const image = card.dataset.image || "";
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + sectionId) {
-          link.classList.add("active");
-        }
-      });
+      modalContent.innerHTML = `
+        <span class="close">&times;</span>
+        <h2>${title}</h2>
+        <p>${desc}</p>
+        <p><strong>Technologies:</strong> ${tech}</p>
+        <img src="${image}" alt="${title}" />
+      `;
+      modal.style.display = "block";
+
+      modalContent.querySelector(".close").onclick = () => {
+        modal.style.display = "none";
+      };
+    });
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
     }
   });
 });
