@@ -1,39 +1,46 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".project-card");
-  const modal = document.getElementById("modal");
-  const closeBtn = document.getElementById("modal-close");
-  const title = document.getElementById("modal-title");
-  const image = document.getElementById("modal-image");
-  const desc = document.getElementById("modal-description");
-  const tech = document.getElementById("modal-tech");
+// === GSAP Scroll Animations (Element-wise) ===
+gsap.registerPlugin(ScrollTrigger);
 
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      title.innerText = card.dataset.title;
-      image.src = card.dataset.image;
-      desc.innerText = card.dataset.description;
-      tech.innerText = card.dataset.tech;
-      modal.style.display = "block";
-    });
+document.querySelectorAll("section").forEach(section => {
+  section.querySelectorAll("h2, h3, p, .job, .skill-card, .project-card").forEach(el => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          toggleActions: "restart none none reverse",
+          once: false
+        }
+      }
+    );
   });
-
-  closeBtn.onclick = () => { modal.style.display = "none"; };
-  window.onclick = e => { if (e.target == modal) modal.style.display = "none"; };
 });
 
-// Scroll-to-top button logic
-const scrollBtn = document.getElementById('scrollToTopBtn');
+// === ScrollSpy Highlight Active Nav Link ===
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a");
 
-window.onscroll = function () {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollBtn.style.display = 'block';
-  } else {
-    scrollBtn.style.display = 'none';
-  }
-};
+window.addEventListener("scroll", () => {
+  let scrollY = window.pageYOffset;
 
-scrollBtn.onclick = function () {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
 
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + sectionId) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+});

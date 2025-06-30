@@ -10,12 +10,15 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
-<body>
+<body data-scroll-spy>
   <div id="progress-bar"></div>
   <header>
-    <nav>
+    <nav data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
@@ -25,8 +28,8 @@
 
   <main>
     <section class="hero" data-aos="fade-up">
-      <h1>Hi, I’m Dhruv</h1>
-      <h2 class="animated-text">
+      <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Hi, I’m Dhruv</h1>
+      <h2 class="animated-text" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
       <span id="typed-text"></span><span class="cursor">|</span>
       </h2>
       <p class="sr-section">I'm a software developer focused on crafting elegant digital experiences. Welcome to my portfolio!</p>
@@ -59,25 +62,25 @@
 <section id="projects" class="fade-in" data-aos="fade-up" class="fade-section">
       <h2>Some Things I've Built</h2>
       <div class="projects-grid">
-        <div class="project-card" data-title="Minesweeper Java Game" data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." data-tech="Java · CSS · Markdown" data-image="project1.jpg">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-title="Minesweeper Java Game" data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." data-tech="Java · CSS · Markdown" data-image="project1.jpg">
 <h3>Minesweeper Java Game</h3>
 <p>An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI.</p>
 <p class="tech">Java · CSS · Markdown</p>
 <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank">GitHub</a>
         </div>
-        <div class="project-card" data-title="Weather Web App" data-description="A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support." data-tech="HTML · CSS · JavaScript" data-image="project2.jpg">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-title="Weather Web App" data-description="A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support." data-tech="HTML · CSS · JavaScript" data-image="project2.jpg">
   <h3>Weather Web App</h3>
   <p>A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support.</p>
   <p class="tech">HTML · CSS · JavaScript</p>
   <a href="https://dhruvdave.ca/weather-app/" target="_blank">Live Demo</a> · 
   <a href="https://github.com/dhruvvdave/weather-app" target="_blank">GitHub</a>
 </div>
-        <div class="project-card" data-title="Personal Web Portfolio" data-description="Portfolio site built to showcase my design/dev work — you're looking at it!" data-tech="HTML · CSS · JavaScript" data-image="project3.jpg">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-title="Personal Web Portfolio" data-description="Portfolio site built to showcase my design/dev work — you're looking at it!" data-tech="HTML · CSS · JavaScript" data-image="project3.jpg">
 <h3>Personal Web Portfolio</h3>
 <p>Portfolio site built to showcase my design/dev work — you're looking at it!</p>
 <p class="tech">HTML · CSS · JavaScript</p>
         </div>
-        <div class="project-card" data-title="Finance Tracker" data-description="A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data — all in a polished, portfolio-ready design." data-tech="HTML · CSS · JavaScript" data-image="project4.jpg">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-title="Finance Tracker" data-description="A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data — all in a polished, portfolio-ready design." data-tech="HTML · CSS · JavaScript" data-image="project4.jpg">
   <h3>Finance Tracker</h3>
   <p>A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data — all in a polished, portfolio-ready design.</p>
   <p class="tech">HTML · CSS · JavaScript</p>
@@ -87,7 +90,7 @@
       </div>
     </section>
 
-    <section id="experience" data-aos="fade-up" class="fade-section">
+    <section id="experience" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-delay="200" data-aos-duration="800" data-aos="fade-up" class="fade-section">
       <h2>Where I've Worked</h2>
       <div class="experience">
         <div class="job">
@@ -131,7 +134,7 @@ participants.</li>
     </section>
 
 
-<section id="skills" data-aos="fade-up" class="fade-in" class="fade-section">
+<section id="skills" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos="fade-up" class="fade-in" class="fade-section">
   <h2>Skills & Strengths</h2>
   <p>Through academic, research, and leadership experiences, I've developed a diverse skillset in development, communication, and problem-solving.</p>
   <div class="skills-grid">
