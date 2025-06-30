@@ -530,7 +530,7 @@ footer {
   word-break: break-word !important;
   overflow-wrap: break-word !important;
   max-width: 100%;
-  line-height: 2.5; /* Adjust this as needed */
+  line-height: 1.4; /* Adjust this as needed */
 }
 
 
@@ -554,4 +554,28 @@ footer {
   margin-top: 1rem; /* Reduce this too */
 }
 
+.animated-text {
+  margin-bottom: 1rem; /* Adjust as needed */
+}
+
+#typed-text-container {
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.animated-text {
+  display: block;
+  font-size: clamp(1.2rem, 5vw, 2.5rem); /* responsive text sizing */
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 1.75rem;
+    margin-bottom: 1.2rem;
+  }
+}
 
