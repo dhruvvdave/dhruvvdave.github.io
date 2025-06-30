@@ -298,3 +298,61 @@ footer {
 .project-card:hover::after {
   opacity: 1;
 }
+
+.animated-text {
+  font-size: 1.25rem;
+  color: #66fcf1;
+  font-weight: 500;
+  height: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+  color: #66fcf1;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Project hover animation */
+.project:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Navbar scroll effect */
+nav.scrolled {
+  background-color: rgba(17, 24, 39, 0.95);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #66fcf1;
+  width: 0%;
+  z-index: 9999;
+}
+
+/* Smooth animation for list items */
+li[data-aos] {
+  opacity: 0;
+  transform: translateY(10px);
+}
