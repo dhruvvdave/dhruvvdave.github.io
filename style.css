@@ -579,3 +579,18 @@ footer {
   }
 }
 
+.typewriter-wrapper {
+  display: block;
+  width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.4;
+  min-height: 3.5em; /* ensures it reserves enough space for 2 lines */
+}
+
+.animated-text {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
