@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <div id="progress-bar"></div>
   <header>
     <nav>
       <a href="#about">About</a>
@@ -23,12 +24,12 @@
   </header>
 
   <main>
-    <section class="hero fade-in">
+    <section class="hero" data-aos="fade-up">
       <h1>Hi, I’m Dhruv</h1>
       <h2 class="animated-text">
       <span id="typed-text"></span><span class="cursor">|</span>
       </h2>
-      <p>I'm a software developer focused on crafting elegant digital experiences. Welcome to my portfolio!</p>
+      <p class="sr-section">I'm a software developer focused on crafting elegant digital experiences. Welcome to my portfolio!</p>
     </section>
 
     
@@ -37,7 +38,7 @@
   <h2>About Me</h2>
   <div class="about-container">
     <div class="about-img">
-      <img src="assets/profile-optimized.jpg" alt="Dhruv's Profile">
+      <img src="images/profile.jpg" alt="Profile picture of Dhruv" />
     </div>
     <div class="about-text">
       <p>
@@ -86,7 +87,7 @@
       </div>
     </section>
 
-    <section id="experience" class="fade-section">
+    <section id="experience" data-aos="fade-up" class="fade-section">
       <h2>Where I've Worked</h2>
       <div class="experience">
         <div class="job">
@@ -130,7 +131,7 @@ participants.</li>
     </section>
 
 
-<section id="skills" class="fade-in" class="fade-section">
+<section id="skills" data-aos="fade-up" class="fade-in" class="fade-section">
   <h2>Skills & Strengths</h2>
   <p>Through academic, research, and leadership experiences, I've developed a diverse skillset in development, communication, and problem-solving.</p>
   <div class="skills-grid">
@@ -247,4 +248,44 @@ participants.</li>
 
   document.addEventListener("DOMContentLoaded", () => type());
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const bar = document.getElementById("progress-bar");
+    function updateScrollBar() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      bar.style.width = scrollPercent + "%";
+    }
+    window.addEventListener("scroll", updateScrollBar);
+    updateScrollBar();
+  });
+</script>
+
+
+<script>
+  
+  
+  
+
+
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  const sr = ScrollReveal({ duration: 1000, distance: '50px', easing: 'ease-out', reset: false });
+
+  sr.reveal('.hero-heading', { origin: 'top', delay: 200 });
+  sr.reveal('.animated-text', { origin: 'bottom', delay: 300 });
+  sr.reveal('.sr-section', {
+    origin: 'bottom',
+    interval: 150,
+    delay: 200,
+  });
+</script>
 </body>
+
+
+
+
