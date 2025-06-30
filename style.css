@@ -614,3 +614,8 @@ footer {
   line-height: 1.4;
   font-size: 1.6rem;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* prevents header overlap if needed */
+}

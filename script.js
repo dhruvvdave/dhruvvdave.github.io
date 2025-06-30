@@ -37,3 +37,9 @@ scrollBtn.onclick = function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+AOS.init({
+  once: false,           // animate every time the element enters the viewport
+  mirror: true,          // animate when scrolling back up
+  duration: 600,         // duration of each animation
+  easing: 'ease-out',    // smooth easing
+});
