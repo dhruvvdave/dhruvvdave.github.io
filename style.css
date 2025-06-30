@@ -526,11 +526,13 @@ footer {
 
 #typed-text {
   display: inline-block;
-  white-space: normal !important; /* ensures text can wrap */
+  white-space: normal !important;
   word-break: break-word !important;
   overflow-wrap: break-word !important;
   max-width: 100%;
+  line-height: 1.4; /* Adjust this as needed */
 }
+
 
 
 .hero p {
@@ -542,4 +544,14 @@ footer {
     font-size: 1.5rem; /* Or any size that ensures wrapping happens */
   }
 }
+
+.hero {
+  margin-bottom: 1rem; /* or reduce further */
+  padding-bottom: 1rem;
+}
+
+#about {
+  margin-top: 1rem; /* Reduce this too */
+}
+
 
