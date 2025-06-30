@@ -589,7 +589,7 @@ footer {
 }
 
 .animated-text {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 1.8rem);
   line-height: 1.4;
   margin-bottom: 1.5rem;
 }
