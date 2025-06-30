@@ -1,57 +1,39 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const observerOptions = {
-    threshold: 0.1
-  };
-
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-      } else {
-        entry.target.classList.remove("in-view");
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll(".fade-section").forEach((el) => {
-    fadeObserver.observe(el);
-  });
-
-  AOS.init({
-    once: false, // Allow AOS to animate on scroll up and down
-    duration: 800,
-    easing: "ease-in-out"
-  });
-
+  const cards = document.querySelectorAll(".project-card");
   const modal = document.getElementById("modal");
-  const modalContent = document.querySelector(".modal-content");
+  const closeBtn = document.getElementById("modal-close");
+  const title = document.getElementById("modal-title");
+  const image = document.getElementById("modal-image");
+  const desc = document.getElementById("modal-description");
+  const tech = document.getElementById("modal-tech");
 
-  document.querySelectorAll(".project-card").forEach((card) => {
+  cards.forEach(card => {
     card.addEventListener("click", () => {
-      const title = card.querySelector("h3")?.textContent || "";
-      const desc = card.querySelector("p")?.textContent || "";
-      const tech = card.querySelector(".tech")?.textContent || "";
-      const image = card.dataset.image || "";
-
-      modalContent.innerHTML = `
-        <span class="close">&times;</span>
-        <h2>${title}</h2>
-        <p>${desc}</p>
-        <p><strong>Technologies:</strong> ${tech}</p>
-        <img src="${image}" alt="${title}" />
-      `;
+      title.innerText = card.dataset.title;
+      image.src = card.dataset.image;
+      desc.innerText = card.dataset.description;
+      tech.innerText = card.dataset.tech;
       modal.style.display = "block";
-
-      modalContent.querySelector(".close").onclick = () => {
-        modal.style.display = "none";
-      };
     });
   });
 
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+  closeBtn.onclick = () => { modal.style.display = "none"; };
+  window.onclick = e => { if (e.target == modal) modal.style.display = "none"; };
 });
+
+// Scroll-to-top button logic
+const scrollBtn = document.getElementById('scrollToTopBtn');
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
+};
+
+scrollBtn.onclick = function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+

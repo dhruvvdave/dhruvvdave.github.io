@@ -54,14 +54,19 @@ main {
 
 /* Animate only these sections */
 .fade-section {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .fade-section.in-view {
   opacity: 1;
   transform: none;
+}
+
+.fade-section.in-view {
+    opacity: 1;
+    transform: none;
 }
 
 h1, h2, h3 {
@@ -102,7 +107,6 @@ section {
 .hero h2 {
     font-size: 1.75rem;
     color: var(--accent-color);
-    margin-bottom: 0.5rem;
 }
 
 .projects-grid {
@@ -270,14 +274,7 @@ footer {
 }
 
 .hero {
-  padding-top: calc(1rem + 60px);
-  padding-bottom: 2rem; /* ⬅️ Add this */
-
-  padding-bottom: 0.5rem;
-}
-
-.hero + .about-section {
-  margin-top: 1rem; /* or 2rem */
+  padding-top: calc(1rem + 60px); /* header padding + nav height */
 }
 
 
@@ -309,10 +306,6 @@ footer {
   height: 1.5rem;
   margin-bottom: 2rem;
   animation: fadeIn 1s ease-in-out;
-
-  word-break: break-word;
-  white-space: normal;
-  line-height: 1.5;
 }
 
 .cursor {
@@ -334,13 +327,7 @@ footer {
 
 
 
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 0.5rem;
+.about-content { margin-top: 1rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease forwards;
@@ -371,13 +358,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .about-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 0.5rem;
+  .about-content { margin-top: 1rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease forwards;
@@ -386,17 +367,6 @@ footer {
 
   .about-text {
     font-size: 1rem;
-  }
-
-  .hero {
-    padding-top: 4rem;
-    padding-bottom: 0.5rem;
-  
-  padding-bottom: 0.5rem;
-}
-
-  .hero + .about-section {
-    margin-top: 1rem;
   }
 }
 
@@ -455,7 +425,7 @@ footer {
 }
 
 .about-section {
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -521,13 +491,11 @@ footer {
 /* === Animations Enhancements === */
 [data-aos] {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 [data-aos].aos-animate {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* Scroll-to-top button */
@@ -555,105 +523,15 @@ footer {
 
 
 
-/* Project card hover tilt */
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-card:hover {
-  transform: translateY(-6px) rotateZ(-1deg);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Skill icons subtle scale */
-.skill-icon, .skill-box img {
-  transition: transform 0.3s ease;
-}
-.skill-icon:hover, .skill-box img:hover {
-  transform: scale(1.1);
-}
-
-/* Section headings fade-in */
-section h2, section h3 {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-section[data-aos].aos-animate h2,
-section[data-aos].aos-animate h3 {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* Smooth section fade-in with delay */
-[data-aos] {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-[data-aos].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Project card Apple-style lift */
-.project-card {
-  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s;
-}
-.project-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.1);
-}
-
-/* Skill icon Apple-style pop */
-.skill-icon, .skill-box img {
-  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-.skill-icon:hover, .skill-box img:hover {
-  transform: scale(1.1);
-}
-
-/* Nav underline hover with spring feel */
-nav a::after {
-  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-
-  /* === ScrollSpy Nav Highlight === */
-  nav a.active {
-    color: var(--accent-color);
-    font-weight: bold;
-    text-shadow: 0 0 6px var(--accent-color);
-    transition: all 0.3s ease;
-  }
-
-.fade-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-section.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 #typed-text {
   display: inline;
-  white-space: normal;
-  word-break: break-word;
-}
-
-.animated-text {
-  word-break: break-word;
+  word-wrap: break-word;
   overflow-wrap: break-word;
-  line-height: 1.3;
-}
-
-
-.animated-text-wrapper {
+  white-space: normal;
   max-width: 100%;
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-break: break-word;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
 }
