@@ -596,7 +596,7 @@ footer {
 
 .animated-text {
   display: block;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 4.5vw, 2.2rem);
   line-height: 1.4;
   margin-bottom: 0.75rem;
   word-wrap: break-word;
@@ -612,5 +612,5 @@ footer {
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.4;
-  font-size: 1.2rem; /* or try 1rem */
+  font-size: 1.6rem;
 }
