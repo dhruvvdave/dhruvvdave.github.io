@@ -594,3 +594,23 @@ footer {
   margin-bottom: 1.5rem;
 }
 
+.animated-text {
+  display: block;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.typed-block {
+  display: inline-block;
+  min-height: 2.5em;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
