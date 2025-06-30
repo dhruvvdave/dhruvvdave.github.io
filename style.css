@@ -383,7 +383,7 @@ footer {
 
   .hero {
     padding-top: 4rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .hero + .about-section {
@@ -627,4 +627,10 @@ nav a::after {
 .fade-section.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+.animated-text {
+  word-break: break-word; /* break long words */
+  white-space: normal;     /* allow wrapping */
+  line-height: 1.5;
 }
