@@ -38,8 +38,8 @@ scrollBtn.onclick = function () {
 };
 
 AOS.init({
-  once: false,           // animate every time the element enters the viewport
-  mirror: true,          // animate when scrolling back up
-  duration: 600,         // duration of each animation
-  easing: 'ease-out',    // smooth easing
+  once: false,
+  mirror: true,
+  duration: 600,
+  easing: 'ease-out',
 });
