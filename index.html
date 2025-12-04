@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dhruv Dave's Portfolio</title>
+  
+  <!-- Preconnect and Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="style.css" as="style">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="icon" href="/favicon.png" type="image/png">
@@ -40,16 +44,38 @@
 <meta name="keywords" content="Dhruv Dave, Queen’s University, Computer Science, Software Developer, Georgetown, Ontario, Java Developer, Full-Stack Developer">
 
 
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Dhruv Dave | Software Developer">
+<meta property="og:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario. Projects in Java, JavaScript, Python, and more.">
+<meta property="og:image" content="https://dhruvdave.ca/images/profile.jpg">
+<meta property="og:url" content="https://dhruvdave.ca">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dhruv Dave | Software Developer">
+<meta name="twitter:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario.">
+<meta name="twitter:image" content="https://dhruvdave.ca/images/profile.jpg">
+
 </head>
 
 <body>
+  <a href="#about" class="skip-link">Skip to main content</a>
   <div id="progress-bar"></div>
   <header>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-icon">🌙</span>
+      </button>
     </nav>
   </header>
 
@@ -67,7 +93,7 @@
   <h2>About Me</h2>
   <div class="about-container">
     <div class="about-img">
-      <img src="images/profile.jpg" alt="Profile picture of Dhruv" />
+      <img src="images/profile.jpg" alt="Dhruv Dave - Computer Science student at Queen's University" loading="lazy" />
     </div>
     <div class="about-text">
       <p>
@@ -82,10 +108,10 @@
 </section>
 
     <p class="project-note">📌 Click on a project to view it</p>
-<section id="projects" class="fade-in" data-aos="fade-up" class="fade-section">
+<section id="projects" class="fade-in fade-section" data-aos="fade-up">
       <h2>Some Things I've Built</h2>
       <div class="projects-grid">
-        <div class="project-card featured" data-title="SecureVault" data-description="A full-stack cybersecurity password manager featuring password strength analysis, breach checking via HaveIBeenPwned API (k-anonymity), encrypted password vault, and two-factor authentication. Built with React, Flask, and modern security practices." data-tech="React · Flask · Python · SQLAlchemy · JWT · Tailwind CSS" data-image="images/securevault-preview.png">
+        <div class="project-card featured" role="button" tabindex="0" aria-label="View details for SecureVault project" data-title="SecureVault" data-description="A full-stack cybersecurity password manager featuring password strength analysis, breach checking via HaveIBeenPwned API (k-anonymity), encrypted password vault, and two-factor authentication. Built with React, Flask, and modern security practices." data-tech="React · Flask · Python · SQLAlchemy · JWT · Tailwind CSS" data-image="images/securevault-preview.png">
           <div class="featured-badge">🔐 Featured</div>
           <h3>SecureVault</h3>
           <p>A full-stack cybersecurity password manager with breach checking, password analysis, secure vault storage, and 2FA support.</p>
@@ -93,25 +119,25 @@
           <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer">Live Demo</a> · 
           <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-        <div class="project-card" data-title="Minesweeper Java Game" data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." data-tech="Java · CSS · Markdown" data-image="project1.jpg">
+        <div class="project-card" role="button" tabindex="0" aria-label="View details for Minesweeper Java Game project" data-title="Minesweeper Java Game" data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." data-tech="Java · CSS · Markdown" data-image="project1.jpg">
 <h3>Minesweeper Java Game</h3>
 <p>An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI.</p>
 <p class="tech">Java · CSS · Markdown</p>
 <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank">GitHub</a>
         </div>
-        <div class="project-card" data-title="Weather Web App" data-description="A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support." data-tech="HTML · CSS · JavaScript" data-image="project2.jpg">
+        <div class="project-card" role="button" tabindex="0" aria-label="View details for Weather Web App project" data-title="Weather Web App" data-description="A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support." data-tech="HTML · CSS · JavaScript" data-image="project2.jpg">
   <h3>Weather Web App</h3>
   <p>A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support.</p>
   <p class="tech">HTML · CSS · JavaScript</p>
   <a href="https://dhruvdave.ca/weather-app/" target="_blank">Live Demo</a> · 
   <a href="https://github.com/dhruvvdave/weather-app" target="_blank">GitHub</a>
 </div>
-        <div class="project-card" data-title="Personal Web Portfolio" data-description="Portfolio site built to showcase my design/dev work — you're looking at it!" data-tech="HTML · CSS · JavaScript" data-image="project3.jpg">
+        <div class="project-card" role="button" tabindex="0" aria-label="View details for Personal Web Portfolio project" data-title="Personal Web Portfolio" data-description="Portfolio site built to showcase my design/dev work — you're looking at it!" data-tech="HTML · CSS · JavaScript" data-image="project3.jpg">
 <h3>Personal Web Portfolio</h3>
 <p>Portfolio site built to showcase my design/dev work — you're looking at it!</p>
 <p class="tech">HTML · CSS · JavaScript</p>
         </div>
-        <div class="project-card" data-title="Finance Tracker" data-description="A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data — all in a polished, portfolio-ready design." data-tech="HTML · CSS · JavaScript" data-image="project4.jpg">
+        <div class="project-card" role="button" tabindex="0" aria-label="View details for Finance Tracker project" data-title="Finance Tracker" data-description="A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data — all in a polished, portfolio-ready design." data-tech="HTML · CSS · JavaScript" data-image="project4.jpg">
   <h3>Finance Tracker</h3>
   <p>A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data — all in a polished, portfolio-ready design.</p>
   <p class="tech">HTML · CSS · JavaScript</p>
@@ -181,7 +207,7 @@ participants.</li>
     </section>
 
 
-<section id="skills" data-aos="fade-up" class="fade-in" class="fade-section">
+<section id="skills" class="fade-in fade-section" data-aos="fade-up">
   <h2>Skills & Strengths</h2>
   <p>Through academic, research, and leadership experiences, I've developed a diverse skillset in development, communication, and problem-solving.</p>
   <div class="skills-grid">
@@ -218,7 +244,7 @@ participants.</li>
   </div>
 </section>  
 
-<section id="contact" class="fade-in" class="fade-section">
+<section id="contact" class="fade-in fade-section">
   <h2>Get In Touch</h2>
   <p>I'm always open to new opportunities or interesting collaborations. Feel free to reach out!</p>
   <div class="contact-icons">
@@ -238,7 +264,7 @@ participants.</li>
   <div class="modal-content">
     <span id="modal-close" class="close">&times;</span>
     <h3 id="modal-title"></h3>
-    <img id="modal-image" src="" alt="Project image" />
+    <img id="modal-image" src="" alt="Project preview image" loading="lazy" />
     <p id="modal-description"></p>
     <p id="modal-tech"></p>
   </div>
@@ -324,11 +350,5 @@ participants.</li>
     delay: 200,
   });
 </script>
-
-<!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 </body>

@@ -8,18 +8,75 @@ document.addEventListener("DOMContentLoaded", () => {
   const desc = document.getElementById("modal-description");
   const tech = document.getElementById("modal-tech");
 
+  // Function to open modal
+  function openModal(card) {
+    title.innerText = card.dataset.title;
+    image.src = card.dataset.image;
+    desc.innerText = card.dataset.description;
+    tech.innerText = card.dataset.tech;
+    modal.style.display = "block";
+  }
+
   cards.forEach(card => {
-    card.addEventListener("click", () => {
-      title.innerText = card.dataset.title;
-      image.src = card.dataset.image;
-      desc.innerText = card.dataset.description;
-      tech.innerText = card.dataset.tech;
-      modal.style.display = "block";
+    // Click event
+    card.addEventListener("click", () => openModal(card));
+    
+    // Keyboard support (Enter and Space)
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openModal(card);
+      }
     });
   });
 
   closeBtn.onclick = () => { modal.style.display = "none"; };
   window.onclick = e => { if (e.target == modal) modal.style.display = "none"; };
+  
+  // Close modal with Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "block") {
+      modal.style.display = "none";
+    }
+  });
+});
+
+// Theme toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle.querySelector('.theme-icon');
+
+// Check for saved theme preference or default to dark
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  document.body.classList.add('light-mode');
+  themeIcon.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const isLightMode = document.body.classList.contains('light-mode');
+  themeIcon.textContent = isLightMode ? '☀️' : '🌙';
+  localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+});
+
+// Mobile hamburger menu functionality
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+  const isExpanded = hamburger.classList.contains('active');
+  hamburger.setAttribute('aria-expanded', isExpanded);
+});
+
+// Close mobile menu when clicking on a nav link
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
 });
 
 // Scroll-to-top button logic
