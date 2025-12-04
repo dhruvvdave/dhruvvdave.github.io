@@ -138,6 +138,45 @@ section {
     margin-top: 0.5rem;
 }
 
+/* Featured Project Card */
+.project-card.featured {
+  position: relative;
+  border: 2px solid var(--accent-color);
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.05) 0%, rgba(10, 25, 47, 0.8) 100%);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.1);
+}
+
+.project-card.featured:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 40px rgba(100, 255, 218, 0.2);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Ensure project card links match the theme */
+.project-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.project-card a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
 .experience .job {
     margin-bottom: 2.5rem;
 }
