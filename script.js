@@ -41,24 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Theme toggle functionality
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = themeToggle.querySelector('.theme-icon');
-
-// Check for saved theme preference or default to dark
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
-  document.body.classList.add('light-mode');
-  themeIcon.textContent = '☀️';
-}
-
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  const isLightMode = document.body.classList.contains('light-mode');
-  themeIcon.textContent = isLightMode ? '☀️' : '🌙';
-  localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-});
-
 // Mobile hamburger menu functionality
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
