@@ -559,8 +559,9 @@ footer {
 }
 
 /* === Animations Enhancements === */
+/* Ensure elements are visible even if AOS library fails to load */
 [data-aos] {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
