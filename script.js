@@ -210,7 +210,23 @@ if (projectSearch) {
 }
 
 // ===== GitHub API Integration =====
-const GITHUB_USERNAME = 'dhruvvdave';
+// Language colors for GitHub language indicators
+const LANGUAGE_COLORS = {
+    'JavaScript': '#f7df1e',
+    'Java': '#b07219',
+    'Python': '#3572A5',
+    'HTML': '#e34c26',
+    'CSS': '#563d7c',
+    'TypeScript': '#3178c6',
+    'C++': '#f34b7d',
+    'C': '#555555',
+    'Shell': '#89e051',
+    'Ruby': '#701516'
+};
+
+// Get GitHub username from data attribute or use default
+const githubSection = document.getElementById('github-stats');
+const GITHUB_USERNAME = githubSection?.dataset.username || 'dhruvvdave';
 
 async function fetchGitHubData() {
     try {
@@ -271,22 +287,9 @@ function renderLanguageChart(languages, totalRepos) {
     const container = document.querySelector('.language-bar-container');
     if (!container) return;
     
-    const colors = {
-        'JavaScript': '#f7df1e',
-        'Java': '#b07219',
-        'Python': '#3572A5',
-        'HTML': '#e34c26',
-        'CSS': '#563d7c',
-        'TypeScript': '#3178c6',
-        'C++': '#f34b7d',
-        'C': '#555555',
-        'Shell': '#89e051',
-        'Ruby': '#701516'
-    };
-    
     container.innerHTML = languages.map(([lang, count]) => {
         const percent = totalRepos > 0 ? Math.round((count / totalRepos) * 100) : 0;
-        const color = colors[lang] || '#8892b0';
+        const color = LANGUAGE_COLORS[lang] || '#8892b0';
         return `
             <div class="language-item">
                 <span class="language-name">${lang}</span>
@@ -332,16 +335,7 @@ function renderFeaturedRepos(repos) {
 }
 
 function getLanguageColor(language) {
-    const colors = {
-        'JavaScript': '#f7df1e',
-        'Java': '#b07219',
-        'Python': '#3572A5',
-        'HTML': '#e34c26',
-        'CSS': '#563d7c',
-        'TypeScript': '#3178c6',
-        'C++': '#f34b7d'
-    };
-    return colors[language] || '#8892b0';
+    return LANGUAGE_COLORS[language] || '#8892b0';
 }
 
 // Fetch GitHub data when page loads
