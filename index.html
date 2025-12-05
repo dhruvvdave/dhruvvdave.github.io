@@ -3,18 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dhruv Dave's Portfolio</title>
+  <title>Dhruv Dave | Software Developer & CS Student</title>
   
   <!-- Preconnect and Preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.github.com">
   <link rel="preload" href="style.css" as="style">
   
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="me" href="https://www.linkedin.com/in/dhruvdave06">
+  
+  <!-- Theme Color for Mobile Browsers -->
+  <meta name="theme-color" content="#0a192f">
+  <meta name="color-scheme" content="dark light">
+  <meta name="author" content="Dhruv Dave">
+  <meta name="robots" content="index, follow">
+  
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -22,14 +31,15 @@
   "name": "Dhruv Dave",
   "url": "https://dhruvdave.ca",
   "sameAs": [
-    "https://www.linkedin.com/in/dhruvdave06"
+    "https://www.linkedin.com/in/dhruvdave06",
+    "https://github.com/dhruvvdave"
   ],
   "jobTitle": "Computer Science Student",
   "worksFor": {
     "@type": "CollegeOrUniversity",
-    "name": "Queen’s University"
+    "name": "Queen's University"
   },
-  "alumniOf": "Queen’s University",
+  "alumniOf": "Queen's University",
   "image": "https://dhruvdave.ca/images/profile.jpg",
   "email": "mailto:davedhruv2006@gmail.com",
   "address": {
@@ -37,27 +47,31 @@
     "addressLocality": "Georgetown",
     "addressRegion": "Ontario",
     "addressCountry": "Canada"
-  }
+  },
+  "knowsAbout": ["JavaScript", "Java", "Python", "React", "Flask", "Web Development", "Full-Stack Development"]
 }
 </script>
-<meta name="description" content="Dhruv Dave — Computer Science student at Queen’s University, software developer based in Georgetown, Ontario. Projects in Java, JavaScript, Python, and more.">
-<meta name="keywords" content="Dhruv Dave, Queen’s University, Computer Science, Software Developer, Georgetown, Ontario, Java Developer, Full-Stack Developer">
-
+<meta name="description" content="Dhruv Dave - Computer Science student at Queen's University, software developer based in Georgetown, Ontario. Expert in JavaScript, Java, Python, React, and full-stack development.">
+<meta name="keywords" content="Dhruv Dave, Queen's University, Computer Science, Software Developer, Georgetown, Ontario, Java Developer, Full-Stack Developer, React, Python, JavaScript, Web Developer">
 
 <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Dhruv Dave | Software Developer">
-<meta property="og:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario. Projects in Java, JavaScript, Python, and more.">
+<meta property="og:title" content="Dhruv Dave | Software Developer & CS Student">
+<meta property="og:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario. Expert in JavaScript, Java, Python, React, and full-stack development.">
 <meta property="og:image" content="https://dhruvdave.ca/images/profile.jpg">
 <meta property="og:url" content="https://dhruvdave.ca">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Dhruv Dave Portfolio">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dhruv Dave | Software Developer">
+<meta name="twitter:title" content="Dhruv Dave | Software Developer & CS Student">
 <meta name="twitter:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario.">
 <meta name="twitter:image" content="https://dhruvdave.ca/images/profile.jpg">
 
 </head>
 
 <body>
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+  
   <a href="#about" class="skip-link">Skip to main content</a>
   <div id="progress-bar"></div>
   <header>
@@ -69,21 +83,56 @@
       </button>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#technologies">Tech Stack</a>
         <a href="#projects">Projects</a>
+        <a href="#github-stats">GitHub</a>
+        <a href="#journey">Journey</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
     </nav>
   </header>
 
-  <main>
+    <main>
     <section class="hero" data-aos="fade-up">
-  <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Hi, I’m Dhruv</h1>
-  <p class="animated-text" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-  <span id="typed-text" class="typed-block"></span><span class="cursor">|</span>
-</p>
-  <p class="sr-section">I'm a software developer focused on crafting elegant digital experiences. Welcome to my portfolio!</p>
-</section>
+      <div class="hero-content">
+        <p class="hero-greeting" data-aos="fade-up" data-aos-delay="200">Hello, my name is</p>
+        <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Dhruv Dave</h1>
+        <p class="animated-text" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <span id="typed-text" class="typed-block"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="800">
+          I'm a software developer focused on crafting elegant digital experiences. 
+          Currently studying Computer Science at Queen's University.
+        </p>
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="1000">
+          <a href="#projects" class="cta-button primary">View My Work</a>
+          <a href="#contact" class="cta-button secondary">Get In Touch</a>
+        </div>
+        <div class="hero-status" data-aos="fade-up" data-aos-delay="1200">
+          <span class="status-badge available">
+            <span class="status-dot"></span>
+            Open to Internship Opportunities
+          </span>
+        </div>
+      </div>
+    </section>
 
 
 <section id="about" class="about-section">
@@ -104,45 +153,400 @@
   </div>
 </section>
 
-    <p class="project-note">📌 Click on a project to view it</p>
-<section id="projects" class="fade-in fade-section" data-aos="fade-up">
-      <h2>Some Things I've Built</h2>
-      <div class="projects-grid">
-        <div class="project-card featured" role="button" tabindex="0" aria-label="View details for SecureVault project" data-title="SecureVault" data-description="A full-stack cybersecurity password manager featuring password strength analysis, breach checking via HaveIBeenPwned API (k-anonymity), encrypted password vault, and two-factor authentication. Built with React, Flask, and modern security practices." data-tech="React · Flask · Python · SQLAlchemy · JWT · Tailwind CSS" data-image="images/securevault-preview.png">
-          <div class="featured-badge">🔐 Featured</div>
-          <h3>SecureVault</h3>
-          <p>A full-stack cybersecurity password manager with breach checking, password analysis, secure vault storage, and 2FA support.</p>
-          <p class="tech">React · Flask · Python · SQLAlchemy · JWT · Tailwind CSS</p>
-          <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer">Live Demo</a> · 
-          <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-        <div class="project-card" role="button" tabindex="0" aria-label="View details for Minesweeper Java Game project" data-title="Minesweeper Java Game" data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." data-tech="Java · CSS · Markdown" data-image="project1.jpg">
-<h3>Minesweeper Java Game</h3>
-<p>An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI.</p>
-<p class="tech">Java · CSS · Markdown</p>
-<a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank">GitHub</a>
-        </div>
-        <div class="project-card" role="button" tabindex="0" aria-label="View details for Weather Web App project" data-title="Weather Web App" data-description="A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support." data-tech="HTML · CSS · JavaScript" data-image="project2.jpg">
-  <h3>Weather Web App</h3>
-  <p>A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support.</p>
-  <p class="tech">HTML · CSS · JavaScript</p>
-  <a href="https://dhruvdave.ca/weather-app/" target="_blank">Live Demo</a> · 
-  <a href="https://github.com/dhruvvdave/weather-app" target="_blank">GitHub</a>
-</div>
-        <div class="project-card" role="button" tabindex="0" aria-label="View details for Personal Web Portfolio project" data-title="Personal Web Portfolio" data-description="Portfolio site built to showcase my design/dev work — you're looking at it!" data-tech="HTML · CSS · JavaScript" data-image="project3.jpg">
-<h3>Personal Web Portfolio</h3>
-<p>Portfolio site built to showcase my design/dev work — you're looking at it!</p>
-<p class="tech">HTML · CSS · JavaScript</p>
-        </div>
-        <div class="project-card" role="button" tabindex="0" aria-label="View details for Finance Tracker project" data-title="Finance Tracker" data-description="A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data — all in a polished, portfolio-ready design." data-tech="HTML · CSS · JavaScript" data-image="project4.jpg">
-  <h3>Finance Tracker</h3>
-  <p>A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data — all in a polished, portfolio-ready design.</p>
-  <p class="tech">HTML · CSS · JavaScript</p>
-  <a href="https://dhruvdave.ca/finance-tracker/" target="_blank">Live Demo</a> · 
-  <a href="https://github.com/dhruvvdave/finance-tracker" target="_blank">GitHub</a>
-</div>
+<!-- Technologies Section -->
+<section id="technologies" class="technologies-section fade-section" data-aos="fade-up">
+  <h2>Technologies I Work With</h2>
+  <p class="section-subtitle">Constantly learning and expanding my toolkit</p>
+  
+  <div class="tech-category">
+    <h3 class="tech-category-title">Languages</h3>
+    <div class="tech-grid">
+      <div class="tech-card" data-level="advanced">
+        <i class="devicon-javascript-plain colored"></i>
+        <span class="tech-name">JavaScript</span>
+        <span class="tech-level">Advanced</span>
       </div>
-    </section>
+      <div class="tech-card" data-level="advanced">
+        <i class="devicon-java-plain colored"></i>
+        <span class="tech-name">Java</span>
+        <span class="tech-level">Advanced</span>
+      </div>
+      <div class="tech-card" data-level="intermediate">
+        <i class="devicon-python-plain colored"></i>
+        <span class="tech-name">Python</span>
+        <span class="tech-level">Intermediate</span>
+      </div>
+      <div class="tech-card" data-level="intermediate">
+        <i class="devicon-cplusplus-plain colored"></i>
+        <span class="tech-name">C++</span>
+        <span class="tech-level">Intermediate</span>
+      </div>
+      <div class="tech-card" data-level="advanced">
+        <i class="devicon-html5-plain colored"></i>
+        <span class="tech-name">HTML5</span>
+        <span class="tech-level">Advanced</span>
+      </div>
+      <div class="tech-card" data-level="advanced">
+        <i class="devicon-css3-plain colored"></i>
+        <span class="tech-name">CSS3</span>
+        <span class="tech-level">Advanced</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="tech-category">
+    <h3 class="tech-category-title">Frameworks & Libraries</h3>
+    <div class="tech-grid">
+      <div class="tech-card" data-level="intermediate">
+        <i class="devicon-react-original colored"></i>
+        <span class="tech-name">React</span>
+        <span class="tech-level">Intermediate</span>
+      </div>
+      <div class="tech-card" data-level="intermediate">
+        <i class="devicon-flask-original"></i>
+        <span class="tech-name">Flask</span>
+        <span class="tech-level">Intermediate</span>
+      </div>
+      <div class="tech-card" data-level="beginner">
+        <i class="devicon-nodejs-plain colored"></i>
+        <span class="tech-name">Node.js</span>
+        <span class="tech-level">Beginner</span>
+      </div>
+      <div class="tech-card" data-level="intermediate">
+        <i class="devicon-tailwindcss-plain colored"></i>
+        <span class="tech-name">Tailwind CSS</span>
+        <span class="tech-level">Intermediate</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="tech-category">
+    <h3 class="tech-category-title">Tools & Platforms</h3>
+    <div class="tech-grid">
+      <div class="tech-card" data-level="advanced">
+        <i class="devicon-git-plain colored"></i>
+        <span class="tech-name">Git</span>
+        <span class="tech-level">Advanced</span>
+      </div>
+      <div class="tech-card" data-level="advanced">
+        <i class="devicon-github-original"></i>
+        <span class="tech-name">GitHub</span>
+        <span class="tech-level">Advanced</span>
+      </div>
+      <div class="tech-card" data-level="advanced">
+        <i class="devicon-vscode-plain colored"></i>
+        <span class="tech-name">VS Code</span>
+        <span class="tech-level">Advanced</span>
+      </div>
+      <div class="tech-card" data-level="intermediate">
+        <i class="devicon-sqlalchemy-plain"></i>
+        <span class="tech-name">SQLAlchemy</span>
+        <span class="tech-level">Intermediate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GitHub Stats Section -->
+<section id="github-stats" class="github-section fade-section" data-aos="fade-up">
+  <h2>GitHub Activity</h2>
+  <p class="section-subtitle">My open source contributions and activity</p>
+  
+  <div class="github-stats-grid">
+    <div class="github-stat-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-icon">📦</div>
+      <div class="stat-value" id="repo-count">--</div>
+      <div class="stat-label">Public Repos</div>
+    </div>
+    <div class="github-stat-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-icon">⭐</div>
+      <div class="stat-value" id="stars-count">--</div>
+      <div class="stat-label">Total Stars</div>
+    </div>
+    <div class="github-stat-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="stat-icon">👥</div>
+      <div class="stat-value" id="followers-count">--</div>
+      <div class="stat-label">Followers</div>
+    </div>
+    <div class="github-stat-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="stat-icon">🔀</div>
+      <div class="stat-value" id="following-count">--</div>
+      <div class="stat-label">Following</div>
+    </div>
+  </div>
+  
+  <div class="github-languages" data-aos="fade-up" data-aos-delay="500">
+    <h3>Top Languages</h3>
+    <div class="languages-chart" id="languages-chart">
+      <div class="language-bar-container">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="github-repos" data-aos="fade-up" data-aos-delay="600">
+    <h3>Featured Repositories</h3>
+    <div class="repos-grid" id="repos-grid">
+      <!-- Populated by JavaScript -->
+      <div class="repo-skeleton"></div>
+      <div class="repo-skeleton"></div>
+      <div class="repo-skeleton"></div>
+    </div>
+  </div>
+  
+  <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer" class="github-profile-link">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+    View Full GitHub Profile
+  </a>
+</section>
+
+<!-- Journey Timeline Section -->
+<section id="journey" class="journey-section fade-section" data-aos="fade-up">
+  <h2>My Journey</h2>
+  <p class="section-subtitle">Key milestones in my development career</p>
+  
+  <div class="timeline">
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">Sep 2024</div>
+        <h3>Started CS at Queen's University</h3>
+        <p>Began my Computer Science journey at Queen's University in Kingston, Ontario.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Education</span>
+          <span class="timeline-tag">Computer Science</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">2024</div>
+        <h3>Built SecureVault</h3>
+        <p>Developed a full-stack password manager with React, Flask, and modern security practices including 2FA and breach checking.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">React</span>
+          <span class="timeline-tag">Flask</span>
+          <span class="timeline-tag">Security</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">2023</div>
+        <h3>Web Development at Digitera</h3>
+        <p>Built accessible and performant websites, collaborating with designers and clients to deliver modern designs.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Web Dev</span>
+          <span class="timeline-tag">Client Work</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">2022</div>
+        <h3>Research at COBWEB</h3>
+        <p>Designed agent-based models to simulate complex adaptive systems, focusing on ecosystems and urban environments.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Research</span>
+          <span class="timeline-tag">Python</span>
+          <span class="timeline-tag">Simulation</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-date">2022</div>
+        <h3>First Java Project</h3>
+        <p>Created Minesweeper Oppenheimer - an Oppenheimer-themed remake of the classic game with custom UI.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Java</span>
+          <span class="timeline-tag">Game Dev</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section with Filters -->
+<section id="projects" class="projects-section fade-section" data-aos="fade-up">
+  <h2>Some Things I've Built</h2>
+  <p class="section-subtitle">Click on a project to view details</p>
+  
+  <div class="project-controls">
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Apps</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+    </div>
+    <div class="project-search">
+      <input type="text" id="project-search" placeholder="Search projects..." aria-label="Search projects">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+    </div>
+  </div>
+  
+  <div class="projects-grid" id="projects-grid">
+    <div class="project-card featured" role="button" tabindex="0" 
+         data-category="fullstack web" 
+         data-title="SecureVault" 
+         data-description="A full-stack cybersecurity password manager featuring password strength analysis, breach checking via HaveIBeenPwned API (k-anonymity), encrypted password vault, and two-factor authentication. Built with React, Flask, and modern security practices." 
+         data-tech="React, Flask, Python, SQLAlchemy, JWT, Tailwind CSS" 
+         data-image="images/securevault-preview.png"
+         aria-label="View details for SecureVault project">
+      <div class="featured-badge">🔐 Featured</div>
+      <div class="project-image">
+        <img src="images/securevault-preview.png" alt="SecureVault Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>SecureVault</h3>
+        <p>A full-stack cybersecurity password manager with breach checking, password analysis, secure vault storage, and 2FA support.</p>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">Flask</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Security</span>
+        </div>
+        <div class="project-links">
+          <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live Demo
+          </a>
+          <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" role="button" tabindex="0" 
+         data-category="java" 
+         data-title="Minesweeper Java Game" 
+         data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." 
+         data-tech="Java, CSS, Markdown" 
+         data-image="project1.jpg"
+         aria-label="View details for Minesweeper Java Game project">
+      <div class="project-image">
+        <img src="project1.jpg" alt="Minesweeper Game Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>Minesweeper Java Game</h3>
+        <p>An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI.</p>
+        <div class="project-tags">
+          <span class="project-tag">Java</span>
+          <span class="project-tag">Game Dev</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" role="button" tabindex="0" 
+         data-category="web" 
+         data-title="Weather Web App" 
+         data-description="A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support." 
+         data-tech="HTML, CSS, JavaScript" 
+         data-image="project2.jpg"
+         aria-label="View details for Weather Web App project">
+      <div class="project-image">
+        <img src="project2.jpg" alt="Weather App Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>Weather Web App</h3>
+        <p>A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://dhruvdave.ca/weather-app/" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live Demo
+          </a>
+          <a href="https://github.com/dhruvvdave/weather-app" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" role="button" tabindex="0" 
+         data-category="web" 
+         data-title="Personal Web Portfolio" 
+         data-description="This portfolio site built to showcase my design/dev work - featuring dark mode, animations, and modern design principles." 
+         data-tech="HTML, CSS, JavaScript" 
+         data-image="project3.jpg"
+         aria-label="View details for Personal Web Portfolio project">
+      <div class="project-image">
+        <img src="project3.jpg" alt="Portfolio Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>Personal Web Portfolio</h3>
+        <p>This portfolio site built to showcase my design/dev work - featuring dark mode, animations, and modern design principles.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link current">You're viewing it!</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" role="button" tabindex="0" 
+         data-category="web fullstack" 
+         data-title="Finance Tracker" 
+         data-description="A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data." 
+         data-tech="HTML, CSS, JavaScript" 
+         data-image="project4.jpg"
+         aria-label="View details for Finance Tracker project">
+      <div class="project-image">
+        <img src="project4.jpg" alt="Finance Tracker Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>Finance Tracker</h3>
+        <p>A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Charts</span>
+        </div>
+        <div class="project-links">
+          <a href="https://dhruvdave.ca/finance-tracker/" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live Demo
+          </a>
+          <a href="https://github.com/dhruvvdave/finance-tracker" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <p class="no-projects-message" id="no-projects-message" style="display: none;">No projects match your search. Try a different filter or search term.</p>
+</section>
 
     <section id="experience" data-aos="fade-up" class="fade-section">
       <h2>Where I've Worked</h2>
@@ -241,19 +645,58 @@ participants.</li>
   </div>
 </section>  
 
-<section id="contact" class="fade-in fade-section">
+<section id="contact" class="contact-section fade-section" data-aos="fade-up">
   <h2>Get In Touch</h2>
-  <p>I'm always open to new opportunities or interesting collaborations. Feel free to reach out!</p>
-  <div class="contact-icons">
-    <a href="mailto:davedhruv2006@gmail.com" target="_blank" aria-label="Email">
-      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 7L4 6v12h16V6l-8 5z"/></svg>
-    </a>
-    <a href="https://github.com/dhruvvdave" target="_blank" aria-label="GitHub">
-      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-    </a>
-    <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" aria-label="LinkedIn">
-      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98A1.99 1.99 0 0 0 7.96 5.5c0-1.1-.88-2-1.98-2zm.02 4.5H3V21h2.01V8H5zm7.5 0h-2V21H12.5v-6.25c0-1.45.67-2.25 1.98-2.25 1.25 0 1.76.9 1.76 2.25V21H18V13c0-3.07-1.64-4.5-3.76-4.5-1.5 0-2.19.83-2.56 1.42v-1.42z"/></svg>
-    </a>
+  <p class="section-subtitle">I'm always open to new opportunities or interesting collaborations. Feel free to reach out!</p>
+  
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-icons">
+        <a href="mailto:davedhruv2006@gmail.com" target="_blank" aria-label="Email" class="contact-icon-link">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 7L4 6v12h16V6l-8 5z"/></svg>
+          <span>davedhruv2006@gmail.com</span>
+        </a>
+        <a href="https://github.com/dhruvvdave" target="_blank" aria-label="GitHub" class="contact-icon-link">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          <span>github.com/dhruvvdave</span>
+        </a>
+        <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" aria-label="LinkedIn" class="contact-icon-link">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98A1.99 1.99 0 0 0 7.96 5.5c0-1.1-.88-2-1.98-2zm.02 4.5H3V21h2.01V8H5zm7.5 0h-2V21H12.5v-6.25c0-1.45.67-2.25 1.98-2.25 1.25 0 1.76.9 1.76 2.25V21H18V13c0-3.07-1.64-4.5-3.76-4.5-1.5 0-2.19.83-2.56 1.42v-1.42z"/></svg>
+          <span>linkedin.com/in/dhruvdave06</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="contact-form-container">
+      <form id="contact-form" action="https://formspree.io/f/xyzgbjea" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
+          <span class="form-error" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com" autocomplete="email">
+          <span class="form-error" id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Your message..." rows="5"></textarea>
+          <span class="form-error" id="message-error"></span>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-loading" style="display: none;">
+            <svg class="spinner" viewBox="0 0 24 24" width="20" height="20">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="31.4 31.4" stroke-linecap="round"></circle>
+            </svg>
+            Sending...
+          </span>
+        </button>
+        <p class="form-success" id="form-success" style="display: none;">Message sent successfully! I'll get back to you soon.</p>
+        <p class="form-error-message" id="form-error-message" style="display: none;">Something went wrong. Please try again or email me directly.</p>
+      </form>
+    </div>
   </div>
 </section>
   
@@ -267,12 +710,27 @@ participants.</li>
   </div>
 </div>
 
-<button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+<button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
 
 </main>
 
   <footer>
-    <p>© 2025 Dhruv Dave</p>
+    <div class="footer-content">
+      <p>Designed & Built by Dhruv Dave</p>
+      <p class="footer-copy">© 2025 Dhruv Dave. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98A1.99 1.99 0 0 0 7.96 5.5c0-1.1-.88-2-1.98-2zm.02 4.5H3V21h2.01V8H5zm7.5 0h-2V21H12.5v-6.25c0-1.45.67-2.25 1.98-2.25 1.25 0 1.76.9 1.76 2.25V21H18V13c0-3.07-1.64-4.5-3.76-4.5-1.5 0-2.19.83-2.56 1.42v-1.42z"/></svg>
+        </a>
+      </div>
+    </div>
   </footer>
 
 <noscript>
@@ -284,62 +742,6 @@ participants.</li>
   </style>
 </noscript>
 <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ once: false, duration: 1000 });</script>
-  <script>
-  const typedText = document.getElementById("typed-text");
-  const words = [
-    "Computer Science Student",
-    "Web Developer",
-    "Tech Enthusiast",
-    "Software Engineer in Progress"
-  ];
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  function type() {
-  const current = words[wordIndex];
-  if (isDeleting) {
-    charIndex--;
-    typedText.textContent = current.substring(0, charIndex);
-    if (charIndex <= 0) {
-      isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-    }
-  } else {
-    charIndex++;
-    typedText.textContent = current.substring(0, charIndex);
-    if (charIndex >= current.length) {
-      isDeleting = true;
-    }
-  }
-  setTimeout(type, isDeleting ? 60 : 120);
-}
-
-
-  document.addEventListener("DOMContentLoaded", () => type());
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const bar = document.getElementById("progress-bar");
-    function updateScrollBar() {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      bar.style.width = scrollPercent + "%";
-    }
-    window.addEventListener("scroll", updateScrollBar);
-    updateScrollBar();
-  });
-</script>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  const sr = ScrollReveal({ duration: 1000, distance: '50px', easing: 'ease-out', reset: false });
-
-  sr.reveal('.hero-heading', { origin: 'top', delay: 200 });
-</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 </body>
