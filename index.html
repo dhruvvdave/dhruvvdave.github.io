@@ -2,2353 +2,748 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mansi &amp; Kunj | Wedding Weekend</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" sizes="32x32" href="mk-logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="mk-logo.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="mk-logo.png">
-  <link rel="shortcut icon" href="mk-logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhruv Dave | Software Developer & CS Student</title>
+  
+  <!-- Preconnect and Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.github.com">
+  <link rel="preload" href="style.css" as="style">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="me" href="https://www.linkedin.com/in/dhruvdave06">
+  
+  <!-- Theme Color for Mobile Browsers -->
+  <meta name="theme-color" content="#0a192f">
+  <meta name="color-scheme" content="dark light">
+  <meta name="author" content="Dhruv Dave">
+  <meta name="robots" content="index, follow">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dhruv Dave",
+  "url": "https://dhruvdave.ca",
+  "sameAs": [
+    "https://www.linkedin.com/in/dhruvdave06",
+    "https://github.com/dhruvvdave"
+  ],
+  "jobTitle": "Computer Science Student",
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "Queen's University"
+  },
+  "alumniOf": "Queen's University",
+  "image": "https://dhruvdave.ca/images/profile.jpg",
+  "email": "mailto:davedhruv2006@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Georgetown",
+    "addressRegion": "Ontario",
+    "addressCountry": "Canada"
+  },
+  "knowsAbout": ["JavaScript", "Java", "Python", "React", "Flask", "Web Development", "Full-Stack Development"]
+}
+</script>
+<meta name="description" content="Dhruv Dave - Computer Science student at Queen's University, software developer based in Georgetown, Ontario. Expert in JavaScript, Java, Python, React, and full-stack development.">
+<meta name="keywords" content="Dhruv Dave, Queen's University, Computer Science, Software Developer, Georgetown, Ontario, Java Developer, Full-Stack Developer, React, Python, JavaScript, Web Developer">
 
-  <!-- Favicons - Multiple sizes for better visibility -->
-<!-- Favicons - Maximum sizes for all platforms -->
-<link rel="icon" type="image/png" sizes="512x512" href="mk-logo.png">
-<link rel="icon" type="image/png" sizes="256x256" href="mk-logo.png">
-<link rel="icon" type="image/png" sizes="196x196" href="mk-logo.png">
-<link rel="icon" type="image/png" sizes="128x128" href="mk-logo.png">
-<link rel="icon" type="image/png" sizes="96x96" href="mk-logo.png">
-<link rel="icon" type="image/png" sizes="64x64" href="mk-logo.png">
-<link rel="icon" type="image/png" sizes="48x48" href="mk-logo.png">
-<link rel="icon" type="image/png" sizes="32x32" href="mk-logo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="mk-logo.png">
-
-<!-- Apple Touch Icons (for iPhone/iPad home screen) -->
-<link rel="apple-touch-icon" sizes="180x180" href="mk-logo.png">
-<link rel="apple-touch-icon" sizes="167x167" href="mk-logo.png">
-<link rel="apple-touch-icon" sizes="152x152" href="mk-logo.png">
-<link rel="apple-touch-icon" sizes="120x120" href="mk-logo.png">
-
-<!-- Microsoft Tiles -->
-<meta name="msapplication-TileImage" content="mk-logo.png">
-<meta name="msapplication-TileColor" content="#D6CCA8">
-<meta name="msapplication-square150x150logo" content="mk-logo.png">
-<meta name="msapplication-square310x310logo" content="mk-logo.png">
-
-<!-- Open Graph / Social Media (shows larger image when shared) -->
-<meta property="og:image" content="mk-logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og: title" content="Mansi & Kunj | Wedding Weekend">
-<meta property="og:description" content="June 19-21, 2026 · Toronto, ON">
-
-<!-- Twitter Card -->
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Dhruv Dave | Software Developer & CS Student">
+<meta property="og:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario. Expert in JavaScript, Java, Python, React, and full-stack development.">
+<meta property="og:image" content="https://dhruvdave.ca/images/profile.jpg">
+<meta property="og:url" content="https://dhruvdave.ca">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dhruv Dave Portfolio">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="mk-logo.png">
+<meta name="twitter:title" content="Dhruv Dave | Software Developer & CS Student">
+<meta name="twitter:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario.">
+<meta name="twitter:image" content="https://dhruvdave.ca/images/profile.jpg">
 
-<!-- Standard favicon fallback -->
-<link rel="shortcut icon" href="mk-logo.png">
-<link rel="icon" href="mk-logo.png">
-<meta name="msapplication-TileImage" content="mk-logo.png">
-<meta name="msapplication-TileColor" content="#D6CCA8">
-
- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    @font-face {
-  font-family:  "PinyonScript";
-  src: url("PinyonScript-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style:  normal;
-  font-display: swap;
-}
-    @font-face {
-      font-family: "Bodoni";
-      src:  url("bodoni_[allfont.net].ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "JosefinSans";
-      src: url("JosefinSans-VariableFont_wght.ttf") format("truetype");
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    :root {
-  --ivory-cream: #D6CCA8;
-  --pistachio:  #000000;
-  --warm-sand: #F9F3E8;
-  --soft-clay: #333333;
-  --font-heading: "Bodoni", "Playfair Display", serif;
-  --font-body:  "JosefinSans", "Montserrat", system-ui, sans-serif;
-  --font-names: "PinyonScript", cursive;  /* ADD THIS LINE */
-}
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    html, body { height: 100%; scroll-behavior: smooth; }
-    html { overflow-x: hidden; width: 100%; }
-    
-    body {
-      overflow-x: hidden;
-      width: 100%;
-      position: relative;
-      font-family: var(--font-body);
-      background: var(--ivory-cream);
-      color: var(--pistachio);
-      line-height: 1.6;
-    }
-
-    .page { max-width: 100%; margin: 0 auto; padding: 0 0 64px; }
-    .section { padding: 64px 20px; max-width: 1280px; margin: 0 auto; }
-    
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: 2.6rem;
-      text-align: center;
-      color: var(--pistachio);
-      letter-spacing: 0.04em;
-      margin-bottom:  8px;
-      font-weight: 400;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--soft-clay);
-      max-width: 540px;
-      margin: 0 auto 24px;
-      font-size:  0.98rem;
-      font-family:  var(--font-body);
-    }
-
-    .code-gate-backdrop {
-      position: fixed;
-      inset: 0;
-      background: var(--ivory-cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 100;
-    }
-
-    .code-gate-card {
-      max-width: 420px;
-      width: 100%;
-      background:  var(--warm-sand);
-      border-radius: 20px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-      padding: 28px 28px 24px;
-      text-align: center;
-      border: 1px solid rgba(184,166,125,0.18);
-    }
-
-    .code-gate-title {
-  font-family: var(--font-names);  /* Changed from var(--font-heading) */
-  font-size: 2.8rem;
-  color: var(--pistachio);
-  margin-bottom: 4px;
-}
-
-    .code-gate-tagline {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: var(--soft-clay);
-      margin-bottom: 14px;
-      font-family: var(--font-body);
-    }
-
-    .code-gate-text {
-      font-size: 0.92rem;
-      color: var(--soft-clay);
-      margin-bottom: 20px;
-      line-height: 1.5;
-      font-family: var(--font-body);
-    }
-
-    .code-input {
-      border-radius: 999px;
-      border: 1px solid rgba(184,166,125,0.4);
-      padding: 11px 16px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.95rem;
-      outline: none;
-      background: var(--ivory-cream);
-      font-family: var(--font-body);
-      color: var(--pistachio);
-    }
-
-    .code-input::placeholder {
-      color: var(--soft-clay);
-      font-size: 0.9rem;
-    }
-
-    .code-input:focus {
-      border-color: var(--soft-clay);
-      box-shadow: 0 0 0 3px rgba(184,166,125,0.35);
-      background: var(--ivory-cream);
-    }
-
-    .code-btn {
-      margin-top: 14px;
-      border-radius: 999px;
-      border: none;
-      padding: 11px 24px;
-      font-size:  0.9rem;
-      font-weight:  600;
-      cursor: pointer;
-      background: var(--soft-clay);
-      color: var(--ivory-cream);
-      box-shadow: 0 12px 22px rgba(184,166,125,0.3);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, filter 0.15s ease-out;
-      width: 100%;
-      font-family: var(--font-body);
-    }
-
-    .code-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 32px rgba(184,166,125,0.4);
-      filter: brightness(1.03);
-    }
-
-    .code-error {
-      margin-top: 10px;
-      min-height: 18px;
-      font-size:  0.8rem;
-      color: #c0392b;
-      font-family: var(--font-body);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: var(--ivory-cream);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(184,166,125,0.12);
-    }
-
-    .header-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 12px 20px 10px;
-      text-align: center;
-      position: relative;
-    }
-
-    .logo-wordmark {
-  font-family:  var(--font-names);  /* Changed from var(--font-heading) */
-  font-size: 3.1rem;
-  color: var(--pistachio);
-  text-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  line-height: 1.1;
-}
-
-    .logo-tagline {
-      font-size:  0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--soft-clay);
-      margin-top: 2px;
-      font-family: var(--font-body);
-    }
-
-    .header-family { display: none; }
-
-    .header-rsvp-btn {
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--soft-clay);
-      color: var(--ivory-cream);
-      border: none;
-      border-radius: 999px;
-      padding: 10px 24px;
-      font-size:  0.75rem;
-      font-weight:  600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(184,166,125,0.3);
-      transition: all 0.2s ease-out;
-      display: none;
-      font-family: var(--font-body);
-    }
-
-    .header-rsvp-btn:hover {
-      transform: translateY(-50%) translateY(-2px);
-      box-shadow: 0 6px 16px rgba(184,166,125,0.4);
-      filter: brightness(1.05);
-    }
-
-    .header-rsvp-btn:active {
-      transform: translateY(-50%) translateY(0);
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-      position: absolute;
-      right: 20px;
-      top: 18px;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      margin:  4px 0;
-      background-color: var(--pistachio);
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .nav-toggle.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-    .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-
-    nav { margin-top: 8px; }
-
-    .nav-links {
-      list-style: none;
-      display: inline-flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav a {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--soft-clay);
-      padding: 3px 0;
-      position: relative;
-      font-weight: 500;
-      transition: color 0.15s ease-out;
-      font-family: var(--font-body);
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom:  -3px;
-      width: 0;
-      height: 2px;
-      background: var(--soft-clay);
-      border-radius: 999px;
-      transition: width 0.18s ease-out;
-    }
-
-    nav a:hover { color: var(--pistachio); }
-    nav a.active { color: var(--pistachio); }
-    nav a.active::after { width: 100%; }
-
-    #hero { scroll-margin-top: 90px; padding: 0; }
-    .hero-section { padding: 0; width: 100%; }
-
-    .hero-text {
-      max-width: 620px;
-      margin: 0 auto 20px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: var(--soft-clay);
-      padding: 24px 20px 0;
-      font-family: var(--font-body);
-    }
-
-  .hero-slider-shell {
-  width:  100%;
-  margin: 0;
-  overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.18);
-  position: relative;
-  background: #000;
-}
-
-.hero-slider {
-  display: flex;
-  height: min(75vh, 700px);
-  min-height: 400px;
-  animation:  hero-flow 55s linear infinite;
-  will-change: transform;
-}
-
-.hero-photo { 
-  flex: 0 0 33.3333%;
-  min-width: 33.3333%;
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at top, rgba(0,0,0,0.22), transparent 55%);
-}
-
-@keyframes hero-flow {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-166.6667%); }
-}
-
-    #schedule { scroll-margin-top: 90px; }
-
-    .schedule-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 24px;
-      align-items:  start;
-    }
-
-    .event-selector {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      position: sticky;
-      top: 120px;
-      align-self: start;
-    }
-
-    .event-selector-header { padding: 0 0 16px 0; }
-
-    .event-selector-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--pistachio);
-      margin-bottom: 4px;
-      font-family:  var(--font-heading);
-    }
-
-    .event-selector-subtitle {
-      font-size: 0.85rem;
-      color: var(--soft-clay);
-      font-family: var(--font-body);
-    }
-
-    .event-selector-item { position: relative; }
-
-    .event-selector-btn {
-      background: var(--warm-sand);
-      border: 2px solid rgba(184,166,125,0.2);
-      border-radius: 16px;
-      padding: 20px 18px;
-      cursor: pointer;
-      transition: all 0.2s ease-out;
-      text-align: left;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .event-selector-btn:hover {
-      border-color: rgba(184,166,125,0.4);
-      box-shadow: 0 4px 12px rgba(184,166,125,0.15);
-      transform: translateY(-2px);
-    }
-
-    .event-selector-btn.active {
-      background: var(--ivory-cream);
-      border-color: var(--soft-clay);
-      box-shadow: 0 6px 20px rgba(184,166,125,0.25);
-      transform: translateY(0);
-    }
-
-    .event-selector-btn.active .event-selector-name { color: var(--pistachio); }
-    .event-selector-btn.active .event-selector-date { color: var(--soft-clay); }
-    .event-selector-emoji { font-size: 2rem; flex-shrink: 0; }
-
-    .event-selector-content {
-      flex: 1;
-      display:  flex;
-      flex-direction:  column;
-      gap: 4px;
-      min-width: 0;
-    }
-
-    .event-selector-name {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--pistachio);
-      line-height: 1.3;
-      word-wrap: break-word;
-      font-family: var(--font-body);
-    }
-
-    .event-selector-date {
-      font-size: 0.8rem;
-      color: var(--soft-clay);
-      line-height: 1.4;
-      word-wrap: break-word;
-      font-family: var(--font-body);
-    }
-
-    .event-detail-card {
-      background: var(--warm-sand);
-      border-radius: 24px;
-      border: 1px solid rgba(184,166,125,0.2);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-      overflow: hidden;
-      min-width: 0;
-    }
-
-    .event-header {
-  background: var(--warm-sand);  /* Changed from var(--ivory-cream) */
-  padding: 28px 24px;
-  border-bottom:  1px solid rgba(184,166,125,0.15);
-}
-
-    .event-header-emoji {
-      font-size: 3rem;
-      text-align: center;
-      margin-bottom: 12px;
-      filter: drop-shadow(0 4px 8px rgba(184,166,125,0.3));
-    }
-
-    .event-header-title {
-      font-family: var(--font-heading);
-      font-size: 2.4rem;
-      color: var(--pistachio);
-      text-align: center;
-      margin-bottom: 8px;
-      line-height: 1.2;
-      word-wrap: break-word;
-    }
-
-    .event-header-meta {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--soft-clay);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 16px;
-      word-wrap: break-word;
-      font-family: var(--font-body);
-    }
-
-    .event-header-description {
-      font-size: 0.95rem;
-      color: var(--pistachio);
-      line-height: 1.7;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 16px;
-      word-wrap:  break-word;
-      font-family: var(--font-body);
-    }
-
-    .event-info-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 16px;
-    }
-
-    .event-info-pill {
-      background: rgba(249,243,232,0.9);
-      border: 1px solid rgba(184,166,125,0.3);
-      border-radius: 999px;
-      padding: 8px 16px;
-      font-size:  0.8rem;
-      color: var(--pistachio);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s ease-out;
-      max-width: 100%;
-      word-wrap: break-word;
-      font-family: var(--font-body);
-    }
-
-    .event-info-pill.clickable { cursor: pointer; }
-
-    .event-info-pill.clickable:hover {
-      background: rgba(184,166,125,0.15);
-      border-color: var(--soft-clay);
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(184,166,125,0.2);
-    }
-
-    .event-actions {
-      display: flex;
-      gap: 10px;
-      justify-content:  center;
-      margin-top:  20px;
-      flex-wrap: wrap;
-    }
-
-    .event-action-btn {
-      background: rgba(249,243,232,0.9);
-      border: 2px solid rgba(184,166,125,0.3);
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--pistachio);
-      cursor: pointer;
-      transition: all 0.2s ease-out;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-    }
-
-    .event-action-btn:hover {
-      background: var(--soft-clay);
-      color: var(--ivory-cream);
-      border-color: var(--soft-clay);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(184,166,125,0.3);
-    }
-
-    .rsvp-section { padding: 32px 24px; }
-
-    .rsvp-title {
-      font-size: 1.1rem;
-      font-weight:  600;
-      color: var(--pistachio);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      text-align: center;
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom:  2px solid rgba(184,166,125,0.2);
-      font-family: var(--font-body);
-    }
-
-    .rsvp-guest-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-bottom:  24px;
-    }
-
-    .rsvp-guest-card {
-      background: var(--ivory-cream);
-      border: 2px solid rgba(184,166,125,0.2);
-      border-radius: 16px;
-      padding: 20px;
-      transition: all 0.2s ease-out;
-    }
-
-    .rsvp-guest-card:hover {
-      border-color: rgba(184,166,125,0.35);
-      box-shadow: 0 4px 16px rgba(184,166,125,0.12);
-    }
-
-    .rsvp-guest-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .rsvp-guest-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--pistachio);
-      word-wrap: break-word;
-      font-family: var(--font-body);
-    }
-
-    .rsvp-toggle {
-      display: flex;
-      border-radius: 999px;
-      overflow: hidden;
-      background: var(--warm-sand);
-      border: 2px solid rgba(184,166,125,0.3);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .rsvp-toggle-btn {
-      border: none;
-      background: transparent;
-      padding: 10px 24px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      color: var(--pistachio);
-      transition: all 0.2s ease-out;
-      white-space: nowrap;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-family: var(--font-body);
-    }
-
-    .rsvp-toggle-btn:hover { background: rgba(184,166,125,0.08); }
-
-    .rsvp-toggle-btn.accept-selected {
-      background: var(--soft-clay);
-      color: var(--ivory-cream);
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .rsvp-toggle-btn.decline-selected {
-      background: #e57373;
-      color: var(--ivory-cream);
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .rsvp-guest-status {
-      font-size: 0.85rem;
-      color: var(--soft-clay);
-      margin-top: 8px;
-      padding:  8px 12px;
-      background: rgba(184,166,125,0.06);
-      border-radius: 8px;
-      border-left: 3px solid var(--soft-clay);
-      word-wrap: break-word;
-      font-family: var(--font-body);
-    }
-
-    .rsvp-guest-status.accepted {
-      background: rgba(76,175,80,0.1);
-      border-left-color: #4CAF50;
-      color: #2e7d32;
-    }
-
-    .rsvp-guest-status.declined {
-      background: rgba(229,115,115,0.1);
-      border-left-color: #e57373;
-      color: #c62828;
-    }
-
-    .rsvp-submit-section {
-      border-top: 2px solid rgba(184,166,125,0.15);
-      padding-top: 24px;
-      margin-top: 8px;
-    }
-
-    .rsvp-submit-btn {
-      border-radius: 999px;
-      border: none;
-      padding: 16px 32px;
-      font-size: 0.95rem;
-      font-weight:  600;
-      cursor: pointer;
-      background: var(--soft-clay);
-      color: var(--ivory-cream);
-      box-shadow: 0 12px 22px rgba(184,166,125,0.3);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      transition: all 0.25s ease-out;
-      width: 100%;
-      display:  block;
-      font-family: var(--font-body);
-    }
-
-    .rsvp-submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 32px rgba(184,166,125,0.4);
-      filter: brightness(1.05);
-    }
-
-    .rsvp-submit-btn:active { transform: translateY(0); }
-    .rsvp-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-
-    .rsvp-status-message {
-      font-size: 0.9rem;
-      color: var(--soft-clay);
-      margin-top: 16px;
-      min-height: 20px;
-      text-align: center;
-      line-height: 1.6;
-      padding: 12px;
-      border-radius: 8px;
-      word-wrap: break-word;
-      font-family: var(--font-body);
-    }
-
-    .rsvp-status-message.success {
-      background: rgba(76,175,80,0.1);
-      color: #2e7d32;
-      border:  1px solid rgba(76,175,80,0.3);
-    }
-
-    .rsvp-status-message.error {
-      background: rgba(229,115,115,0.1);
-      color: #c62828;
-      border: 1px solid rgba(229,115,115,0.3);
-    }
-
-    .rsvp-no-guests {
-      text-align: center;
-      padding: 40px 20px;
-      color: var(--soft-clay);
-      font-style: italic;
-      font-size: 0.95rem;
-      font-family: var(--font-body);
-    }
-
-    .haldi-notice {
-      background: linear-gradient(145deg, #fff8e1, #fff9c4);
-      border: 2px solid rgba(255,193,7,0.4);
-      border-radius: 16px;
-      padding: 16px 20px;
-      margin-bottom:  24px;
-      display: flex;
-      gap: 12px;
-      align-items:  flex-start;
-    }
-
-    .haldi-notice-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-
-    .haldi-notice-text {
-      font-size: 0.9rem;
-      color: var(--pistachio);
-      line-height: 1.6;
-      font-family: var(--font-body);
-    }
-
-    .haldi-notice-text strong {
-      color: #f57c00;
-      font-weight: 600;
-    }
-
-    .rsvp-confirmation-message {
-      background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
-      border: 2px solid rgba(59, 130, 246, 0.3);
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    .confirmation-icon {
-      font-size: 3rem;
-      color: #10b981;
-      margin-bottom: 12px;
-      filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.3));
-    }
-
-    .confirmation-text {
-      font-size: 1rem;
-      color: var(--pistachio);
-      font-weight: 500;
-      line-height: 1.6;
-      font-family: var(--font-body);
-    }
-
-    .rsvp-guest-card-locked {
-      background: linear-gradient(145deg, #fafafa, #f5f5f5);
-      border-color: rgba(0,0,0,0.1);
-    }
-
-    .rsvp-guest-header-locked {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .rsvp-status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-size:  0.85rem;
-      font-weight:  600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-family: var(--font-body);
-    }
-
-    .rsvp-status-badge.status-accepted {
-      background: rgba(76,175,80,0.15);
-      color: #2e7d32;
-      border:  2px solid rgba(76,175,80,0.4);
-    }
-
-    .rsvp-status-badge.status-declined {
-      background: rgba(229,115,115,0.15);
-      color: #c62828;
-      border:  2px solid rgba(229,115,115,0.4);
-    }
-
-    .rsvp-status-badge.status-pending {
-      background: rgba(255,193,7,0.15);
-      color: #f57c00;
-      border: 2px solid rgba(255,193,7,0.4);
-    }
-
-    .status-icon {
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    .rsvp-lock-note {
-      margin-top: 24px;
-      padding: 20px;
-      background: rgba(255,193,7,0.1);
-      border:  1px solid rgba(255,193,7,0.3);
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .rsvp-lock-note p {
-      font-size: 0.9rem;
-      color: var(--pistachio);
-      line-height: 1.6;
-      margin:  0;
-      font-family: var(--font-body);
-    }
-
-    .rsvp-lock-note strong { color: var(--soft-clay); }
-
-    @media (max-width: 968px) {
-      .schedule-container { grid-template-columns: 1fr; gap: 24px; padding: 0 16px; max-width: 100%; overflow-x: hidden; }
-      .event-selector { position: static; display: flex; flex-direction: column; gap: 12px; width: 100%; overflow-x: hidden; }
-      .event-selector-header { text-align: center; padding-bottom: 20px; }
-      .event-selector-title { font-size: 1.8rem; }
-      .event-selector-subtitle { font-size: 0.9rem; }
-      .event-selector-btn { padding: 18px 16px; width: 100%; box-sizing: border-box; }
-      .event-selector-btn:hover { transform: none; }
-      .event-selector-btn:active { transform: scale(0.98); }
-      .event-detail-card { width: 100%; box-sizing: border-box; }
-    }
-
-    @media (max-width:  768px) {
-      .section { padding: 48px 16px; }
-      .schedule-container { padding: 0 12px; }
-      .event-selector-btn { padding: 16px 14px; gap: 12px; }
-      .event-selector-emoji { font-size: 1.8rem; }
-      .event-selector-name { font-size: 0.95rem; }
-      .event-selector-date { font-size: 0.75rem; }
-      .event-header { padding:  24px 16px; }
-      .event-header-title { font-size: 1.8rem; }
-      .event-header-meta { font-size: 0.75rem; letter-spacing: 0.08em; }
-      .event-header-description { font-size: 0.9rem; }
-      .event-info-pill { font-size: 0.75rem; padding: 6px 12px; }
-      .rsvp-section { padding: 24px 16px; }
-      .rsvp-title { font-size: 1rem; }
-      .rsvp-guest-card { padding: 16px; }
-      .rsvp-guest-header { flex-direction: column; align-items: flex-start; gap: 12px; }
-      .rsvp-guest-name { font-size: 1rem; }
-      .rsvp-toggle { width: 100%; }
-      .rsvp-toggle-btn { flex:  1; padding: 12px 16px; font-size: 0.8rem; }
-      .event-actions { flex-direction: column; gap: 8px; }
-      .event-action-btn { width: 100%; justify-content: center; padding: 12px 16px; }
-      .rsvp-submit-btn { font-size: 0.85rem; padding: 14px 24px; letter-spacing: 0.1em; }
-      .haldi-notice { padding: 14px 16px; gap: 10px; }
-      .haldi-notice-icon { font-size: 1.3rem; }
-      .haldi-notice-text { font-size: 0.85rem; }
-      .rsvp-guest-header-locked { flex-direction: column; align-items: flex-start; }
-      .rsvp-status-badge { width: 100%; justify-content: center; }
-      .confirmation-icon { font-size: 2.5rem; }
-      .confirmation-text { font-size: 0.9rem; }
-      .logo-wordmark { font-size: 2. 4rem; }
-      .header-inner { text-align: center; }
-      .header-rsvp-btn { position: static; transform: none; margin:  12px auto 0; display: block; width: fit-content; font-size: 0.7rem; padding: 8px 20px; }
-      .header-rsvp-btn:hover { transform: translateY(-2px); }
-      .nav-toggle { display: block; }
-      nav { margin-top: 6px; }
-      .nav-links { position: absolute; top: 100%; left:  0; right: 0; display: none; flex-direction: column; gap: 6px; background: var(--ivory-cream); padding: 10px 20px 14px; box-shadow: 0 10px 20px rgba(0,0,0,0.08); border-radius: 0 0 18px 18px; z-index: 50; }
-      .nav-links.nav-open { display: flex; }
-      nav a { font-size: 0.7rem; padding: 4px 0; }
-      .section { padding: 52px 16px; }
-      .section-title { font-size: 2.2rem; }
-      .section-subtitle { font-size:  0.9rem; }
-      .story-row, .story-row.reverse { display: flex; flex-direction: column; gap: 18px; }
-      .story-row.reverse > .story-photo { order: 2; }
-      .story-row.reverse > :not(.story-photo) { order: 1; }
-      .hero-slider { height: min(60vh, 500px); min-height: 320px; animation: hero-flow-mobile 55s linear infinite; }
-      .hero-photo { flex: 0 0 100%; }
-    }
-
-    @keyframes hero-flow-mobile {
-  0% { transform: translateX(0); }
-  100% { transform:  translateX(-500%); }
-}
-
-    @media (max-width: 480px) {
-      .code-gate-card { margin: 0 16px; }
-      .schedule-container { padding: 0 8px; }
-      .event-selector-header { padding-bottom: 16px; }
-      .event-selector-title { font-size: 1.5rem; }
-      .event-selector-btn { padding: 14px 12px; gap: 10px; }
-      .event-selector-emoji { font-size:  1.6rem; }
-      .event-selector-name { font-size:  0.9rem; }
-      .event-selector-date { font-size: 0.7rem; }
-      .event-header { padding: 20px 12px; }
-      .event-header-emoji { font-size: 2.5rem; }
-      .event-header-title { font-size:  1.6rem; }
-      .event-header-meta { font-size:  0.7rem; }
-      .event-header-description { font-size:  0.85rem; }
-      .event-info-pills { flex-direction: column; gap: 8px; }
-      .event-info-pill { justify-content: center; width: 100%; box-sizing: border-box; }
-      .rsvp-section { padding: 20px 12px; }
-      .rsvp-guest-card { padding: 14px; }
-      .rsvp-toggle-btn { font-size: 0.75rem; padding: 10px 12px; }
-      .rsvp-submit-btn { font-size: 0.8rem; padding: 12px 20px; }
-    }
-
-    #story { scroll-margin-top: 90px; }
-
-    .story-grid {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
-    }
-
-    .story-row {
-      display: grid;
-      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
-      gap: 32px;
-      align-items: center;
-    }
-
-    .story-row.reverse { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
-
-    .story-eyebrow {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--soft-clay);
-      margin-bottom: 4px;
-      font-family: var(--font-body);
-    }
-
-    .story-heading {
-      font-family: var(--font-heading);
-      font-size: 2.2rem;
-      color: var(--pistachio);
-      margin-bottom: 6px;
-    }
-
-    .story-body {
-      font-size: 0.95rem;
-      color: var(--pistachio);
-      margin-bottom: 6px;
-      line-height: 1.7;
-      font-family: var(--font-body);
-    }
-
-    .story-footnote {
-      font-size:  0.82rem;
-      color: var(--soft-clay);
-      font-style: italic;
-      font-family: var(--font-body);
-    }
-
-    .story-photo {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-    }
-
-    #travel { scroll-margin-top: 90px; }
-
-    .travel-card {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 24px;
-      border-radius: 24px;
-      background: var(--warm-sand);
-      border: 1px solid rgba(184,166,125,0.3);
-      box-shadow: 0 16px 36px rgba(0,0,0,0.08);
-    }
-
-    .travel-name {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      color: var(--pistachio);
-      margin-bottom: 4px;
-    }
-
-    .travel-detail {
-      font-size: 0.9rem;
-      color: var(--soft-clay);
-      margin-bottom: 3px;
-      font-family:  var(--font-body);
-    }
-
-    .travel-badge {
-      display: inline-block;
-      font-size: 0.8rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--ivory-cream);
-      color: var(--pistachio);
-      margin-top: 8px;
-      font-weight: 500;
-      font-family: var(--font-body);
-    }
-
-    .travel-map {
-      margin-top: 16px;
-      border-radius:  14px;
-      overflow: hidden;
-      border: 1px solid var(--warm-sand);
-    }
-
-    .travel-map iframe { width: 100%; height: 200px; border: 0; }
-
-    /* TRAVEL SECTION - UPDATED */
-#travel { scroll-margin-top: 90px; }
-
-.travel-intro {
-  max-width: 800px;
-  margin: 0 auto 40px;
-  padding: 24px;
-  background:  var(--warm-sand);
-  border-radius: 16px;
-  border: var(--border-light);
-  text-align: center;
-}
-
-.travel-intro p {
-  font-size: 0.95rem;
-  color: var(--pistachio);
-  line-height: 1.7;
-  margin:  0;
-  font-family: var(--font-body);
-}
-
-.hotel-grid {
-  display: grid;
-  grid-template-columns:  repeat(4, 1fr);  /* CHANGED from repeat(auto-fit, minmax(280px, 1fr)) */
-  gap: 20px;  /* Reduced gap slightly */
-  max-width: 1200px;  /* Increased max-width */
-  margin:  0 auto 40px;
-}
-
-.hotel-card {
-  background: var(--warm-sand);
-  border: var(--border-light);
-  border-radius: 20px;
-  padding: 32px 24px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
-}
-
-.hotel-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--soft-clay);
-}
-
-.hotel-icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-}
-
-.hotel-name {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: var(--pistachio);
-  margin-bottom: 8px;
-  line-height: 1.3;
-}
-
-.hotel-location {
-  font-size: 0.9rem;
-  color: var(--soft-clay);
-  margin-bottom: 20px;
-  font-family: var(--font-body);
-}
-
-.hotel-link {
-  display: inline-block;
-  background: var(--soft-clay);
-  color: var(--ivory-cream);
-  padding: 10px 24px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transition: all 0.2s ease;
-  font-family: var(--font-body);
-  text-decoration: none;
-}
-
-.hotel-link:hover {
-  background: var(--pistachio);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-sm);
-}
-
-.travel-footer {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 28px 24px;
-  background: var(--ivory-cream);
-  border-radius: 16px;
-  border: var(--border-light);
-  text-align: center;
-}
-
-.travel-footer p {
-  font-size: 0.95rem;
-  color: var(--pistachio);
-  line-height: 1.7;
-  margin: 0;
-  font-family: var(--font-body);
-}
-
-/* Mobile Responsive */
-/* Mobile Responsive */
-@media (max-width: 1100px) {
-  .hotel-grid {
-    grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablets */
-    gap: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hotel-grid {
-    grid-template-columns: 1fr;  /* 1 column on mobile */
-    gap:  16px;
-  }
-
-  .hotel-card {
-    padding: 24px 20px;
-  }
-
-  .hotel-name {
-    font-size: 1.2rem;
-  }
-
-  .travel-intro, .travel-footer {
-    padding: 20px 16px;
-  }
-
-  .travel-intro p, .travel-footer p {
-    font-size: 0.9rem;
-  }
-}
-
-    #faqs { 
-  scroll-margin-top: 90px; 
-  padding-top: 32px;  /* ADD THIS LINE - reduces top padding from 64px to 32px */
-}
-
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .faq-item {
-      background: var(--warm-sand);
-      border-radius: 16px;
-      border: 1px solid rgba(184,166,125,0.3);
-      overflow: hidden;
-    }
-
-    .faq-question {
-      padding: 14px 18px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .faq-question h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--pistachio);
-      font-family: var(--font-body);
-    }
-
-    .faq-icon {
-      font-size: 1.1rem;
-      color: var(--soft-clay);
-      transition: transform 0.2s ease-out;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      padding: 0 18px;
-      transition: max-height 0.25s ease-out, padding-bottom 0.25s ease-out;
-      font-size: 0.9rem;
-      color: var(--pistachio);
-      background: rgba(184,166,125,0.06);
-      font-family: var(--font-body);
-    }
-
-    .faq-item.open .faq-answer { max-height: 400px; padding-bottom: 14px; }
-    .faq-item.open .faq-icon { transform: rotate(90deg); }
-    .faq-answer p { margin-top: 8px; line-height: 1.6; }
-
-    footer {
-      padding-top: 32px;
-      padding-bottom: 40px;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--soft-clay);
-      max-width: 1280px;
-      margin: 0 auto;
-      padding-left: 20px;
-      padding-right:  20px;
-      font-family: var(--font-body);
-    }
-
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .footer-content p { margin: 0; }
-    footer span { font-weight: 600; color: var(--pistachio); }
-
-    .footer-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 16px;
-      border-top: 1px solid rgba(184,166,125,0.2);
-      width: 100%;
-      max-width: 600px;
-      background-color: var(--ivory-cream);
-    }
-
-    .footer-logo img {
-      max-width: 200px;
-      height: auto;
-      opacity: 0.8;
-      transition: opacity 0.3s ease;
-      background-color: var(--ivory-cream);
-    }
-
-    .footer-logo img:hover { opacity: 1; }
-
-    @media (max-width: 768px) {
-      .footer-logo img { max-width: 150px; }
-      .footer-content { gap: 20px; }
-    }
-
-    @media (max-width: 480px) {
-      .footer-logo img { max-width: 120px; }
-    }
-  </style>
 </head>
-<body>
-  <div class="code-gate-backdrop" id="codeGate">
-    <div class="code-gate-card">
-      <div class="code-gate-title">Mansi &amp; Kunj</div>
-      <div class="code-gate-tagline">June 19–21, 2026 · Toronto, ON</div>
-      <p class="code-gate-text">Please enter your email address or phone number to see your personalized wedding weekend schedule.</p>
-      <input type="text" id="codeInput" class="code-input" placeholder="Enter email or phone number" autocomplete="off" />
-      <button class="code-btn" id="codeBtn">Continue</button>
-      <div class="code-error" id="codeError"></div>
-    </div>
-  </div>
 
-  <div class="page" id="site" style="display: none;">
-    <header>
-      <div class="header-inner">
-        <div class="logo-wordmark">Mansi &amp; Kunj</div>
-        <div class="logo-tagline">June 19–21, 2026 · Toronto, ON</div>
-        <div class="header-family">Celebrating with the <span id="familyName">Guest Family</span></div>
-        <a href="#schedule" class="header-rsvp-btn" id="headerRsvpBtn">RSVP Now</a>
-        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#hero" class="nav-link active">Home</a></li>
-            <li><a href="#schedule" class="nav-link">RSVP</a></li>
-            <li><a href="#story" class="nav-link">Story</a></li>
-            <li><a href="#travel" class="nav-link">Travel</a></li>
-            <li><a href="#faqs" class="nav-link">FAQs</a></li>
-          </ul>
-        </nav>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+  <div class="floating-orb orb-1"></div>
+  <div class="floating-orb orb-2"></div>
+  <div class="floating-orb orb-3"></div>
+  <div class="grid-pattern"></div>
+  
+  <a href="#about" class="skip-link">Skip to main content</a>
+  <div id="progress-bar"></div>
+  <header>
+    <nav>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#technologies">Tech Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
       </div>
-    </header>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
 
     <main>
-      <section id="hero" class="hero-section">
-        <p class="hero-text">We're so excited to celebrate with the <strong id="familyNameInline">Guest Family</strong>. </p>
-        <div class="hero-slider-shell">
-          <div class="hero-slider">
-            <div class="hero-photo"><img src="JVP04567_Original-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="IMG_2489-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="DSCF1066_Original-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="PXL_20230801_035250149-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="IMG_6806-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="JVP04567_Original-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="IMG_2489-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="DSCF1066_Original-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="PXL_20230801_035250149-EDIT.jpg" alt=""></div>
-            <div class="hero-photo"><img src="IMG_6806-EDIT.jpg" alt=""></div>
-          </div>
-          <div class="hero-overlay"></div>
+    <section class="hero" data-aos="fade-up">
+      <div class="hero-content">
+        <p class="hero-greeting" data-aos="fade-up" data-aos-delay="200">Hello, my name is</p>
+        <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Dhruv Dave</h1>
+        <p class="animated-text" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <span id="typed-text" class="typed-block"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="800">
+          I'm a software developer focused on crafting elegant digital experiences. 
+          Currently studying Computer Science at Queen's University.
+        </p>
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="1000">
+          <a href="#projects" class="cta-button primary">View My Work</a>
+          <a href="#experience" class="cta-button secondary">My Experience</a>
         </div>
-      </section>
-
-      <section id="schedule" class="section">
-        <h2 class="section-title">RSVP for Wedding Weekend</h2>
-        <p class="section-subtitle">Select an event below to view details and respond for each invited family member.</p>
-        <div class="schedule-container">
-          <div class="event-selector" id="eventSelector"></div>
-          <div class="event-detail-card" id="eventDetailCard"></div>
+        <div class="hero-status" data-aos="fade-up" data-aos-delay="1200">
+          <span class="status-badge available">
+            <span class="status-dot"></span>
+            Open to Internship Opportunities
+          </span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="story" class="section">
-        <h2 class="section-title">Our Story</h2>
-        <p class="section-subtitle">A little timeline of how we went from "we could talk for hours" to celebrating this weekend with all of you.</p>
-        <div class="story-grid">
-          <div class="story-row">
-            <div>
-              <div class="story-eyebrow">2020 · The Beginning</div>
-              <div class="story-heading">Talking for Hours</div>
-              <p class="story-body">We started spending more time together during the pandemic, since our families were often getting together.  It didn't take long for us to realize we could talk for hours and genuinely enjoyed each other's company.  That's really how it all began.</p>
-              <p class="story-footnote">Also the era of Mansi's self-cut covid bangs, which deserve their own chapter.</p>
-            </div>
-            <div class="story-photo"><img src="story-beginning-forest.jpg" alt="One of our early walks together"></div>
-          </div>
-          <div class="story-row reverse">
-            <div class="story-photo"><img src="story-rock-dundar.jpg" alt="Rock Dunder near Kingston"></div>
-            <div>
-              <div class="story-eyebrow">2021–2023 · Kingston</div>
-              <div class="story-heading">Weekend Drives on the 401</div>
-              <p class="story-body">When Mansi moved to Kingston for medical school, we settled into a long-distance routine. It wasn't always glamorous, but we made it work, Kunj definitely put in his fair share of kilometres along the 401 when visiting on weekends.</p>
-              <p class="story-footnote">Rock Dunder hikes, coffee runs, and learning that "home" could be a moving target.</p>
-            </div>
-          </div>
-          <div class="story-row">
-            <div>
-              <div class="story-eyebrow">Summer 2023 · Toronto</div>
-              <div class="story-heading">Our Sakar Nariyal</div>
-              <p class="story-body">In the summer of 2023, we had our sakar nariyal, our Indian engagement, in the presence of our guru, Mahant Swami Maharaj. It was calm, emotional, and very us:  a spiritual moment surrounded by people who had quietly watched our story unfold. </p>
-              <p class="story-footnote">Still trying to get the taste of Gol Dhana out of our mouths.</p>
-            </div>
-            <div class="story-photo"><img src="story-engagement-temple.jpg" alt="At the mandir after our engagement"></div>
-          </div>
-          <div class="story-row reverse">
-            <div class="story-photo"><img src="story-ski-proposal.jpg" alt="Ski proposal in Japan"></div>
-            <div>
-              <div class="story-eyebrow">February 2025 · Japan</div>
-              <div class="story-heading">The Proposal</div>
-              <p class="story-body">On a ski trip in Japan, Mansi took a pretty bad fall and tore her ACL, and still insisted on getting back on the hill. Later that day, in the middle of the snow and chaos, Kunj proposed.  Not exactly the day we planned, but definitely one we'll never forget.</p>
-              <p class="story-footnote">Freshly engaged, slightly injured, and ridiculously happy.</p>
-            </div>
-          </div>
-          <div class="story-row">
-            <div>
-              <div class="story-eyebrow">June 2025 · Hamilton</div>
-              <div class="story-heading">Our First Home</div>
-              <p class="story-body">In June 2025, we bought our first home in Hamilton, the place we'll be based while Mansi finishes residency and where we'll start this next chapter together.  It's already full of half-built furniture, too many mugs, and the feeling that we're exactly where we're meant to be.</p>
-              <p class="story-footnote">Practising our "welcome in!" on the front steps for the day we get to host you all.</p>
-            </div>
-            <div class="story-photo"><img src="story-hamilton-home.jpg" alt="On the steps of our home in Hamilton"></div>
-          </div>
-        </div>
-      </section>
 
-      <!-- TRAVEL -->
-<section id="travel" class="section">
-  <h2 class="section-title">Travel &amp; Stay</h2>
-  <p class="section-subtitle">
-    For our out-of-town guests, here are some recommended hotels near our wedding venues. 
-  </p>
-
-  <div class="travel-intro">
-    <p>We do not have a reserved room block, but we recommend staying at one of the hotels below for convenient access to our wedding venues. These options are all located nearby and offer a range of amenities to suit different preferences.</p>
-  </div>
-
-  <div class="hotel-grid">
-    <div class="hotel-card">
-      <div class="hotel-icon">🏨</div>
-      <h3 class="hotel-name">Holiday Inn & Suites</h3>
-      <p class="hotel-location">Mississauga West – Meadowvale</p>
-      <a href="https://www.guestreservations.com/holiday-inn-suites-mississauga-west-meadowvale-an-ihg-hotel/booking" target="_blank" class="hotel-link">View Hotel →</a>
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <div class="about-img">
+      <img src="images/profile.jpg" alt="Dhruv Dave - Computer Science student at Queen's University" />
     </div>
-
-    <div class="hotel-card">
-      <div class="hotel-icon">🏨</div>
-      <h3 class="hotel-name">Courtyard by Marriott</h3>
-      <p class="hotel-location">Toronto Mississauga/Meadowvale</p>
-      <a href="https://www.marriott.com/search/findHotels.mi?pageType=advanced&searchType=InCity&destinationAddress.latitude=43.601411&destinationAddress.longitude=-79.751864&destinationAddress. destination=Courtyard+Toronto+Mississauga+Meadowvale" target="_blank" class="hotel-link">View Hotel →</a>
+    <div class="about-text">
+      <p>
+        I’m a detail-oriented developer studying Computer Science at Queen’s University who loves to code,
+        collaborate, and keep learning. I’m fluent in languages like HTML, CSS, JavaScript, Java, Python, C++, and more.
+        I’m super driven, a big believer in teamwork, and always excited to take on new challenges. I’m always looking
+        for ways to grow, whether it’s picking up a new skill, diving into a challenge, or finding better ways to
+        work with others. Outside of code, I love hiking, hockey, and travelling.
+      </p>
     </div>
-
-    <div class="hotel-card">
-      <div class="hotel-icon">🏨</div>
-      <h3 class="hotel-name">Hilton Hotels</h3>
-      <p class="hotel-location">Mississauga (Meadowvale Area)</p>
-      <a href="https://www.hilton.com/en/locations/canada/ontario/mississauga/hilton-hotels/" target="_blank" class="hotel-link">View Hotel →</a>
-    </div>
-
-    <div class="hotel-card">
-      <div class="hotel-icon">🏨</div>
-      <h3 class="hotel-name">Marriott Hotels</h3>
-      <p class="hotel-location">Mississauga Area</p>
-      <a href="https://www.marriott.com/reservation/rateListMenu.mi" target="_blank" class="hotel-link">View Hotel →</a>
-    </div>
-  </div>
-
-  <div class="travel-footer">
-    <p>If you prefer, there are also several <strong>Airbnb</strong> and other hotel options available nearby.</p>
-    <p style="margin-top:  16px; font-weight: 600;">Contact us at <a href="mailto: mansikunj26@gmail.com" style="color: var(--pistachio); text-decoration: underline;">mansikunj26@gmail.com</a></p>
   </div>
 </section>
 
-      <section id="faqs" class="section">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">A few quick answers. If you don't see your question here, please reach out, we're happy to help. </p>
-        <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-question"><h4>1. How do I RSVP?</h4><span class="faq-icon">&#8250;</span></div>
-            <div class="faq-answer"><p>Enter your email address, phone number, or family code on the landing page.  Once you're in, select an event and respond for every invited family member, then click "Submit RSVP" for that event.</p></div>
+<!-- Technologies Section -->
+<section id="technologies" class="technologies-section fade-section" data-aos="fade-up">
+  <h2>Technologies I Work With</h2>
+  <p class="section-subtitle">Constantly learning and expanding my toolkit</p>
+  
+  <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+    <h3 class="tech-category-title">Languages</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <i class="devicon-javascript-plain colored"></i>
+        <span class="tech-name">JavaScript</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-typescript-plain colored"></i>
+        <span class="tech-name">TypeScript</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-java-plain colored"></i>
+        <span class="tech-name">Java</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-python-plain colored"></i>
+        <span class="tech-name">Python</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-cplusplus-plain colored"></i>
+        <span class="tech-name">C++</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-html5-plain colored"></i>
+        <span class="tech-name">HTML5</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-css3-plain colored"></i>
+        <span class="tech-name">CSS3</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-azuresqldatabase-plain colored"></i>
+        <span class="tech-name">SQL</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+    <h3 class="tech-category-title">Frontend</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <i class="devicon-react-original colored"></i>
+        <span class="tech-name">React</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-nextjs-plain"></i>
+        <span class="tech-name">Next.js</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-vuejs-plain colored"></i>
+        <span class="tech-name">Vue.js</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-tailwindcss-plain colored"></i>
+        <span class="tech-name">Tailwind CSS</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-bootstrap-plain colored"></i>
+        <span class="tech-name">Bootstrap</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+    <h3 class="tech-category-title">Backend</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <i class="devicon-nodejs-plain colored"></i>
+        <span class="tech-name">Node.js</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-express-original"></i>
+        <span class="tech-name">Express.js</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-flask-original"></i>
+        <span class="tech-name">Flask</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-fastapi-plain colored"></i>
+        <span class="tech-name">FastAPI</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="tech-category" data-aos="fade-up" data-aos-delay="400">
+    <h3 class="tech-category-title">Database</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <i class="devicon-mongodb-plain colored"></i>
+        <span class="tech-name">MongoDB</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-postgresql-plain colored"></i>
+        <span class="tech-name">PostgreSQL</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-mysql-plain colored"></i>
+        <span class="tech-name">MySQL</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-sqlalchemy-plain"></i>
+        <span class="tech-name">SQLAlchemy</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="tech-category" data-aos="fade-up" data-aos-delay="500">
+    <h3 class="tech-category-title">Other Tools & Technologies</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <svg class="tech-icon-svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        <span class="tech-name">RESTful APIs</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-graphql-plain colored"></i>
+        <span class="tech-name">GraphQL</span>
+      </div>
+      <div class="tech-card">
+        <svg class="tech-icon-svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12,1L3,5v6c0,5.55,3.84,10.74,9,12c5.16-1.26,9-6.45,9-12V5L12,1L12,1z M12,11.99h7c-0.53,4.12-3.28,7.79-7,8.94V12H5V6.3l7-3.11v8.8H12z"/>
+        </svg>
+        <span class="tech-name">JWT</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-docker-plain colored"></i>
+        <span class="tech-name">Docker</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+        <span class="tech-name">AWS</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-git-plain colored"></i>
+        <span class="tech-name">Git</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-github-original"></i>
+        <span class="tech-name">GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section with Filters -->
+<section id="projects" class="projects-section fade-section" data-aos="fade-up">
+  <h2>Some Things I've Built</h2>
+  <p class="section-subtitle">Click on a project to view details</p>
+  
+  <div class="project-controls">
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Apps</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+    </div>
+    <div class="project-search">
+      <input type="text" id="project-search" placeholder="Search projects..." aria-label="Search projects">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+    </div>
+  </div>
+  
+  <div class="projects-grid" id="projects-grid">
+    <div class="project-card featured" role="button" tabindex="0" 
+         data-category="fullstack web" 
+         data-title="SecureVault" 
+         data-description="A full-stack cybersecurity password manager featuring password strength analysis, breach checking via HaveIBeenPwned API (k-anonymity), encrypted password vault, and two-factor authentication. Built with React, Flask, and modern security practices." 
+         data-tech="React, Flask, Python, SQLAlchemy, JWT, Tailwind CSS" 
+         data-image="images/securevault-preview.png"
+         aria-label="View details for SecureVault project">
+      <div class="featured-badge">🔐 Featured</div>
+      <div class="project-image">
+        <img src="images/securevault-preview.png" alt="SecureVault Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>SecureVault</h3>
+        <p>A full-stack cybersecurity password manager with breach checking, password analysis, secure vault storage, and 2FA support.</p>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">Flask</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Security</span>
+        </div>
+        <div class="project-links">
+          <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live Demo
+          </a>
+          <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" role="button" tabindex="0" 
+         data-category="java" 
+         data-title="Minesweeper Java Game" 
+         data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." 
+         data-tech="Java, CSS, Markdown" 
+         data-image="project1.jpg"
+         aria-label="View details for Minesweeper Java Game project">
+      <div class="project-image">
+        <img src="project1.jpg" alt="Minesweeper Game Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>Minesweeper Java Game</h3>
+        <p>An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI.</p>
+        <div class="project-tags">
+          <span class="project-tag">Java</span>
+          <span class="project-tag">Game Dev</span>
+        </div>
+        <div class="project-links">
+          <a href="https://dhruvvdave.github.io/Minesweeper-Oppenheimer/" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live Demo
+          </a>
+          <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" role="button" tabindex="0" 
+         data-category="web" 
+         data-title="Weather Web App" 
+         data-description="A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support." 
+         data-tech="HTML, CSS, JavaScript" 
+         data-image="project2.jpg"
+         aria-label="View details for Weather Web App project">
+      <div class="project-image">
+        <img src="project2.jpg" alt="Weather App Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>Weather Web App</h3>
+        <p>A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://dhruvdave.ca/weather-app/" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live Demo
+          </a>
+          <a href="https://github.com/dhruvvdave/weather-app" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" role="button" tabindex="0" 
+         data-category="web" 
+         data-title="Personal Web Portfolio" 
+         data-description="This portfolio site built to showcase my design/dev work - featuring dark mode, animations, and modern design principles." 
+         data-tech="HTML, CSS, JavaScript" 
+         data-image="project3.jpg"
+         aria-label="View details for Personal Web Portfolio project">
+      <div class="project-image">
+        <img src="project3.jpg" alt="Portfolio Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>Personal Web Portfolio</h3>
+        <p>This portfolio site built to showcase my design/dev work - featuring dark mode, animations, and modern design principles.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link current">You're viewing it!</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" role="button" tabindex="0" 
+         data-category="web fullstack" 
+         data-title="Finance Tracker" 
+         data-description="A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data." 
+         data-tech="HTML, CSS, JavaScript" 
+         data-image="project4.jpg"
+         aria-label="View details for Finance Tracker project">
+      <div class="project-image">
+        <img src="project4.jpg" alt="Finance Tracker Preview" loading="lazy">
+      </div>
+      <div class="project-info">
+        <h3>Finance Tracker</h3>
+        <p>A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Charts</span>
+        </div>
+        <div class="project-links">
+          <a href="https://dhruvdave.ca/finance-tracker/" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live Demo
+          </a>
+          <a href="https://github.com/dhruvvdave/finance-tracker" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <p class="no-projects-message" id="no-projects-message" style="display: none;">No projects match your search. Try a different filter or search term.</p>
+</section>
+
+            <section id="experience" class="experience-section fade-section" data-aos="fade-up">
+      <h2>Where I've Worked</h2>
+      <p class="section-subtitle">My professional experience and journey</p>
+      <div class="experience-grid">
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="experience-card-header">
+            <div class="company-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <div class="company-info">
+              <h3 class="job-title">Mobility Hardware and Software Technician</h3>
+              <span class="company-name">Bird</span>
+            </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question"><h4>2. Can I bring children?</h4><span class="faq-icon">&#8250;</span></div>
-            <div class="faq-answer"><p>Yes, we're delighted to include children, and we kindly ask that only the little ones listed on your invitation join us. </p></div>
+          <div class="experience-date">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Jul 2025 - Aug 2025</span>
           </div>
-          <div class="faq-item">
-            <div class="faq-question"><h4>3. What if I have dietary restrictions?</h4><span class="faq-icon">&#8250;</span></div>
-            <div class="faq-answer"><p>All of our wedding meals will be fully vegetarian and prepared without onion, garlic, or eggs. If you have any other dietary needs, we're more than happy to accommodate them as best we can, just let us know! </p></div>
+          <ul class="experience-achievements">
+            <li>Performed inspections, diagnostics, and repairs on e-scooters to address mechanical and software issues.</li>
+            <li>Ensured safety compliance through standardized procedures, maintained accurate spare parts inventory, and supported product and engineering teams with testing new features and innovations.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="experience-card-header">
+            <div class="company-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+              </svg>
+            </div>
+            <div class="company-info">
+              <h3 class="job-title">Deputy Returning Officer</h3>
+              <span class="company-name">Elections Canada</span>
+            </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question"><h4>4. What time should I arrive?</h4><span class="faq-icon">&#8250;</span></div>
-            <div class="faq-answer"><p>Arrival times may vary slightly by event.  Please refer to the details in your invitation and the schedule above for suggested arrival windows so we can begin each celebration on time.</p></div>
+          <div class="experience-date">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Apr 2025</span>
           </div>
-          <div class="faq-item">
-            <div class="faq-question"><h4>5. Is there a gifts registry?</h4><span class="faq-icon">&#8250;</span></div>
-            <div class="faq-answer"><p>We don't have a registry, and we kindly ask that no boxed gifts be brought.  Your presence truly means the most to us. </p></div>
+          <ul class="experience-achievements">
+            <li>Opened and closed the polling station on time, ensuring efficient daily operations.</li>
+            <li>Monitored compliance of candidates' representatives with election guidelines.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="experience-card-header">
+            <div class="company-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <div class="company-info">
+              <h3 class="job-title">Skate Guard</h3>
+              <span class="company-name">City of Brampton</span>
+            </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question"><h4>6. Is there parking?</h4><span class="faq-icon">&#8250;</span></div>
-            <div class="faq-answer"><p>Absolutely, parking is free at every event. If you're joining us at the Dave or Patel homes, there's ample street parking nearby.</p></div>
+          <div class="experience-date">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Nov 2022 - Mar 2025</span>
           </div>
-          <div class="faq-item">
-            <div class="faq-question"><h4>7. Is there a dress code?</h4><span class="faq-icon">&#8250;</span></div>
-            <div class="faq-answer"><p>Details on expected attire and colours are included within the event invites and summarized in the schedule section above.</p></div>
+          <ul class="experience-achievements">
+            <li>Ensured rink safety by monitoring activities, enforcing rules, and maintaining a secure environment for all participants.</li>
+            <li>Responded promptly and effectively to emergencies, administering first aid when required.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="experience-card-header">
+            <div class="company-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+              </svg>
+            </div>
+            <div class="company-info">
+              <h3 class="job-title">Skate Instructor</h3>
+              <span class="company-name">City of Brampton</span>
+            </div>
+          </div>
+          <div class="experience-date">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Mar 2023 - Sep 2024</span>
+          </div>
+          <ul class="experience-achievements">
+            <li>Provided personalized instruction to skaters of all ages and skill levels, adapting lesson plans to individual needs and goals.</li>
+            <li>Taught foundational and advanced skating techniques, including balance, posture, and speed control.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card featured" data-aos="fade-up" data-aos-delay="300">
+          <div class="experience-card-header">
+            <div class="company-icon tech">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+              </svg>
+            </div>
+            <div class="company-info">
+              <h3 class="job-title">Website Developer</h3>
+              <span class="company-name">Digitera</span>
+            </div>
+          </div>
+          <div class="experience-date">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Sep 2022 - Feb 2023</span>
+          </div>
+          <ul class="experience-achievements">
+            <li>Built accessible and performant websites using modern web technologies.</li>
+            <li>Collaborated with designers and clients to deliver new designs meeting business requirements.</li>
+            <li>Utilized both front-end and back-end technologies to enhance site performance and functionality.</li>
+          </ul>
+          <div class="experience-tags">
+            <span class="experience-tag">HTML</span>
+            <span class="experience-tag">CSS</span>
+            <span class="experience-tag">JavaScript</span>
+            <span class="experience-tag">WordPress</span>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <div class="footer-content">
-        <p>With love, <span>Mansi &amp; Kunj</span> · June 19–21, 2026</p>
-        <div class="footer-logo"><img src="mk-logo.png" alt="M&K Logo"></div>
+        <div class="experience-card featured" data-aos="fade-up" data-aos-delay="350">
+          <div class="experience-card-header">
+            <div class="company-icon research">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4s1.79-4 4-4h.71C7.37 7.69 9.48 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3s-1.34 3-3 3z"/>
+              </svg>
+            </div>
+            <div class="company-info">
+              <h3 class="job-title">Research Assistant</h3>
+              <span class="company-name">COBWEB</span>
+            </div>
+          </div>
+          <div class="experience-date">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Summer 2022</span>
+          </div>
+          <ul class="experience-achievements">
+            <li>Designed and implemented agent-based models to simulate complex adaptive systems, focusing on ecosystems and urban environments.</li>
+            <li>Collaborated with interdisciplinary teams to apply innovative research methodologies, enhancing problem-solving and project management skills.</li>
+          </ul>
+          <div class="experience-tags">
+            <span class="experience-tag">Python</span>
+            <span class="experience-tag">Research</span>
+            <span class="experience-tag">Simulation</span>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
+
+<section id="skills" class="fade-in fade-section" data-aos="fade-up">
+  <h2>Skills & Strengths</h2>
+  <p>Through academic, research, and leadership experiences, I've developed a diverse skillset in development, communication, and problem-solving.</p>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="icon">🛠</div>
+      <h3>Web Development</h3>
+      <p>Built websites using HTML, CSS, JS & WordPress for clients at Digitera with responsive, accessible design.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">📊</div>
+      <h3>Research & Data</h3>
+      <p>Analyzed ecosystem models at COBWEB, drawing actionable insights from complex simulations using Python.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">🗣</div>
+      <h3>Communication</h3>
+      <p>Presented ideas at MUN, DECA, and client meetings; served as PR officer and led community outreach.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">🤝</div>
+      <h3>Team Collaboration</h3>
+      <p>Led club initiatives and worked on interdisciplinary teams, ensuring shared vision and success.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">👨‍🏫</div>
+      <h3>Teaching</h3>
+      <p>Delivered skating instruction to diverse age groups; tailored lessons for skill growth and confidence.</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon">🧠</div>
+      <h3>Adaptability</h3>
+      <p>Handled emergencies and client demands in varied roles, staying resourceful and responsive under pressure.</p>
+    </div>
   </div>
+</section>  
 
-  <script>
-    // =============================
-    // CONFIGURATION
-    // =============================
 
-    // Your Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw0zuR0b1KXMzGB2adOLB1BKg_Aih0w2lOSSJqReOwFxmGDeRBmKZquZawhFsHsoCHu/exec";
+  
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="modal-close" class="close">&times;</span>
+    <h3 id="modal-title"></h3>
+    <img id="modal-image" src="" alt="Project preview image" loading="lazy" />
+    <p id="modal-description"></p>
+    <p id="modal-tech"></p>
+  </div>
+</div>
 
-    const EVENTS = [
-      {
-        key: "Sangeet",
-        name: "Sangeet",
-        dateShort: "Friday, June 19",
-        dateFull: "Friday, June 19, 2026",
-        time: "Evening · 6:00 PM",
-        tag: "Music & dancing",
-        location: "69 Gooderham Drive, Georgetown, ON",
-        locationShort: "69 Gooderham Drive, Georgetown",
-        mapsUrl: "https://www.google.com/maps/search/?api=1&query=69+Gooderham+Drive+Georgetown+ON",
-        startDateTime: "2026-06-19T18:00:00",
-        endDateTime: "2026-06-19T23:00:00",
-        blurb: "Sangeet under the stars!  Embrace the spirit of celebration in bright, joyful Indian wear, we can't wait to dance the night away with you.",
-        dress: "Bright, colourful Indian wear",
-        visibleTo: "all"
-      },
-      {
-        key: "Grah Shanti & Haldi (Bride)",
-        name: "Grah Shanti & Haldi",
-        dateShort: "Saturday, June 20",
-        dateFull: "Saturday, June 20, 2026",
-        time: "Morning · 10:00 AM",
-        tag: "Family rituals at home",
-        location: "69 Gooderham Drive, Georgetown, ON",
-        locationShort: "69 Gooderham Drive, Georgetown",
-        mapsUrl: "https://www.google.com/maps/search/?api=1&query=69+Gooderham+Drive+Georgetown+ON",
-        startDateTime: "2026-06-20T10:00:00",
-        endDateTime: "2026-06-20T14:00:00",
-        blurb: "A joyful morning of love and laughter at Mansi's family home!  Expect turmeric, giggles, and lots of photos as we celebrate blessings with the bride's family.",
-        dress: "Shades of yellow, orange, or red to match the sunny, festive spirit",
-        visibleTo: "bride"
-      },
-      {
-        key: "Grah Shanti & Haldi (Groom)",
-        name: "Grah Shanti & Haldi",
-        dateShort:  "Saturday, June 20",
-        dateFull: "Saturday, June 20, 2026",
-        time: "Morning · 10:00 AM",
-        tag:  "Family rituals at home",
-        location: "42 Lisson Crescent, Brampton, ON",
-        locationShort: "42 Lisson Crescent, Brampton",
-        mapsUrl: "https://www.google.com/maps/search/?api=1&query=42+Lisson+Crescent+Brampton+ON",
-        startDateTime: "2026-06-20T10:00:00",
-        endDateTime: "2026-06-20T14:00:00",
-        blurb: "A joyful morning of love and laughter at Kunj's family home! Expect turmeric, giggles, and lots of photos as we celebrate blessings with the groom's family.",
-        dress: "Shades of yellow, orange, or red to match the sunny, festive spirit",
-        visibleTo: "groom"
-      },
-      {
-        key: "Wedding Ceremony",
-        name: "Wedding Ceremony",
-        dateShort: "Sunday, June 21",
-        dateFull: "Sunday, June 21, 2026",
-        time: "Daytime · 11:00 AM",
-        tag: "Mandap & vows",
-        location: "Lionhead Golf Club, Brampton, ON",
-        locationShort: "Lionhead Golf Club, Brampton",
-        mapsUrl: "https://www.google.com/maps/search/?api=1&query=Lionhead+Golf+Club+Brampton+ON",
-        startDateTime:  "2026-06-21T11:00:00",
-        endDateTime: "2026-06-21T15:00:00",
-        blurb: "A celebration of love and new beginnings.  We invite you to join us in your finest attire, Indian traditional wear is warmly encouraged.",
-        dress: "Indian traditional wear for the ceremony",
-        visibleTo:  "all"
-      },
-      {
-        key: "Reception",
-        name: "Reception",
-        dateShort: "Sunday, June 21",
-        dateFull: "Sunday, June 21, 2026",
-        time: "Evening · 6:00 PM",
-        tag: "Cocktails & dinner",
-        location: "Terrace on the Green, Brampton, ON",
-        locationShort: "Terrace on the Green, Brampton",
-        mapsUrl: "https://www.google.com/maps/search/?api=1&query=Terrace+on+the+Green+Brampton+ON",
-        startDateTime: "2026-06-21T18:00:00",
-        endDateTime: "2026-06-21T23:00:00",
-        blurb: "An elegant evening beneath the tented sky.  Cocktail hour begins at 6:00 PM; doors open at 7:00 PM.",
-        dress: "Formal attire with practical footwear for the outdoors",
-        visibleTo:  "all"
-      }
-    ];
+<button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
 
-    const EVENT_EMOJIS = {
-      "Sangeet": "💃",
-      "Grah Shanti & Haldi (Bride)": "🌼",
-      "Grah Shanti & Haldi (Groom)": "🌼",
-      "Wedding Ceremony":  "💍",
-      "Reception": "🪩"
-    };
+</main>
 
-    let currentFamily = null;
-    let responses = {};
-    let activeEventKey = "Sangeet";
+  <footer>
+    <div class="footer-content">
+      <p>Designed & Built by Dhruv Dave</p>
+      <p class="footer-copy">© 2025 Dhruv Dave. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98A1.99 1.99 0 0 0 7.96 5.5c0-1.1-.88-2-1.98-2zm.02 4.5H3V21h2.01V8H5zm7.5 0h-2V21H12.5v-6.25c0-1.45.67-2.25 1.98-2.25 1.25 0 1.76.9 1.76 2.25V21H18V13c0-3.07-1.64-4.5-3.76-4.5-1.5 0-2.19.83-2.56 1.42v-1.42z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 
-    const scheduleContainer = document.querySelector(".schedule-container");
-    const eventDetailCardEl = document.getElementById("eventDetailCard");
-
-    // =============================
-    // CALENDAR HELPERS
-    // =============================
-
-    function generateGoogleCalendarUrl(event) {
-      const title = encodeURIComponent(event.name + " - Mansi & Kunj's Wedding");
-      const details = encodeURIComponent(event.blurb + "\n\nDress code: " + event.dress);
-      const location = encodeURIComponent(event.location);
-      
-      const startDate = event.startDateTime.replace(/[-:]/g, '');
-      const endDate = event.endDateTime.replace(/[-:]/g, '');
-      
-      return `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}&sf=true&output=xml`;
+<noscript>
+  <style>
+    .fade-section {
+      opacity: 1 !important;
+      transform: none !important;
     }
+  </style>
+</noscript>
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-    function generateICSFile(event) {
-      const startDate = event.startDateTime.replace(/[-:]/g, '');
-      const endDate = event. endDateTime.replace(/[-:]/g, '');
-      const now = new Date().toISOString().replace(/[-:]/g, '').split('.')[0];
-      
-      const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Mansi & Kunj Wedding//EN
-BEGIN:VEVENT
-UID:${event.key}-${now}@mansikunjwedding.com
-DTSTAMP:${now}Z
-DTSTART:${startDate}
-DTEND:${endDate}
-SUMMARY:${event.name} - Mansi & Kunj's Wedding
-DESCRIPTION:${event.blurb}\\n\\nDress code: ${event.dress}
-LOCATION: ${event.location}
-STATUS:CONFIRMED
-END:VEVENT
-END:VCALENDAR`;
-
-      return icsContent;
-    }
-
-    function downloadICS(event) {
-      const icsContent = generateICSFile(event);
-      const blob = new Blob([icsContent], { type:  'text/calendar;charset=utf-8' });
-      const link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.download = `${event.key. replace(/\s+/g, '_')}.ics`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
-    // =============================
-    // CODE GATE LOGIC
-    // =============================
-
-    const codeGate = document.getElementById("codeGate");
-    const codeInput = document.getElementById("codeInput");
-    const codeBtn = document.getElementById("codeBtn");
-    const codeError = document.getElementById("codeError");
-    const site = document.getElementById("site");
-
-    function normalizeIdentifier(input) {
-      const cleaned = input.trim().toLowerCase();
-      if (/^\+? [\d\s\-\(\)]+$/.test(cleaned)) {
-        return cleaned. replace(/\D/g, '');
-      }
-      return cleaned;
-    }
-
-    function initResponsesForFamily(familyData) {
-      responses = {};
-      
-      // Initialize responses object with existing RSVP data from the sheet
-      familyData.guests.forEach(guest => {
-        responses[guest.name] = {};
-        guest.events.forEach(evKey => {
-          // Check if there's existing RSVP data for this guest and event
-          const existingRsvp = familyData.rsvps?. find(r => 
-            r.guest === guest. name && r.event === evKey
-          );
-          
-          if (existingRsvp && existingRsvp.response) {
-            // Map "yes"/"no" from sheet to our format
-            responses[guest.name][evKey] = existingRsvp.response. toLowerCase();
-          } else {
-            // Default to null (pending)
-            responses[guest.name][evKey] = null;
-          }
-        });
-      });
-    }
-
-    async function unlockSite(identifier) {
-      codeError.textContent = "";
-      codeBtn.textContent = "Loading...";
-      codeBtn.disabled = true;
-
-      try {
-        // Call Google Apps Script to lookup family data
-        const response = await fetch(`${GOOGLE_SCRIPT_URL}?identifier=${encodeURIComponent(identifier)}`);
-        
-        // Check if response is OK
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-
-        if (data.status === 'error') {
-          // Check if it's a "hold" status
-          if (data. message === 'hold') {
-            codeError. textContent = "Your invitation is not yet ready. Please check back later or contact us at mansikunj26@gmail.com. ";
-          } else {
-            codeError.textContent = "We couldn't find that email or phone number. Please check your invitation. ";
-          }
-          codeBtn.textContent = "Continue";
-          codeBtn.disabled = false;
-          return;
-        }
-
-        // Successfully found family
-        currentFamily = data;
-
-        document.getElementById("familyName").textContent = data.familyName;
-        document.getElementById("familyNameInline").textContent = data.familyName;
-        document.getElementById("headerRsvpBtn").style.display = "inline-block";
-
-        initResponsesForFamily(data);
-
-        codeGate.style.display = "none";
-        site.style.display = "block";
-
-        renderEventSelector();
-        renderEventDetail(activeEventKey);
-
-      } catch (error) {
-        console.error('Lookup error:', error);
-        codeError.textContent = "There was an error connecting to the server. Please try again. ";
-        codeBtn.textContent = "Continue";
-        codeBtn.disabled = false;
-      }
-    }
-
-    codeBtn.addEventListener("click", () => {
-      const inputValue = codeInput.value. trim();
-      if (! inputValue) {
-        codeError.textContent = "Please enter your email or phone number.";
-        return;
-      }
-      unlockSite(inputValue);
-    });
-
-    codeInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        const inputValue = codeInput.value.trim();
-        if (!inputValue) {
-          codeError.textContent = "Please enter your email or phone number.";
-          return;
-        }
-        unlockSite(inputValue);
-      }
-    });
-
-    // =============================
-    // RENDER EVENT SELECTOR
-    // =============================
-
-    function renderEventSelector() {
-      const selectorEl = document.getElementById("eventSelector");
-      selectorEl.innerHTML = "";
-
-      // Add header
-      const header = document.createElement("div");
-      header.className = "event-selector-header";
-      
-      const title = document.createElement("div");
-      title.className = "event-selector-title";
-      title.textContent = "Events";
-      
-      const subtitle = document.createElement("div");
-      subtitle.className = "event-selector-subtitle";
-      subtitle. textContent = "Select an event to RSVP";
-      
-      header.appendChild(title);
-      header.appendChild(subtitle);
-      selectorEl.appendChild(header);
-
-      const visibleEvents = EVENTS.filter(ev => {
-        if (! currentFamily) return false;
-        return currentFamily.guests.some(g => g.events.includes(ev.key));
-      });
-
-      visibleEvents. forEach(ev => {
-        const item = document.createElement("div");
-        item.className = "event-selector-item";
-
-        const btn = document.createElement("button");
-        btn.className = "event-selector-btn";
-        btn. dataset.eventKey = ev.key;
-        
-        if (ev.key === activeEventKey) {
-          btn.classList.add("active");
-        }
-
-        const emoji = document.createElement("span");
-        emoji.className = "event-selector-emoji";
-        emoji.textContent = EVENT_EMOJIS[ev.key] || "💗";
-
-        const content = document.createElement("div");
-        content.className = "event-selector-content";
-
-        const name = document.createElement("div");
-        name.className = "event-selector-name";
-        name. textContent = ev.name;
-
-        const date = document.createElement("div");
-        date.className = "event-selector-date";
-        date. textContent = `${ev.dateShort} • ${ev.time}`;
-
-        content.appendChild(name);
-        content.appendChild(date);
-
-        btn.appendChild(emoji);
-        btn.appendChild(content);
-
-        btn.addEventListener("click", () => {
-          document.querySelectorAll(".event-selector-btn").forEach(b => {
-            b.classList.remove("active");
-          });
-          btn.classList.add("active");
-          activeEventKey = ev.key;
-          renderEventDetail(ev.key);
-          
-          // Scroll to top of event detail card on mobile
-          if (window.innerWidth <= 968) {
-            eventDetailCardEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }
-        });
-
-        item.appendChild(btn);
-        selectorEl.appendChild(item);
-      });
-
-      if (! visibleEvents.find(e => e.key === activeEventKey) && visibleEvents.length > 0) {
-        activeEventKey = visibleEvents[0].key;
-        renderEventDetail(activeEventKey);
-        document
-          .querySelectorAll(".event-selector-btn")
-          .forEach(b => b.classList.toggle("active", b.dataset.eventKey === activeEventKey));
-      }
-    }
-
-    // =============================
-    // RENDER EVENT DETAIL & RSVP
-    // =============================
-
-    function renderEventDetail(eventKey) {
-      const ev = EVENTS.find(e => e.key === eventKey);
-      if (!ev || !eventDetailCardEl) return;
-
-      const cardEl = eventDetailCardEl;
-      cardEl.innerHTML = "";
-
-      // Event Header
-      const header = document.createElement("div");
-      header.className = "event-header";
-
-      const emoji = document.createElement("div");
-      emoji.className = "event-header-emoji";
-      emoji.textContent = EVENT_EMOJIS[ev.key] || "💗";
-
-      const title = document.createElement("div");
-      title.className = "event-header-title";
-      title. textContent = ev.name;
-
-      const meta = document.createElement("div");
-      meta.className = "event-header-meta";
-      meta. textContent = `${ev.dateFull} · ${ev.time}`;
-
-      const desc = document.createElement("div");
-      desc.className = "event-header-description";
-      desc.textContent = ev.blurb;
-
-      const pills = document.createElement("div");
-      pills.className = "event-info-pills";
-
-      const locationPill = document.createElement("div");
-      locationPill.className = "event-info-pill clickable";
-      locationPill. innerHTML = `📍 ${ev.locationShort}`;
-      locationPill.title = "Click to view in Google Maps";
-      locationPill.style.cursor = "pointer";
-      locationPill.addEventListener("click", () => {
-        window. open(ev.mapsUrl, '_blank');
-      });
-
-      const dressPill = document.createElement("div");
-      dressPill.className = "event-info-pill";
-      dressPill.innerHTML = `👗 ${ev.dress}`;
-
-      pills.appendChild(locationPill);
-      pills.appendChild(dressPill);
-
-      // Action buttons
-      const actions = document.createElement("div");
-      actions.className = "event-actions";
-
-      const calendarBtn = document.createElement("button");
-      calendarBtn.className = "event-action-btn";
-      calendarBtn.innerHTML = `📅 Add to Calendar`;
-      calendarBtn.addEventListener("click", () => {
-        window.open(generateGoogleCalendarUrl(ev), '_blank');
-        setTimeout(() => {
-          downloadICS(ev);
-        }, 500);
-      });
-
-      const mapBtn = document.createElement("button");
-      mapBtn.className = "event-action-btn";
-      mapBtn.innerHTML = `🗺️ View in Maps`;
-      mapBtn.addEventListener("click", () => {
-        window.open(ev.mapsUrl, '_blank');
-      });
-
-      actions.appendChild(calendarBtn);
-      actions.appendChild(mapBtn);
-
-      header.appendChild(emoji);
-      header.appendChild(title);
-      header.appendChild(meta);
-      header.appendChild(desc);
-      header.appendChild(pills);
-      header.appendChild(actions);
-
-      cardEl.appendChild(header);
-
-      // RSVP Section
-      const rsvpSection = document.createElement("div");
-      rsvpSection.className = "rsvp-section";
-
-      const invitedGuests = currentFamily.guests.filter(guest => 
-        guest.events.includes(ev.key)
-      );
-
-      if (invitedGuests.length === 0) {
-        const noGuests = document.createElement("div");
-        noGuests.className = "rsvp-no-guests";
-        noGuests.textContent = "No family members are invited to this event.";
-        rsvpSection.appendChild(noGuests);
-      } else if (currentFamily.isLocked) {
-        // LOCKED STATE - Show confirmation
-        const rsvpTitle = document.createElement("div");
-        rsvpTitle. className = "rsvp-title";
-        rsvpTitle. textContent = "Your Responses";
-
-        const confirmationMessage = document.createElement("div");
-        confirmationMessage.className = "rsvp-confirmation-message";
-        confirmationMessage. innerHTML = `
-          <div class="confirmation-icon">✓</div>
-          <p class="confirmation-text">Thank you for your responses!  Please see your confirmation below.</p>
-        `;
-
-        const guestList = document.createElement("div");
-        guestList.className = "rsvp-guest-list";
-
-        invitedGuests.forEach(guest => {
-          const card = document.createElement("div");
-          card.className = "rsvp-guest-card rsvp-guest-card-locked";
-
-          const guestHeader = document.createElement("div");
-          guestHeader.className = "rsvp-guest-header-locked";
-
-          const guestName = document. createElement("div");
-          guestName.className = "rsvp-guest-name";
-          guestName.textContent = guest.name;
-
-          const currentResp = responses[guest.name]?.[ev.key] || null;
-          
-          const statusBadge = document.createElement("div");
-          statusBadge. className = `rsvp-status-badge ${currentResp === 'yes' ? 'status-accepted' : currentResp === 'no' ?  'status-declined' : 'status-pending'}`;
-          
-          if (currentResp === "yes") {
-            statusBadge.innerHTML = `<span class="status-icon">✓</span> Attending`;
-          } else if (currentResp === "no") {
-            statusBadge.innerHTML = `<span class="status-icon">✗</span> Not Attending`;
-          } else {
-            statusBadge.innerHTML = `<span class="status-icon">⏱</span> No Response`;
-          }
-
-          guestHeader.appendChild(guestName);
-          guestHeader.appendChild(statusBadge);
-          card.appendChild(guestHeader);
-          guestList.appendChild(card);
-        });
-
-        const lockNote = document.createElement("div");
-        lockNote.className = "rsvp-lock-note";
-        lockNote.innerHTML = `
-          <p>If you would like to make any changes, please email <strong>mansikunj26@gmail.com</strong>.</p>
-        `;
-
-        rsvpSection.appendChild(rsvpTitle);
-        rsvpSection.appendChild(confirmationMessage);
-        rsvpSection.appendChild(guestList);
-        rsvpSection.appendChild(lockNote);
-        
-      } else {
-        // UNLOCKED STATE - Show normal RSVP interface
-        const rsvpTitle = document.createElement("div");
-        rsvpTitle.className = "rsvp-title";
-        rsvpTitle.textContent = "Who's Coming?";
-
-        rsvpSection.appendChild(rsvpTitle);
-
-        // Check if this is a Grah Shanti event and if any guests are invited to both
-        const haldiKeys = ["Grah Shanti & Haldi (Bride)", "Grah Shanti & Haldi (Groom)"];
-        if (haldiKeys.includes(ev.key)) {
-          const guestsInvitedToBoth = invitedGuests.filter(guest => {
-            const otherKey = haldiKeys.find(k => k !== ev.key);
-            return guest.events.includes(ev.key) && guest.events.includes(otherKey);
-          });
-          
-          if (guestsInvitedToBoth.length > 0) {
-            const haldiNotice = document.createElement("div");
-            haldiNotice.className = "haldi-notice";
-            haldiNotice.innerHTML = `
-              <div class="haldi-notice-icon">ℹ️</div>
-              <div class="haldi-notice-text">
-                <strong>Note:</strong> You're invited to both Grah Shanti celebrations! You're welcome to attend either or both, 
-                but for catering purposes, please RSVP to the one where you'll be having your meal.  Accepting one will 
-                automatically decline the other for meal planning.  
-              </div>
-            `;
-            rsvpSection.appendChild(haldiNotice);
-          }
-        }
-
-        const guestList = document.createElement("div");
-        guestList.className = "rsvp-guest-list";
-
-        invitedGuests.forEach(guest => {
-          const card = document.createElement("div");
-          card.className = "rsvp-guest-card";
-
-          const guestHeader = document.createElement("div");
-          guestHeader.className = "rsvp-guest-header";
-
-          const guestName = document. createElement("div");
-          guestName.className = "rsvp-guest-name";
-          guestName.textContent = guest. name;
-
-          const toggle = document.createElement("div");
-          toggle.className = "rsvp-toggle";
-
-          const currentResp = responses[guest.name]?.[ev. key] || null;
-
-          const acceptBtn = document.createElement("button");
-          acceptBtn.className = "rsvp-toggle-btn";
-          acceptBtn. textContent = "Accept";
-          if (currentResp === "yes") acceptBtn.classList.add("accept-selected");
-
-          const declineBtn = document. createElement("button");
-          declineBtn.className = "rsvp-toggle-btn";
-          declineBtn.textContent = "Decline";
-          if (currentResp === "no") declineBtn.classList.add("decline-selected");
-
-          acceptBtn.addEventListener("click", () => {
-            responses[guest.name][ev.key] = "yes";
-
-            const haldiKeys = ["Grah Shanti & Haldi (Bride)", "Grah Shanti & Haldi (Groom)"];
-            if (haldiKeys.includes(ev.key)) {
-              const otherKey = haldiKeys.find(k => k !== ev.key);
-              // Check if this guest is invited to the other Grah Shanti
-              if (responses[guest.name] && responses[guest.name][otherKey] !== undefined) {
-                // They're invited to both, so automatically decline the other one
-                responses[guest.name][otherKey] = "no";
-              }
-            }
-
-            renderEventDetail(ev.key);
-          });
-
-          declineBtn.addEventListener("click", () => {
-            responses[guest.name][ev. key] = "no";
-            renderEventDetail(ev.key);
-          });
-
-          toggle.appendChild(acceptBtn);
-          toggle.appendChild(declineBtn);
-
-          guestHeader.appendChild(guestName);
-          guestHeader.appendChild(toggle);
-
-          card.appendChild(guestHeader);
-
-          if (currentResp) {
-            const status = document.createElement("div");
-            status.className = `rsvp-guest-status ${currentResp === 'yes' ? 'accepted' : 'declined'}`;
-            if (currentResp === "yes") {
-              status.textContent = `✓ ${guest.name} is attending`;
-            } else {
-              status.textContent = `✗ ${guest.name} is not attending`;
-            }
-            card.appendChild(status);
-          }
-
-          guestList. appendChild(card);
-        });
-
-        rsvpSection.appendChild(guestList);
-
-        // Submit section
-        const submitSection = document. createElement("div");
-        submitSection.className = "rsvp-submit-section";
-
-        const submitBtn = document.createElement("button");
-        submitBtn.className = "rsvp-submit-btn";
-        submitBtn.textContent = `Submit RSVP for ${ev. name}`;
-
-        const statusMsg = document.createElement("div");
-        statusMsg.className = "rsvp-status-message";
-
-        submitBtn.addEventListener("click", () => {
-          submitRsvpForEvent(ev.key, statusMsg, submitBtn);
-        });
-
-        submitSection.appendChild(submitBtn);
-        submitSection.appendChild(statusMsg);
-
-        rsvpSection.appendChild(submitSection);
-      }
-
-      cardEl.appendChild(rsvpSection);
-    }
-
-    // =============================
-    // SUBMIT RSVP FOR SINGLE EVENT
-    // =============================
-
-    function submitRsvpForEvent(eventKey, statusEl, buttonEl) {
-      if (!currentFamily) return;
-      
-      // Check if locked
-      if (currentFamily.isLocked) {
-        statusEl.textContent = "The RSVP deadline has passed.  Please contact us at mansikunj26@gmail. com to make changes.";
-        statusEl.className = "rsvp-status-message error";
-        return;
-      }
-
-      statusEl.textContent = "Saving your responses...";
-      statusEl. className = "rsvp-status-message";
-      buttonEl.disabled = true;
-
-      const event = EVENTS.find(e => e.key === eventKey);
-      const invitedGuests = currentFamily. guests.filter(g => g.events.includes(eventKey));
-
-      const flatResponses = [];
-      invitedGuests.forEach(guest => {
-        const resp = responses[guest.name]?.[eventKey] ?? null;
-        flatResponses.push({
-          guest: guest.name,
-          event: eventKey,
-          response: resp
-        });
-      });
-
-      const payload = {
-        action: 'saveRsvp',
-        familyId: currentFamily.familyId,
-        familyName: currentFamily.familyName,
-        side: currentFamily.side,
-        responses: flatResponses
-      };
-
-      // Create a hidden form to submit the data
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = GOOGLE_SCRIPT_URL;
-      form.target = 'hidden_iframe';
-      form.style.display = 'none';
-
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = 'data';
-      input.value = JSON.stringify(payload);
-      form.appendChild(input);
-
-      // Create hidden iframe if it doesn't exist
-      let iframe = document.getElementById('hidden_iframe');
-      if (!iframe) {
-        iframe = document.createElement('iframe');
-        iframe.name = 'hidden_iframe';
-        iframe.id = 'hidden_iframe';
-        iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-      }
-
-      // Submit the form
-      document.body. appendChild(form);
-      form.submit();
-      document.body. removeChild(form);
-
-      // Show success message after delay
-      setTimeout(() => {
-        statusEl.textContent = `✓ Thank you!  Your responses for ${event.name} have been saved.`;
-        statusEl.className = "rsvp-status-message success";
-        buttonEl.disabled = false;
-      }, 1500);
-    }
-
-    // =============================
-    // FAQ ACCORDION
-    // =============================
-
-    document.querySelectorAll(".faq-item").forEach(item => {
-      const q = item.querySelector(".faq-question");
-      q.addEventListener("click", () => {
-        item.classList.toggle("open");
-      });
-    });
-
-    // =============================
-    // NAV ACTIVE ON SCROLL
-    // =============================
-
-    const navLinks = document.querySelectorAll(". nav-link");
-    const sectionIds = ["hero","schedule","story","travel","faqs"];
-    const sections = sectionIds.map(id => document.getElementById(id));
-
-    function updateActiveNav() {
-      const scrollY = window.scrollY + 130;
-      let currentId = "hero";
-      sections.forEach((sec) => {
-        if (sec && scrollY >= sec.offsetTop) currentId = sec.id;
-      });
-      navLinks.forEach(link => {
-        const target = link.getAttribute("href").slice(1);
-        link.classList.toggle("active", target === currentId);
-      });
-    }
-
-    window.addEventListener("scroll", updateActiveNav);
-
-    // =============================
-    // MOBILE NAV TOGGLE
-    // =============================
-
-    const navToggle = document.querySelector(".nav-toggle");
-    const navLinksContainer = document.querySelector(".nav-links");
-
-    if (navToggle && navLinksContainer) {
-      navToggle.addEventListener("click", () => {
-        navLinksContainer.classList.toggle("nav-open");
-        navToggle.classList.toggle("is-open");
-      });
-
-      navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-          if (window.innerWidth <= 768) {
-            navLinksContainer.classList.remove("nav-open");
-            navToggle.classList.remove("is-open");
-          }
-        });
-      });
-    }
-
-    // =============================
-    // HANDLE RESIZE
-    // =============================
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768 && navLinksContainer && navToggle) {
-        navLinksContainer.classList.remove("nav-open");
-        navToggle.classList.remove("is-open");
-      }
-    });
-</script>
 </body>
-</html>
-
