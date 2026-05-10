@@ -309,6 +309,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ===== Active Nav Section Highlight =====
+(function () {
+    const sections = document.querySelectorAll('section[id], .about-section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    if (!sections.length || !navAnchors.length) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navAnchors.forEach((a) => {
+                        a.classList.toggle(
+                            'active',
+                            a.getAttribute('href') === '#' + entry.target.id
+                        );
+                    });
+                }
+            });
+        },
+        { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+})();
+
 // ===== Lazy Loading Images =====
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
