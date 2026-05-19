@@ -3,779 +3,409 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dhruv Dave | Software Developer & CS Student</title>
-  
-  <!-- Preconnect and Preload -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://api.github.com">
-  <link rel="preload" href="style.css" as="style">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="me" href="https://www.linkedin.com/in/dhruvdave06">
-  
-  <!-- Theme Color for Mobile Browsers -->
-  <meta name="theme-color" content="#0a192f">
-  <meta name="color-scheme" content="dark light">
+  <title>Dhruv Dave — Software Developer</title>
+
+  <meta name="description" content="Dhruv Dave — Computer Science student at Queen's University. Full-stack developer based in Ontario, Canada.">
   <meta name="author" content="Dhruv Dave">
   <meta name="robots" content="index, follow">
-  
+  <meta name="theme-color" content="#ffffff" id="theme-meta">
+
+  <meta property="og:title" content="Dhruv Dave — Software Developer">
+  <meta property="og:description" content="CS student at Queen's University. Full-stack developer based in Ontario, Canada.">
+  <meta property="og:image" content="https://dhruvdave.ca/images/profile.jpg">
+  <meta property="og:url" content="https://dhruvdave.ca">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="me" href="https://www.linkedin.com/in/dhruvdave06">
+
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dhruv Dave",
-  "url": "https://dhruvdave.ca",
-  "sameAs": [
-    "https://www.linkedin.com/in/dhruvdave06",
-    "https://github.com/dhruvvdave"
-  ],
-  "jobTitle": "Computer Science Student",
-  "worksFor": {
-    "@type": "CollegeOrUniversity",
-    "name": "Queen's University"
-  },
-  "alumniOf": "Queen's University",
-  "image": "https://dhruvdave.ca/images/profile.jpg",
-  "email": "mailto:davedhruv2006@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Georgetown",
-    "addressRegion": "Ontario",
-    "addressCountry": "Canada"
-  },
-  "knowsAbout": ["JavaScript", "Java", "Python", "React", "Flask", "Web Development", "Full-Stack Development"]
-}
-</script>
-<meta name="description" content="Dhruv Dave - Computer Science student at Queen's University, software developer based in Georgetown, Ontario. Expert in JavaScript, Java, Python, React, and full-stack development.">
-<meta name="keywords" content="Dhruv Dave, Queen's University, Computer Science, Software Developer, Georgetown, Ontario, Java Developer, Full-Stack Developer, React, Python, JavaScript, Web Developer">
-
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Dhruv Dave | Software Developer & CS Student">
-<meta property="og:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario. Expert in JavaScript, Java, Python, React, and full-stack development.">
-<meta property="og:image" content="https://dhruvdave.ca/images/profile.jpg">
-<meta property="og:url" content="https://dhruvdave.ca">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Dhruv Dave Portfolio">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dhruv Dave | Software Developer & CS Student">
-<meta name="twitter:description" content="Computer Science student at Queen's University, software developer based in Georgetown, Ontario.">
-<meta name="twitter:image" content="https://dhruvdave.ca/images/profile.jpg">
-
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dhruv Dave",
+    "url": "https://dhruvdave.ca",
+    "sameAs": [
+      "https://www.linkedin.com/in/dhruvdave06",
+      "https://github.com/dhruvvdave"
+    ],
+    "jobTitle": "Computer Science Student",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "Queen's University" }
+  }
+  </script>
 </head>
-
 <body>
-  <!-- Animated Background -->
-  <div class="animated-bg"></div>
-  <div class="floating-orb orb-1"></div>
-  <div class="floating-orb orb-2"></div>
-  <div class="floating-orb orb-3"></div>
-  <div class="grid-pattern"></div>
-  
-  <a href="#about" class="skip-link">Skip to main content</a>
-  <div id="progress-bar"></div>
-  <header>
-    <nav>
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#technologies">Tech Stack</a>
-        <a href="#projects">Projects</a>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Progress bar -->
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header id="header">
+    <nav class="wrapper nav-inner">
+      <a href="/" class="nav-brand">DD</a>
+      <div class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#work">Work</a>
         <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="mailto:davedhruv2006@gmail.com" class="nav-cta">Contact</a>
       </div>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
+      <div class="nav-right">
+        <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
-    <main>
-    <section class="hero" data-aos="fade-up">
-      <div class="hero-content">
-        <p class="hero-greeting" data-aos="fade-up" data-aos-delay="200">Hello, my name is</p>
-        <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Dhruv Dave</h1>
-        <p class="animated-text" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-          <span id="typed-text" class="typed-block"></span><span class="cursor">|</span>
-        </p>
-        <p class="hero-description" data-aos="fade-up" data-aos-delay="800">
-          I'm a software developer focused on crafting elegant digital experiences. 
-          Currently studying Computer Science at Queen's University.
-        </p>
-        <div class="hero-cta" data-aos="fade-up" data-aos-delay="1000">
-          <a href="#projects" class="cta-button primary">View My Work</a>
-          <a href="#experience" class="cta-button secondary">My Experience</a>
+  <main id="main">
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+      <div class="wrapper hero-inner">
+        <div class="hero-eyebrow">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Open to internship opportunities
         </div>
-        <div class="hero-status" data-aos="fade-up" data-aos-delay="1200">
-          <span class="status-badge available">
-            <span class="status-dot"></span>
-            Open to Internship Opportunities
-          </span>
+        <h1>Dhruv Dave</h1>
+        <p class="hero-tagline">
+          CS student at Queen's University.<br>
+          Building thoughtful software for the web.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View my work</a>
+          <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            GitHub
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            LinkedIn
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- ── Work ── -->
+    <section id="work" class="section reveal">
+      <div class="wrapper section-header">
+        <span class="label">Work</span>
+        <h2>Selected Projects</h2>
+      </div>
+
+      <!-- Featured -->
+      <div class="wrapper">
+        <article class="project-featured reveal">
+          <div class="project-img-wrap">
+            <img src="images/securevault-preview.png" alt="SecureVault password manager interface" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge">Featured</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>SecureVault</h3>
+            <p>A full-stack cybersecurity password manager with breach detection via HaveIBeenPwned (k-anonymity), AES-encrypted vault, and two-factor authentication.</p>
+            <div class="stack-pills">
+              <span>React</span><span>Flask</span><span>Python</span><span>SQLAlchemy</span><span>JWT</span><span>Tailwind CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer">
+                Live Demo
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
+              </a>
+              <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer">
+                Source
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Grid -->
+      <div class="wrapper projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="images/wavvy-preview.png" alt="Wavvy beat-making platform" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Wavvy</h3>
+            <p>Full-stack beat-making & audio visualization platform with a 16-step sequencer, melody pads, five visualizer modes, and Spotify integration.</p>
+            <div class="stack-pills">
+              <span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Tone.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://wavvy-flax.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a href="https://github.com/dhruvvdave/wavvy" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="project2.jpg" alt="Weather web app interface" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-year">2023</span>
+            </div>
+            <h3>Weather Web App</h3>
+            <p>Responsive weather app with real-time conditions, 5-day forecast, location autocomplete, unit toggle, and geolocation via OpenWeather API.</p>
+            <div class="stack-pills">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>OpenWeather API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://dhruvdave.ca/weather-app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a href="https://github.com/dhruvvdave/weather-app" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="project4.jpg" alt="Finance tracker dashboard" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-year">2023</span>
+            </div>
+            <h3>Finance Tracker</h3>
+            <p>Personal finance web app for managing income and expenses, with chart visualizations, monthly filtering, dark mode, and CSV export.</p>
+            <div class="stack-pills">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://dhruvdave.ca/finance-tracker/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a href="https://github.com/dhruvvdave/finance-tracker" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="project1.jpg" alt="Oppenheimer Minesweeper game" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-year">2023</span>
+            </div>
+            <h3>Minesweeper — Java</h3>
+            <p>Oppenheimer-themed remake of classic Minesweeper with custom splash screens, recursive flood-fill, and a fully redesigned UI in Java Swing.</p>
+            <div class="stack-pills">
+              <span>Java</span><span>Swing</span>
+            </div>
+            <div class="project-links">
+              <a href="https://dhruvvdave.github.io/Minesweeper-Oppenheimer/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── Stack ── -->
+    <section id="stack" class="section section-alt reveal">
+      <div class="wrapper section-header">
+        <span class="label">Stack</span>
+        <h2>Technologies</h2>
+      </div>
+      <div class="wrapper stack-layout">
+        <div class="stack-col">
+          <h3>Languages</h3>
+          <ul>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Vue.js</li>
+            <li>Tailwind CSS</li>
+            <li>HTML / CSS</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Flask</li>
+            <li>FastAPI</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h3>Data</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+            <li>MySQL</li>
+            <li>SQLAlchemy</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h3>Tools</h3>
+          <ul>
+            <li>Git</li>
+            <li>Docker</li>
+            <li>AWS</li>
+            <li>REST APIs</li>
+            <li>GraphQL</li>
+            <li>JWT</li>
+          </ul>
         </div>
       </div>
     </section>
 
+    <!-- ── Experience ── -->
+    <section id="experience" class="section reveal">
+      <div class="wrapper section-header">
+        <span class="label">Experience</span>
+        <h2>Where I've Worked</h2>
+      </div>
+      <div class="wrapper exp-list">
 
-<section id="about" class="about-section">
-  <h2>About Me</h2>
-  <div class="about-container">
-    <div class="about-img">
-      <img src="images/profile.jpg" alt="Dhruv Dave - Computer Science student at Queen's University" fetchpriority="high" />
-    </div>
-    <div class="about-text">
-      <p>
-        I’m a detail-oriented developer studying Computer Science at Queen’s University who loves to code,
-        collaborate, and keep learning. I’m fluent in languages like HTML, CSS, JavaScript, Java, Python, C++, and more.
-        I’m super driven, a big believer in teamwork, and always excited to take on new challenges. I’m always looking
-        for ways to grow, whether it’s picking up a new skill, diving into a challenge, or finding better ways to
-        work with others. Outside of code, I love hiking, hockey, and travelling.
-      </p>
-    </div>
-  </div>
-</section>
+        <article class="exp-item reveal">
+          <div class="exp-left">
+            <span class="exp-role">Website Developer</span>
+            <span class="exp-company">Digitera</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-date">Sep 2022 – Feb 2023</span>
+            <ul class="exp-bullets">
+              <li>Built accessible, performant websites using HTML, CSS, JavaScript, and WordPress.</li>
+              <li>Collaborated with designers and clients to ship designs meeting business requirements.</li>
+              <li>Enhanced site performance using both front-end and back-end technologies.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>WordPress</span>
+            </div>
+          </div>
+        </article>
 
-<!-- Technologies Section -->
-<section id="technologies" class="technologies-section fade-section" data-aos="fade-up">
-  <h2>Technologies I Work With</h2>
-  <p class="section-subtitle">Constantly learning and expanding my toolkit</p>
-  
-  <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
-    <h3 class="tech-category-title">Languages</h3>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <i class="devicon-javascript-plain colored"></i>
-        <span class="tech-name">JavaScript</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-typescript-plain colored"></i>
-        <span class="tech-name">TypeScript</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-java-plain colored"></i>
-        <span class="tech-name">Java</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-python-plain colored"></i>
-        <span class="tech-name">Python</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-cplusplus-plain colored"></i>
-        <span class="tech-name">C++</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-html5-plain colored"></i>
-        <span class="tech-name">HTML5</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-css3-plain colored"></i>
-        <span class="tech-name">CSS3</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-azuresqldatabase-plain colored"></i>
-        <span class="tech-name">SQL</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
-    <h3 class="tech-category-title">Frontend</h3>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <i class="devicon-react-original colored"></i>
-        <span class="tech-name">React</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-nextjs-plain"></i>
-        <span class="tech-name">Next.js</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-vuejs-plain colored"></i>
-        <span class="tech-name">Vue.js</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-tailwindcss-plain colored"></i>
-        <span class="tech-name">Tailwind CSS</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-bootstrap-plain colored"></i>
-        <span class="tech-name">Bootstrap</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
-    <h3 class="tech-category-title">Backend</h3>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <i class="devicon-nodejs-plain colored"></i>
-        <span class="tech-name">Node.js</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-express-original"></i>
-        <span class="tech-name">Express.js</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-flask-original"></i>
-        <span class="tech-name">Flask</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-fastapi-plain colored"></i>
-        <span class="tech-name">FastAPI</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="tech-category" data-aos="fade-up" data-aos-delay="400">
-    <h3 class="tech-category-title">Database</h3>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <i class="devicon-mongodb-plain colored"></i>
-        <span class="tech-name">MongoDB</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-postgresql-plain colored"></i>
-        <span class="tech-name">PostgreSQL</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-mysql-plain colored"></i>
-        <span class="tech-name">MySQL</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-sqlalchemy-plain"></i>
-        <span class="tech-name">SQLAlchemy</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="tech-category" data-aos="fade-up" data-aos-delay="500">
-    <h3 class="tech-category-title">Other Tools & Technologies</h3>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <svg class="tech-icon-svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-        </svg>
-        <span class="tech-name">RESTful APIs</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-graphql-plain colored"></i>
-        <span class="tech-name">GraphQL</span>
-      </div>
-      <div class="tech-card">
-        <svg class="tech-icon-svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12,1L3,5v6c0,5.55,3.84,10.74,9,12c5.16-1.26,9-6.45,9-12V5L12,1L12,1z M12,11.99h7c-0.53,4.12-3.28,7.79-7,8.94V12H5V6.3l7-3.11v8.8H12z"/>
-        </svg>
-        <span class="tech-name">JWT</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-docker-plain colored"></i>
-        <span class="tech-name">Docker</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-        <span class="tech-name">AWS</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-git-plain colored"></i>
-        <span class="tech-name">Git</span>
-      </div>
-      <div class="tech-card">
-        <i class="devicon-github-original"></i>
-        <span class="tech-name">GitHub</span>
-      </div>
-    </div>
-  </div>
-</section>
+        <article class="exp-item reveal">
+          <div class="exp-left">
+            <span class="exp-role">Research Assistant</span>
+            <span class="exp-company">COBWEB</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-date">Summer 2022</span>
+            <ul class="exp-bullets">
+              <li>Designed agent-based models to simulate adaptive systems in ecosystems and urban environments.</li>
+              <li>Collaborated across interdisciplinary teams, strengthening analytical and project management skills.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Python</span><span>Research</span><span>Simulation</span>
+            </div>
+          </div>
+        </article>
 
-<!-- Projects Section with Filters -->
-<section id="projects" class="projects-section fade-section" data-aos="fade-up">
-  <h2>Some Things I've Built</h2>
-  <p class="section-subtitle">Click on a project to view details</p>
-  
-  <div class="project-controls">
-    <div class="project-filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="web">Web Apps</button>
-      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-      <button class="filter-btn" data-filter="java">Java</button>
-    </div>
-    <div class="project-search">
-      <input type="text" id="project-search" placeholder="Search projects..." aria-label="Search projects">
-      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="8"></circle>
-        <path d="m21 21-4.35-4.35"></path>
-      </svg>
-    </div>
-  </div>
-  
-  <div class="projects-grid" id="projects-grid">
-    <div class="project-card featured" role="button" tabindex="0" 
-         data-category="fullstack web" 
-         data-title="SecureVault" 
-         data-description="A full-stack cybersecurity password manager featuring password strength analysis, breach checking via HaveIBeenPwned API (k-anonymity), encrypted password vault, and two-factor authentication. Built with React, Flask, and modern security practices." 
-         data-tech="React, Flask, Python, SQLAlchemy, JWT, Tailwind CSS" 
-         data-image="images/securevault-preview.png"
-         aria-label="View details for SecureVault project">
-      <div class="featured-badge">🔐 Featured</div>
-      <div class="project-image">
-        <img src="images/securevault-preview.png" alt="SecureVault Preview" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h3>SecureVault</h3>
-        <p>A full-stack cybersecurity password manager with breach checking, password analysis, secure vault storage, and 2FA support.</p>
-        <div class="project-tags">
-          <span class="project-tag">React</span>
-          <span class="project-tag">Flask</span>
-          <span class="project-tag">Python</span>
-          <span class="project-tag">Security</span>
-        </div>
-        <div class="project-links">
-          <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Live Demo
-          </a>
-          <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            View Code
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="project-card" role="button" tabindex="0" 
-         data-category="java" 
-         data-title="Minesweeper Java Game" 
-         data-description="An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI." 
-         data-tech="Java, CSS, Markdown" 
-         data-image="project1.jpg"
-         aria-label="View details for Minesweeper Java Game project">
-      <div class="project-image">
-        <img src="project1.jpg" alt="Minesweeper Game Preview" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h3>Minesweeper Java Game</h3>
-        <p>An Oppenheimer-themed Java remake of the classic Minesweeper game featuring custom screens, recursive gameplay, and a refined modern UI.</p>
-        <div class="project-tags">
-          <span class="project-tag">Java</span>
-          <span class="project-tag">Game Dev</span>
-        </div>
-        <div class="project-links">
-          <a href="https://dhruvvdave.github.io/Minesweeper-Oppenheimer/" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Live Demo
-          </a>
-          <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            View Code
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="project-card" role="button" tabindex="0" 
-         data-category="web" 
-         data-title="Weather Web App" 
-         data-description="A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support." 
-         data-tech="HTML, CSS, JavaScript" 
-         data-image="project2.jpg"
-         aria-label="View details for Weather Web App project">
-      <div class="project-image">
-        <img src="project2.jpg" alt="Weather App Preview" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h3>Weather Web App</h3>
-        <p>A modern, responsive weather app that uses the OpenWeather API to display current conditions and a 5-day forecast with location autocomplete, unit toggle, and geolocation support.</p>
-        <div class="project-tags">
-          <span class="project-tag">HTML</span>
-          <span class="project-tag">CSS</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">API</span>
-        </div>
-        <div class="project-links">
-          <a href="https://dhruvdave.ca/weather-app/" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Live Demo
-          </a>
-          <a href="https://github.com/dhruvvdave/weather-app" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            View Code
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="project-card" role="button" tabindex="0" 
-         data-category="web" 
-         data-title="Personal Web Portfolio" 
-         data-description="This portfolio site built to showcase my design/dev work - featuring dark mode, animations, and modern design principles." 
-         data-tech="HTML, CSS, JavaScript" 
-         data-image="project3.jpg"
-         aria-label="View details for Personal Web Portfolio project">
-      <div class="project-image">
-        <img src="project3.jpg" alt="Portfolio Preview" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h3>Personal Web Portfolio</h3>
-        <p>This portfolio site built to showcase my design/dev work - featuring dark mode, animations, and modern design principles.</p>
-        <div class="project-tags">
-          <span class="project-tag">HTML</span>
-          <span class="project-tag">CSS</span>
-          <span class="project-tag">JavaScript</span>
-        </div>
-        <div class="project-links">
-          <span class="project-link current">You're viewing it!</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="project-card" role="button" tabindex="0" 
-         data-category="web fullstack" 
-         data-title="Finance Tracker" 
-         data-description="A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data." 
-         data-tech="HTML, CSS, JavaScript" 
-         data-image="project4.jpg"
-         aria-label="View details for Finance Tracker project">
-      <div class="project-image">
-        <img src="project4.jpg" alt="Finance Tracker Preview" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h3>Finance Tracker</h3>
-        <p>A modern, responsive personal finance tracker web app that lets users manage income and expenses, visualize spending with charts, filter by month, toggle dark mode, and export data.</p>
-        <div class="project-tags">
-          <span class="project-tag">HTML</span>
-          <span class="project-tag">CSS</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Charts</span>
-        </div>
-        <div class="project-links">
-          <a href="https://dhruvdave.ca/finance-tracker/" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Live Demo
-          </a>
-          <a href="https://github.com/dhruvvdave/finance-tracker" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            View Code
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="project-card" role="button" tabindex="0" 
-         data-category="fullstack web" 
-         data-title="Wavvy" 
-         data-description="A full-stack beat making and audio visualization platform featuring a 16-step drum sequencer, melody pads, 5 stunning visualizer modes, file upload/playback, and Spotify integration — all with a dark neon UI." 
-         data-tech="React, TypeScript, Node.js, Express, PostgreSQL, Tailwind CSS, Tone.js" 
-         data-image="images/wavvy-preview.png"
-         aria-label="View details for Wavvy project">
-      <div class="project-image">
-        <img src="images/wavvy-preview.png" alt="Wavvy Preview" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h3>Wavvy</h3>
-        <p>A full-stack beat making and audio visualization platform featuring a 16-step drum sequencer, melody pads, 5 stunning visualizer modes, file upload/playback, and Spotify integration — all with a dark neon UI.</p>
-        <div class="project-tags">
-          <span class="project-tag">React</span>
-          <span class="project-tag">TypeScript</span>
-          <span class="project-tag">Node.js</span>
-          <span class="project-tag">Tone.js</span>
-        </div>
-        <div class="project-links">
-          <a href="https://wavvy-flax.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link live" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Live Demo
-          </a>
-          <a href="https://github.com/dhruvvdave/wavvy" target="_blank" rel="noopener noreferrer" class="project-link code" onclick="event.stopPropagation()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            View Code
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <p class="no-projects-message" id="no-projects-message" style="display: none;">No projects match your search. Try a different filter or search term.</p>
-</section>
+        <article class="exp-item reveal">
+          <div class="exp-left">
+            <span class="exp-role">Mobility Technician</span>
+            <span class="exp-company">Bird</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-date">Jul 2025 – Aug 2025</span>
+            <ul class="exp-bullets">
+              <li>Performed diagnostics and repairs on e-scooters, addressing mechanical and software issues.</li>
+              <li>Supported product and engineering teams with testing new features and innovations.</li>
+            </ul>
+          </div>
+        </article>
 
-            <section id="experience" class="experience-section fade-section" data-aos="fade-up">
-      <h2>Where I've Worked</h2>
-      <p class="section-subtitle">My professional experience and journey</p>
-      <div class="experience-grid">
-        <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="experience-card-header">
-            <div class="company-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-              </svg>
-            </div>
-            <div class="company-info">
-              <h3 class="job-title">Mobility Hardware and Software Technician</h3>
-              <span class="company-name">Bird</span>
-            </div>
+        <article class="exp-item reveal">
+          <div class="exp-left">
+            <span class="exp-role">Deputy Returning Officer</span>
+            <span class="exp-company">Elections Canada</span>
           </div>
-          <div class="experience-date">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-            <span>Jul 2025 - Aug 2025</span>
+          <div class="exp-right">
+            <span class="exp-date">Apr 2025</span>
+            <ul class="exp-bullets">
+              <li>Opened and closed the polling station on time, managing daily operations efficiently.</li>
+              <li>Monitored compliance of candidates' representatives with federal election guidelines.</li>
+            </ul>
           </div>
-          <ul class="experience-achievements">
-            <li>Performed inspections, diagnostics, and repairs on e-scooters to address mechanical and software issues.</li>
-            <li>Ensured safety compliance through standardized procedures, maintained accurate spare parts inventory, and supported product and engineering teams with testing new features and innovations.</li>
-          </ul>
-        </div>
+        </article>
 
-        <div class="experience-card" data-aos="fade-up" data-aos-delay="150">
-          <div class="experience-card-header">
-            <div class="company-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-              </svg>
-            </div>
-            <div class="company-info">
-              <h3 class="job-title">Deputy Returning Officer</h3>
-              <span class="company-name">Elections Canada</span>
-            </div>
-          </div>
-          <div class="experience-date">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-            <span>Apr 2025</span>
-          </div>
-          <ul class="experience-achievements">
-            <li>Opened and closed the polling station on time, ensuring efficient daily operations.</li>
-            <li>Monitored compliance of candidates' representatives with election guidelines.</li>
-          </ul>
-        </div>
+      </div>
+    </section>
 
-        <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="experience-card-header">
-            <div class="company-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-            </div>
-            <div class="company-info">
-              <h3 class="job-title">Skate Guard</h3>
-              <span class="company-name">City of Brampton</span>
-            </div>
-          </div>
-          <div class="experience-date">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-            <span>Nov 2022 - Mar 2025</span>
-          </div>
-          <ul class="experience-achievements">
-            <li>Ensured rink safety by monitoring activities, enforcing rules, and maintaining a secure environment for all participants.</li>
-            <li>Responded promptly and effectively to emergencies, administering first aid when required.</li>
-          </ul>
-        </div>
-
-        <div class="experience-card" data-aos="fade-up" data-aos-delay="250">
-          <div class="experience-card-header">
-            <div class="company-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
-              </svg>
-            </div>
-            <div class="company-info">
-              <h3 class="job-title">Skate Instructor</h3>
-              <span class="company-name">City of Brampton</span>
-            </div>
-          </div>
-          <div class="experience-date">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-            <span>Mar 2023 - Sep 2024</span>
-          </div>
-          <ul class="experience-achievements">
-            <li>Provided personalized instruction to skaters of all ages and skill levels, adapting lesson plans to individual needs and goals.</li>
-            <li>Taught foundational and advanced skating techniques, including balance, posture, and speed control.</li>
-          </ul>
-        </div>
-
-        <div class="experience-card featured" data-aos="fade-up" data-aos-delay="300">
-          <div class="experience-card-header">
-            <div class="company-icon tech">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-              </svg>
-            </div>
-            <div class="company-info">
-              <h3 class="job-title">Website Developer</h3>
-              <span class="company-name">Digitera</span>
-            </div>
-          </div>
-          <div class="experience-date">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-            <span>Sep 2022 - Feb 2023</span>
-          </div>
-          <ul class="experience-achievements">
-            <li>Built accessible and performant websites using modern web technologies.</li>
-            <li>Collaborated with designers and clients to deliver new designs meeting business requirements.</li>
-            <li>Utilized both front-end and back-end technologies to enhance site performance and functionality.</li>
-          </ul>
-          <div class="experience-tags">
-            <span class="experience-tag">HTML</span>
-            <span class="experience-tag">CSS</span>
-            <span class="experience-tag">JavaScript</span>
-            <span class="experience-tag">WordPress</span>
+    <!-- ── About ── -->
+    <section id="about" class="section section-alt reveal">
+      <div class="wrapper section-header">
+        <span class="label">About</span>
+        <h2>A bit about me</h2>
+      </div>
+      <div class="wrapper about-layout">
+        <div class="about-text">
+          <p>
+            I'm a detail-oriented developer studying Computer Science at Queen's University.
+            I love building things — whether it's a full-stack web app, a data tool, or something creative
+            that pushes me into unfamiliar territory.
+          </p>
+          <p>
+            I'm fluent in JavaScript, Java, Python, and more. Outside of code, I spend my
+            time hiking, playing hockey, and travelling.
+          </p>
+          <div class="about-actions">
+            <a href="mailto:davedhruv2006@gmail.com" class="btn btn-primary">Get in touch</a>
+            <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              GitHub ↗
+            </a>
           </div>
         </div>
-
-        <div class="experience-card featured" data-aos="fade-up" data-aos-delay="350">
-          <div class="experience-card-header">
-            <div class="company-icon research">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4s1.79-4 4-4h.71C7.37 7.69 9.48 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3s-1.34 3-3 3z"/>
-              </svg>
-            </div>
-            <div class="company-info">
-              <h3 class="job-title">Research Assistant</h3>
-              <span class="company-name">COBWEB</span>
-            </div>
-          </div>
-          <div class="experience-date">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-            <span>Summer 2022</span>
-          </div>
-          <ul class="experience-achievements">
-            <li>Designed and implemented agent-based models to simulate complex adaptive systems, focusing on ecosystems and urban environments.</li>
-            <li>Collaborated with interdisciplinary teams to apply innovative research methodologies, enhancing problem-solving and project management skills.</li>
-          </ul>
-          <div class="experience-tags">
-            <span class="experience-tag">Python</span>
-            <span class="experience-tag">Research</span>
-            <span class="experience-tag">Simulation</span>
-          </div>
+        <div class="about-photo">
+          <img src="images/profile.jpg" alt="Dhruv Dave" fetchpriority="low">
         </div>
       </div>
     </section>
 
-<section id="skills" class="fade-in fade-section" data-aos="fade-up">
-  <h2>Skills & Strengths</h2>
-  <p>Through academic, research, and leadership experiences, I've developed a diverse skillset in development, communication, and problem-solving.</p>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <div class="icon">🛠</div>
-      <h3>Web Development</h3>
-      <p>Built websites using HTML, CSS, JS & WordPress for clients at Digitera with responsive, accessible design.</p>
-    </div>
-    <div class="skill-card">
-      <div class="icon">📊</div>
-      <h3>Research & Data</h3>
-      <p>Analyzed ecosystem models at COBWEB, drawing actionable insights from complex simulations using Python.</p>
-    </div>
-    <div class="skill-card">
-      <div class="icon">🗣</div>
-      <h3>Communication</h3>
-      <p>Presented ideas at MUN, DECA, and client meetings; served as PR officer and led community outreach.</p>
-    </div>
-    <div class="skill-card">
-      <div class="icon">🤝</div>
-      <h3>Team Collaboration</h3>
-      <p>Led club initiatives and worked on interdisciplinary teams, ensuring shared vision and success.</p>
-    </div>
-    <div class="skill-card">
-      <div class="icon">👨‍🏫</div>
-      <h3>Teaching</h3>
-      <p>Delivered skating instruction to diverse age groups; tailored lessons for skill growth and confidence.</p>
-    </div>
-    <div class="skill-card">
-      <div class="icon">🧠</div>
-      <h3>Adaptability</h3>
-      <p>Handled emergencies and client demands in varied roles, staying resourceful and responsive under pressure.</p>
-    </div>
-  </div>
-</section>  
+  </main>
 
-
-  
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span id="modal-close" class="close">&times;</span>
-    <h3 id="modal-title"></h3>
-    <img id="modal-image" src="" alt="Project preview image" loading="lazy" />
-    <p id="modal-description"></p>
-    <p id="modal-tech"></p>
-  </div>
-</div>
-
-<button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <polyline points="18 15 12 9 6 15"></polyline>
-  </svg>
-</button>
-
-</main>
-
+  <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <p>Designed & Built by Dhruv Dave</p>
-      <p class="footer-copy">© 2025 Dhruv Dave. All rights reserved.</p>
+    <div class="wrapper footer-inner">
+      <p>Designed &amp; built by Dhruv Dave</p>
       <div class="footer-links">
-        <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.09 11.09 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.41-5.27 5.7.43.38.8 1.12.8 2.26v3.35c0 .31.2.68.8.56A10.98 10.98 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98A1.99 1.99 0 0 0 7.96 5.5c0-1.1-.88-2-1.98-2zm.02 4.5H3V21h2.01V8H5zm7.5 0h-2V21H12.5v-6.25c0-1.45.67-2.25 1.98-2.25 1.25 0 1.76.9 1.76 2.25V21H18V13c0-3.07-1.64-4.5-3.76-4.5-1.5 0-2.19.83-2.56 1.42v-1.42z"/></svg>
-        </a>
+        <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:davedhruv2006@gmail.com">Email</a>
       </div>
+      <p class="footer-copy">© 2025 Dhruv Dave</p>
     </div>
   </footer>
 
-<noscript>
-  <style>
-    .fade-section {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-  </style>
-</noscript>
-<script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Scroll to top -->
+  <button id="scroll-top" aria-label="Back to top" title="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
+  <script src="script.js"></script>
 </body>
+</html>
