@@ -678,11 +678,21 @@ header {
 }
 
 .about-photo img {
-  width: 148px;
-  height: 148px;
+  width: 192px;
+  height: 192px;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--border);
+}
+
+.about-currently {
+  font-size: .8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-subtle);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 /* ── Footer ── */
@@ -830,7 +840,7 @@ footer {
     gap: 2rem;
   }
   .about-photo { order: -1; }
-  .about-photo img { width: 88px; height: 88px; }
+  .about-photo img { width: 116px; height: 116px; }
 
   .footer-inner {
     flex-direction: column;
