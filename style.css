@@ -143,9 +143,12 @@ header {
 
 .brand-mark {
   flex-shrink: 0;
-  transition: opacity 0.15s;
+  transition: opacity 0.2s;
+  /* slight vertical nudge so the optical center aligns with text */
+  position: relative;
+  top: 0.5px;
 }
-.nav-brand:hover .brand-mark { opacity: .7; }
+.nav-brand:hover .brand-mark { opacity: .6; }
 
 .brand-name {
   font-size: .9375rem;
