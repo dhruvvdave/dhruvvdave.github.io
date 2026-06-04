@@ -88,7 +88,7 @@
         <h1>Dhruv Dave</h1>
         <p class="hero-tagline">
           CS student at Queen's University.<br>
-          Building thoughtful software for the web.
+          I build things for the web.
         </p>
         <div class="hero-actions">
           <a href="#work" class="btn btn-primary">View my work</a>
@@ -116,13 +116,10 @@
       <div class="wrapper about-layout">
         <div class="about-text">
           <p>
-            I'm a detail-oriented developer studying Computer Science at Queen's University.
-            I love building things — whether it's a full-stack web app, a data tool, or something creative
-            that pushes me into unfamiliar territory.
+            I study Computer Science at Queen's University. I like building things: full-stack web apps, data tools, whatever sounds interesting and pushes me somewhere new.
           </p>
           <p>
-            I'm fluent in JavaScript, Java, Python, and more. Outside of code, I spend my
-            time hiking, playing hockey, and travelling.
+            I work mainly in JavaScript, Java, and Python. Outside of code, I'm usually hiking, playing hockey, or travelling.
           </p>
           <p class="about-currently">
             Currently: Cerebro AI Technical Specialist @ FGF Brands · Queen's University
@@ -155,7 +152,7 @@
               <span class="project-year">2025</span>
             </div>
             <h3>Markr — Stock Screener</h3>
-            <p>Full-stack stock screener with a FastAPI backend, Redis cache, and PostgreSQL for range-partitioned price history. Uses a 6-source data fallback chain (Finnhub → Yahoo Finance → FMP → Alpha Vantage → Stooq → Twelve Data) with per-source rate limiting via atomic Redis Lua script across 12 REST endpoints. RSI(14), MACD, Bollinger Bands, MA50, and MA200 all compute client-side from raw price history; candle writes go async to a monthly-partitioned Postgres table.</p>
+            <p>Stock screener with a FastAPI backend, Redis cache, and PostgreSQL for range-partitioned price history. Pulls data from 6 sources (Finnhub → Yahoo Finance → FMP → Alpha Vantage → Stooq → Twelve Data) with per-source rate limiting via an atomic Redis Lua script across 12 REST endpoints. RSI(14), MACD, Bollinger Bands, MA50, and MA200 all compute client-side from raw price history; candle writes go async to a monthly-partitioned Postgres table.</p>
             <div class="stack-pills">
               <span>React 19</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
             </div>
@@ -182,7 +179,7 @@
               <span class="project-year">2024</span>
             </div>
             <h3>Password Security Analyzer &amp; Manager</h3>
-            <p>Full-stack password manager with AES-256-GCM encryption (per-entry keys via PBKDF2 at 600k iterations), bcrypt auth, JWT rotation, TOTP 2FA, and HaveIBeenPwned breach checking via SHA-1 k-anonymity. 18 REST endpoints across auth, vault, password tools, and a security dashboard; containerized behind nginx with a pytest suite.</p>
+            <p>Password manager with AES-256-GCM encryption (per-entry keys via PBKDF2 at 600k iterations), bcrypt auth, JWT rotation, TOTP 2FA, and HaveIBeenPwned breach checking via SHA-1 k-anonymity. 18 REST endpoints across auth, vault, password tools, and a security dashboard; containerized behind nginx with a pytest suite.</p>
             <div class="stack-pills">
               <span>React 18</span><span>Flask</span><span>Python</span><span>SQLite</span><span>Docker</span>
             </div>
@@ -199,7 +196,7 @@
               <span class="project-year">2025</span>
             </div>
             <h3>ctx — Browser Session Tracker</h3>
-            <p>Local-first browser session tracker as a TypeScript npm workspace monorepo: Chrome MV3 extension, Hono/Node.js backend, and a CLI. Sessions batch via chrome.alarms and persist to chrome.storage.local without needing a running server. A privacy guard in the content script checks URL patterns, a sensitive-domain list, and live DOM fields (password inputs, credit card autocomplete) before capturing anything.</p>
+            <p>Local-first browser session tracker as a TypeScript npm workspace monorepo: Chrome MV3 extension, Hono/Node.js backend, and a CLI. Sessions batch via chrome.alarms and persist to chrome.storage.local with no server required. A privacy guard in the content script checks URL patterns, a sensitive-domain list, and live DOM fields (password inputs, credit card autocomplete) before capturing anything.</p>
             <div class="stack-pills">
               <span>TypeScript</span><span>Node.js</span><span>Hono</span><span>SQLite</span><span>Chrome MV3</span>
             </div>
@@ -218,7 +215,7 @@
               <span class="project-year">2024</span>
             </div>
             <h3>Wavvy</h3>
-            <p>Full-stack beat-making & audio visualization platform with a 16-step sequencer, melody pads, five visualizer modes, and Spotify integration.</p>
+            <p>Beat-making and audio visualization app with a 16-step sequencer, melody pads, five visualizer modes, and Spotify integration.</p>
             <div class="stack-pills">
               <span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Tone.js</span>
             </div>
@@ -238,7 +235,7 @@
               <span class="project-year">2023</span>
             </div>
             <h3>Weather Web App</h3>
-            <p>Responsive weather app with real-time conditions, 5-day forecast, location autocomplete, unit toggle, and geolocation via OpenWeather API.</p>
+            <p>Weather app with live conditions, a 5-day forecast, location autocomplete, unit toggle, and geolocation via the OpenWeather API.</p>
             <div class="stack-pills">
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>OpenWeather API</span>
             </div>
@@ -258,7 +255,7 @@
               <span class="project-year">2023</span>
             </div>
             <h3>Finance Tracker</h3>
-            <p>Personal finance web app for managing income and expenses, with chart visualizations, monthly filtering, dark mode, and CSV export.</p>
+            <p>Personal finance app for tracking income and expenses, with chart visualizations, monthly filtering, dark mode, and CSV export.</p>
             <div class="stack-pills">
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Chart.js</span>
             </div>
@@ -308,9 +305,9 @@
           <div class="exp-right">
             <span class="exp-date">May 2026 – Present</span>
             <ul class="exp-bullets">
-              <li>Built internal tooling in Node.js and Python to document Cerebro's OEE telemetry models, changeover logic, and troubleshooting decision trees; developed Power BI dashboards fed by Cerebro's production data to track manufacturing performance across FGF's 22 facilities.</li>
+              <li>Built internal tooling in Node.js and Python to document Cerebro's OEE telemetry models, changeover logic, and troubleshooting decision trees; built Power BI dashboards fed by Cerebro's production data to track manufacturing performance across FGF's 22 facilities.</li>
               <li>Write and optimize SQL diagnostic queries against Cerebro's production database to detect and reconcile data anomalies; work to date has surfaced systemic misconfigurations in workflow state transitions and upstream pipeline gaps across over 2,000 production records.</li>
-              <li>Configure and maintain Cerebro platform environments across FGF's Canadian facilities; debug and resolve discrepancies at the integration boundary between Cerebro's production monitoring layer and upstream ERP systems.</li>
+              <li>Configure and maintain Cerebro platform environments across FGF's Canadian facilities; debug and resolve discrepancies at the boundary between Cerebro's production monitoring layer and upstream ERP systems.</li>
             </ul>
             <div class="exp-tags">
               <span>Node.js</span><span>Python</span><span>SQL</span><span>Power BI</span><span>ERP Integration</span>
@@ -326,8 +323,8 @@
           <div class="exp-right">
             <span class="exp-date">Jul 2025 – Aug 2025</span>
             <ul class="exp-bullets">
-              <li>Performed diagnostics and repairs on e-scooters, addressing mechanical and software issues.</li>
-              <li>Supported product and engineering teams with testing new features and innovations.</li>
+              <li>Diagnosed and repaired e-scooters, covering both mechanical and software faults.</li>
+              <li>Ran tests on new features with the product and engineering teams.</li>
             </ul>
           </div>
         </article>
@@ -340,7 +337,7 @@
           <div class="exp-right">
             <span class="exp-date">Apr 2025</span>
             <ul class="exp-bullets">
-              <li>Opened and closed the polling station on time, managing daily operations efficiently.</li>
+              <li>Opened and closed the polling station; managed day-to-day operations on election day.</li>
               <li>Monitored compliance of candidates' representatives with federal election guidelines.</li>
             </ul>
           </div>
@@ -371,10 +368,9 @@
           <div class="exp-right">
             <span class="exp-date">Sep 2022 – Feb 2023</span>
             <ul class="exp-bullets">
-              <li>Developed and shipped web applications for small business clients using JavaScript, HTML, and CSS; optimized page performance by 40% through asset minification, image compression, and deferred script loading.</li>
+              <li>Developed and shipped web applications for small business clients using JavaScript, HTML, and CSS; cut page load times by 40% through asset minification, image compression, and deferred script loading.</li>
               <li>Built accessible, performant websites using HTML, CSS, JavaScript, and WordPress.</li>
-              <li>Collaborated with designers and clients to ship designs meeting business requirements.</li>
-              <li>Enhanced site performance using both front-end and back-end technologies.</li>
+              <li>Worked with designers and clients to make sure the final product matched what was needed.</li>
             </ul>
             <div class="exp-tags">
               <span>JavaScript</span><span>HTML</span><span>CSS</span><span>WordPress</span>
@@ -391,7 +387,7 @@
             <span class="exp-date">Summer 2022</span>
             <ul class="exp-bullets">
               <li>Designed agent-based models to simulate adaptive systems in ecosystems and urban environments.</li>
-              <li>Collaborated across interdisciplinary teams, strengthening analytical and project management skills.</li>
+              <li>Worked with interdisciplinary teams spanning ecology, urban planning, and computer science.</li>
             </ul>
             <div class="exp-tags">
               <span>Python</span><span>Research</span><span>Simulation</span>
