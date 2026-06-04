@@ -149,25 +149,22 @@
       <!-- Featured -->
       <div class="wrapper">
         <article class="project-featured reveal">
-          <div class="project-img-wrap">
-            <img src="images/securevault-preview.png" alt="SecureVault password manager interface" loading="lazy">
-          </div>
           <div class="project-body">
             <div class="project-meta">
               <span class="badge">Featured</span>
-              <span class="project-year">2024</span>
+              <span class="project-year">2025</span>
             </div>
-            <h3>SecureVault</h3>
-            <p>A full-stack cybersecurity password manager with breach detection via HaveIBeenPwned (k-anonymity), AES-encrypted vault, and two-factor authentication.</p>
+            <h3>Markr — Stock Screener</h3>
+            <p>Full-stack stock screener with a FastAPI backend, Redis cache, and PostgreSQL for range-partitioned price history. Uses a 6-source data fallback chain (Finnhub → Yahoo Finance → FMP → Alpha Vantage → Stooq → Twelve Data) with per-source rate limiting via atomic Redis Lua script across 12 REST endpoints. RSI(14), MACD, Bollinger Bands, MA50, and MA200 all compute client-side from raw price history; candle writes go async to a monthly-partitioned Postgres table.</p>
             <div class="stack-pills">
-              <span>React</span><span>Flask</span><span>Python</span><span>SQLAlchemy</span><span>JWT</span><span>Tailwind CSS</span>
+              <span>React 19</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
             </div>
             <div class="project-links">
-              <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer">
+              <a href="https://stock-screener-kappa-one.vercel.app" target="_blank" rel="noopener noreferrer">
                 Live Demo
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
               </a>
-              <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/dhruvvdave/stock-screener" target="_blank" rel="noopener noreferrer">
                 Source
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
               </a>
@@ -180,81 +177,34 @@
       <div class="wrapper projects-grid">
 
         <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="images/wavvy-preview.png" alt="Wavvy beat-making platform" loading="lazy">
-          </div>
           <div class="project-body">
             <div class="project-meta">
               <span class="project-year">2024</span>
             </div>
-            <h3>Wavvy</h3>
-            <p>Full-stack beat-making & audio visualization platform with a 16-step sequencer, melody pads, five visualizer modes, and Spotify integration.</p>
+            <h3>Password Security Analyzer &amp; Manager</h3>
+            <p>Full-stack password manager with AES-256-GCM encryption (per-entry keys via PBKDF2 at 600k iterations), bcrypt auth, JWT rotation, TOTP 2FA, and HaveIBeenPwned breach checking via SHA-1 k-anonymity. 18 REST endpoints across auth, vault, password tools, and a security dashboard; containerized behind nginx with a pytest suite.</p>
             <div class="stack-pills">
-              <span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Tone.js</span>
+              <span>React 18</span><span>Flask</span><span>Python</span><span>SQLite</span><span>Docker</span>
             </div>
             <div class="project-links">
-              <a href="https://wavvy-flax.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/wavvy" target="_blank" rel="noopener noreferrer">Source ↗</a>
+              <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer">Source ↗</a>
             </div>
           </div>
         </article>
 
         <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="project2.jpg" alt="Weather web app interface" loading="lazy">
-          </div>
           <div class="project-body">
             <div class="project-meta">
-              <span class="project-year">2023</span>
+              <span class="project-year">2025</span>
             </div>
-            <h3>Weather Web App</h3>
-            <p>Responsive weather app with real-time conditions, 5-day forecast, location autocomplete, unit toggle, and geolocation via OpenWeather API.</p>
+            <h3>ctx — Browser Session Tracker</h3>
+            <p>Local-first browser session tracker as a TypeScript npm workspace monorepo: Chrome MV3 extension, Hono/Node.js backend, and a CLI. Sessions batch via chrome.alarms and persist to chrome.storage.local without needing a running server. A privacy guard in the content script checks URL patterns, a sensitive-domain list, and live DOM fields (password inputs, credit card autocomplete) before capturing anything.</p>
             <div class="stack-pills">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>OpenWeather API</span>
+              <span>TypeScript</span><span>Node.js</span><span>Hono</span><span>SQLite</span><span>Chrome MV3</span>
             </div>
             <div class="project-links">
-              <a href="https://dhruvdave.ca/weather-app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/weather-app" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="project4.jpg" alt="Finance tracker dashboard" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-year">2023</span>
-            </div>
-            <h3>Finance Tracker</h3>
-            <p>Personal finance web app for managing income and expenses, with chart visualizations, monthly filtering, dark mode, and CSV export.</p>
-            <div class="stack-pills">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Chart.js</span>
-            </div>
-            <div class="project-links">
-              <a href="https://dhruvdave.ca/finance-tracker/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/finance-tracker" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="project1.jpg" alt="Oppenheimer Minesweeper game" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-year">2023</span>
-            </div>
-            <h3>Minesweeper — Java</h3>
-            <p>Oppenheimer-themed remake of classic Minesweeper with custom splash screens, recursive flood-fill, and a fully redesigned UI in Java Swing.</p>
-            <div class="stack-pills">
-              <span>Java</span><span>Swing</span>
-            </div>
-            <div class="project-links">
-              <a href="https://dhruvvdave.github.io/Minesweeper-Oppenheimer/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank" rel="noopener noreferrer">Source ↗</a>
+              <a href="https://github.com/dhruvvdave/ctx-saver" target="_blank" rel="noopener noreferrer">Source ↗</a>
             </div>
           </div>
         </article>
@@ -278,58 +228,12 @@
           <div class="exp-right">
             <span class="exp-date">May 2026 – Present</span>
             <ul class="exp-bullets">
-              <li>Serve as primary technical point-of-contact for Cerebro AI, an enterprise workflow platform; diagnose and resolve user-reported issues end-to-end, maintaining SLA-aligned response quality across a ticketing-based support queue.</li>
-              <li>Write and optimize SQL queries to investigate data discrepancies flagged by business teams, surfacing actionable insights to support AI-driven process decisions.</li>
-              <li>Collaborate cross-functionally with operations and IT stakeholders to translate business requirements into system configurations and escalation paths within the AI platform.</li>
+              <li>Built internal tooling in Node.js and Python to document Cerebro's OEE telemetry models, changeover logic, and troubleshooting decision trees; developed Power BI dashboards fed by Cerebro's production data to track manufacturing performance across FGF's 22 facilities.</li>
+              <li>Write and optimize SQL diagnostic queries against Cerebro's production database to detect and reconcile data anomalies; work to date has surfaced systemic misconfigurations in workflow state transitions and upstream pipeline gaps across over 2,000 production records.</li>
+              <li>Configure and maintain Cerebro platform environments across FGF's Canadian facilities; debug and resolve discrepancies at the integration boundary between Cerebro's production monitoring layer and upstream ERP systems.</li>
             </ul>
             <div class="exp-tags">
-              <span>SQL</span><span>AI Systems</span><span>Workflow Automation</span><span>Enterprise Support</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Mobility Technician</span>
-            <span class="exp-company">Bird</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Jul 2025 – Aug 2025</span>
-            <ul class="exp-bullets">
-              <li>Performed diagnostics and repairs on e-scooters, addressing mechanical and software issues.</li>
-              <li>Supported product and engineering teams with testing new features and innovations.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Deputy Returning Officer</span>
-            <span class="exp-company">Elections Canada</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Apr 2025</span>
-            <ul class="exp-bullets">
-              <li>Opened and closed the polling station on time, managing daily operations efficiently.</li>
-              <li>Monitored compliance of candidates' representatives with federal election guidelines.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Website Developer</span>
-            <span class="exp-company">Digitera</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Sep 2022 – Feb 2023</span>
-            <ul class="exp-bullets">
-              <li>Built accessible, performant websites using HTML, CSS, JavaScript, and WordPress.</li>
-              <li>Collaborated with designers and clients to ship designs meeting business requirements.</li>
-              <li>Enhanced site performance using both front-end and back-end technologies.</li>
-            </ul>
-            <div class="exp-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>WordPress</span>
+              <span>Node.js</span><span>Python</span><span>SQL</span><span>Power BI</span><span>ERP Integration</span>
             </div>
           </div>
         </article>
@@ -337,16 +241,35 @@
         <article class="exp-item reveal">
           <div class="exp-left">
             <span class="exp-role">Research Assistant</span>
-            <span class="exp-company">COBWEB</span>
+            <span class="exp-company">COBWEB, University of Toronto</span>
           </div>
           <div class="exp-right">
-            <span class="exp-date">Summer 2022</span>
+            <span class="exp-date">Jan 2024 – Aug 2024</span>
             <ul class="exp-bullets">
-              <li>Designed agent-based models to simulate adaptive systems in ecosystems and urban environments.</li>
-              <li>Collaborated across interdisciplinary teams, strengthening analytical and project management skills.</li>
+              <li>Implemented agent-based simulations on the COBWEB platform (Dr. Brad Bass) to model emergent behaviour in ecological adaptive systems; configured multi-condition experiments comparing control and experimental agent populations.</li>
+              <li>Wrote Python data-processing pipelines using Pandas and NumPy to clean, normalize, and visualize multi-run simulation outputs; analysis revealed population dynamics and threshold-crossing patterns across experimental conditions.</li>
             </ul>
             <div class="exp-tags">
-              <span>Python</span><span>Research</span><span>Simulation</span>
+              <span>Python</span><span>Pandas</span><span>NumPy</span><span>Agent-Based Modelling</span><span>Simulation</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="exp-item reveal">
+          <div class="exp-left">
+            <span class="exp-role">Software Engineer Intern</span>
+            <span class="exp-company">Digitera</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-date">Sep 2022 – Feb 2023</span>
+            <ul class="exp-bullets">
+              <li>Developed and shipped web applications for small business clients using JavaScript, HTML, and CSS; optimized page performance by 40% through asset minification, image compression, and deferred script loading.</li>
+              <li>Built accessible, performant websites using HTML, CSS, JavaScript, and WordPress.</li>
+              <li>Collaborated with designers and clients to ship designs meeting business requirements.</li>
+              <li>Enhanced site performance using both front-end and back-end technologies.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>JavaScript</span><span>HTML</span><span>CSS</span><span>WordPress</span>
             </div>
           </div>
         </article>
@@ -365,56 +288,47 @@
         <div class="stack-row reveal">
           <span class="stack-cat">Languages</span>
           <div class="stack-pills">
+            <span>Python</span>
             <span>JavaScript</span>
             <span>TypeScript</span>
             <span>Java</span>
-            <span>Python</span>
-            <span>C++</span>
+            <span>C</span>
             <span>SQL</span>
-            <span>HTML / CSS</span>
           </div>
         </div>
 
         <div class="stack-row reveal">
-          <span class="stack-cat">Frontend</span>
+          <span class="stack-cat">Frameworks &amp; Libraries</span>
           <div class="stack-pills">
             <span>React</span>
-            <span>Next.js</span>
-            <span>Vue.js</span>
-            <span>Tailwind CSS</span>
-            <span>Bootstrap</span>
-          </div>
-        </div>
-
-        <div class="stack-row reveal">
-          <span class="stack-cat">Backend</span>
-          <div class="stack-pills">
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>Flask</span>
             <span>FastAPI</span>
-            <span>REST APIs</span>
-            <span>GraphQL</span>
+            <span>Node.js</span>
+            <span>Hono</span>
+            <span>Flask</span>
+            <span>SQLAlchemy</span>
+            <span>Tailwind CSS</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
           </div>
         </div>
 
         <div class="stack-row reveal">
-          <span class="stack-cat">Database</span>
+          <span class="stack-cat">Databases</span>
           <div class="stack-pills">
             <span>PostgreSQL</span>
-            <span>MongoDB</span>
-            <span>MySQL</span>
-            <span>SQLAlchemy</span>
+            <span>Redis</span>
+            <span>SQLite</span>
           </div>
         </div>
 
         <div class="stack-row reveal">
-          <span class="stack-cat">Tools</span>
+          <span class="stack-cat">Developer Tools</span>
           <div class="stack-pills">
             <span>Git</span>
             <span>Docker</span>
-            <span>AWS</span>
-            <span>JWT</span>
+            <span>Bash</span>
+            <span>Power BI</span>
+            <span>Chrome Extension APIs</span>
           </div>
         </div>
 
