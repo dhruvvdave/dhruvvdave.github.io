@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dhruv Dave — Software Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhruv Dave</title>
 
-  <meta name="description" content="Dhruv Dave — Computer Science student at Queen's University. Full-stack developer based in Ontario, Canada.">
+  <meta name="description" content="Dhruv Dave — computer science student at Queen's University. I build web apps and data tools, and I'm looking for software engineering internships.">
   <meta name="author" content="Dhruv Dave">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#ffffff" id="theme-meta">
 
-  <meta property="og:title" content="Dhruv Dave — Software Developer">
-  <meta property="og:description" content="CS student at Queen's University. Full-stack developer based in Ontario, Canada.">
-  <meta property="og:image" content="https://dhruvdave.ca/images/profile.jpg">
+  <meta property="og:title" content="Dhruv Dave">
+  <meta property="og:description" content="Computer science student at Queen's University. I build web apps and data tools.">
+  <meta property="og:image" content="https://dhruvdave.ca/images/og.jpg">
   <meta property="og:url" content="https://dhruvdave.ca">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#fcfcfc" id="theme-meta">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="canonical" href="https://dhruvdave.ca/">
   <link rel="me" href="https://www.linkedin.com/in/dhruvdave06">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    // Set theme before first paint to avoid a flash of the wrong colours.
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) { /* storage unavailable; CSS media query takes over */ }
+    })();
+  </script>
 
   <script type="application/ld+json">
   {
@@ -30,471 +40,249 @@
     "@type": "Person",
     "name": "Dhruv Dave",
     "url": "https://dhruvdave.ca",
+    "email": "mailto:davedhruv2006@gmail.com",
     "sameAs": [
-      "https://www.linkedin.com/in/dhruvdave06",
-      "https://github.com/dhruvvdave"
+      "https://github.com/dhruvvdave",
+      "https://www.linkedin.com/in/dhruvdave06"
     ],
     "jobTitle": "Computer Science Student",
-    "worksFor": { "@type": "CollegeOrUniversity", "name": "Queen's University" }
+    "worksFor": { "@type": "Organization", "name": "FGF Brands" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Queen's University" }
   }
   </script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <!-- Progress bar -->
-  <div id="progress-bar" aria-hidden="true"></div>
-
-  <!-- Navigation -->
-  <header id="header">
-    <nav class="wrapper nav-inner">
-      <a href="/" class="nav-brand" aria-label="Dhruv Dave — Home">
-        <!-- Geometric D mark: filled vertical stroke + open arc -->
-        <svg class="brand-mark" width="20" height="26" viewBox="0 0 20 26" fill="none" aria-hidden="true">
-          <rect x="0" y="0" width="6" height="26" rx="3" fill="currentColor"/>
-          <path d="M6 4C8.5 4 18 6 18 13C18 20 8.5 22 6 22" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
-        </svg>
-        <span class="brand-name">Dhruv Dave</span>
-      </a>
-      <div class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#stack">Stack</a>
-        <a href="mailto:davedhruv2006@gmail.com" class="nav-cta">Contact</a>
-      </div>
-      <div class="nav-right">
-        <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode" title="Toggle theme">
-          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="Dhruv Dave — home">
+      <svg width="16" height="21" viewBox="0 0 20 26" fill="none" aria-hidden="true">
+        <rect x="0" y="0" width="6" height="26" rx="3" fill="currentColor"/>
+        <path d="M6 4C8.5 4 18 6 18 13C18 20 8.5 22 6 22" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
+      </svg>
+    </a>
+    <nav aria-label="Site">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" aria-label="Switch to dark theme" hidden>
+        <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
     </nav>
   </header>
 
   <main id="main">
 
-    <!-- ── Hero ── -->
-    <section class="hero">
-      <div class="wrapper hero-inner">
-        <div class="hero-eyebrow">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          Open to internship opportunities
+    <section class="intro">
+      <div class="intro-head">
+        <div>
+          <h1>Dhruv Dave</h1>
+          <p class="intro-meta">CS @ Queen's University · Ontario, Canada</p>
         </div>
-        <h1>Dhruv Dave</h1>
-        <p class="hero-tagline">
-          CS student at Queen's University.<br>
-          I build things for the web.
+        <img class="portrait" src="images/profile.jpg" alt="Dhruv Dave, smiling, in a black t-shirt" width="72" height="72">
+      </div>
+
+      <p>
+        I'm a computer science student at Queen's, currently at
+        <a href="https://fgfbrands.com" rel="noopener">FGF Brands</a> working on Cerebro,
+        the platform that monitors production lines across its 22 bakery plants.
+      </p>
+      <p>
+        I like the parts of software most people never look at — rate limiters,
+        encryption schemes, cache layers, the seams between systems. Most of the
+        projects below started with wanting to know how one of those things
+        actually works.
+      </p>
+      <p>
+        I'm looking for a software engineering internship.
+        If you're hiring, <a href="mailto:davedhruv2006@gmail.com">email me</a>.
+      </p>
+
+      <p class="toolbox" aria-label="Tools I use most">
+        Mostly: TypeScript · Python · Java · React · FastAPI · PostgreSQL · Redis · Docker
+      </p>
+    </section>
+
+    <section id="work" aria-labelledby="work-title">
+      <h2 id="work-title">Work</h2>
+
+      <article class="project">
+        <h3><a href="https://stock-screener-kappa-one.vercel.app" rel="noopener">Markr</a> <span class="desc">— stock screener</span></h3>
+        <p>
+          Free market-data APIs cap you hard, and every provider caps you
+          differently. Markr chains six of them — Finnhub through Yahoo Finance,
+          FMP, Alpha Vantage, Stooq, and Twelve Data — behind a FastAPI backend
+          that enforces per-source rate limits with an atomic Redis Lua script,
+          so a burst of traffic fails over instead of failing. Candles land
+          asynchronously in a monthly-partitioned Postgres table, and the
+          indicators (RSI, MACD, Bollinger Bands) are computed client-side from
+          raw history, which keeps the backend a dumb, fast cache.
         </p>
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">View my work</a>
-          <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-            GitHub
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-            LinkedIn
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </div>
+        <p class="project-foot">
+          <span class="tech">React · FastAPI · PostgreSQL · Redis · Docker</span>
+          <span class="links">
+            <a href="https://stock-screener-kappa-one.vercel.app" rel="noopener">Demo</a>
+            <a href="https://github.com/dhruvvdave/stock-screener" rel="noopener">Source</a>
+          </span>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://securevault.dhruvdave.ca" rel="noopener">SecureVault</a> <span class="desc">— password manager</span></h3>
+        <p>
+          Built to understand what 1Password is actually doing. Every vault
+          entry is encrypted with its own AES-256-GCM key, derived with PBKDF2
+          at 600,000 iterations, so cracking one entry buys you nothing else.
+          Breach checks use HaveIBeenPwned's k-anonymity model — five characters
+          of a hash leave the machine, never the password. Rounded out with
+          bcrypt logins, rotating JWTs, TOTP two-factor, and a pytest suite,
+          deployed behind nginx.
+        </p>
+        <p class="project-foot">
+          <span class="tech">Flask · React · SQLite · Docker</span>
+          <span class="links">
+            <a href="https://securevault.dhruvdave.ca" rel="noopener">Demo</a>
+            <a href="https://github.com/dhruvvdave/securevault" rel="noopener">Source</a>
+          </span>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">ctx</a> <span class="desc">— browser session tracker</span></h3>
+        <p>
+          A session tracker designed to work with the network unplugged. The
+          Chrome extension batches sessions with <code>chrome.alarms</code> and
+          persists them locally, so the Hono backend and CLI — same TypeScript
+          monorepo — are optional extras. The part that took longest is the
+          privacy guard: before anything is captured, a content script checks
+          the URL against a sensitive-domain list and scans the live DOM for
+          password and credit-card fields.
+        </p>
+        <p class="project-foot">
+          <span class="tech">TypeScript · Chrome MV3 · Hono · SQLite</span>
+          <span class="links">
+            <a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">Source</a>
+          </span>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://wavvy-flax.vercel.app" rel="noopener">Wavvy</a> <span class="desc">— drum machine for the browser</span></h3>
+        <p>
+          A 16-step sequencer and melody pads scheduled with Tone.js, with five
+          visualizer modes drawn in real time from the Web Audio analyser node.
+          Made for making noise; kept because the scheduling was a genuinely
+          hard timing problem.
+        </p>
+        <p class="project-foot">
+          <span class="tech">React · TypeScript · Tone.js · PostgreSQL</span>
+          <span class="links">
+            <a href="https://wavvy-flax.vercel.app" rel="noopener">Demo</a>
+            <a href="https://github.com/dhruvvdave/wavvy" rel="noopener">Source</a>
+          </span>
+        </p>
+      </article>
+
+      <h3 class="earlier-title">Earlier</h3>
+      <ul class="earlier">
+        <li>
+          <a href="https://github.com/dhruvvdave/weather-app" rel="noopener">Weather app</a>
+          <span> — five-day forecasts on the OpenWeather API; the first thing I ever deployed.</span>
+        </li>
+        <li>
+          <a href="https://github.com/dhruvvdave/finance-tracker" rel="noopener">Finance tracker</a>
+          <span> — income and expenses with Chart.js and CSV export.</span>
+        </li>
+        <li>
+          <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" rel="noopener">Minesweeper</a>
+          <span> — Oppenheimer-themed, in Java Swing; recursive flood fill and custom splash screens.</span>
+        </li>
+      </ul>
     </section>
 
-    <!-- ── About ── -->
-    <section id="about" class="section reveal">
-      <div class="wrapper section-header">
-        <span class="label">About</span>
-        <h2>A bit about me</h2>
-      </div>
-      <div class="wrapper about-layout">
-        <div class="about-text">
-          <p>
-            I study Computer Science at Queen's University. I like building things: full-stack web apps, data tools, whatever sounds interesting and pushes me somewhere new.
-          </p>
-          <p>
-            I work mainly in JavaScript, Java, and Python. Outside of code, I'm usually hiking, playing hockey, or travelling.
-          </p>
-          <p class="about-currently">
-            Currently: Cerebro AI Technical Specialist @ FGF Brands · Queen's University
-          </p>
-          <div class="about-actions">
-            <a href="mailto:davedhruv2006@gmail.com" class="btn btn-primary">Get in touch</a>
-            <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+
+      <ol class="jobs">
+        <li class="job">
+          <span class="job-when">2026–</span>
+          <div class="job-body">
+            <h3>Cerebro AI Technical Specialist · FGF Brands</h3>
+            <p>
+              I keep Cerebro honest: writing SQL to chase anomalies through
+              production data — which has turned up misconfigured workflow
+              states across 2,000+ records — building Power BI dashboards for
+              22 plants, and debugging the seam between Cerebro and the ERP
+              systems upstream of it.
+            </p>
           </div>
-        </div>
-        <div class="about-photo">
-          <img src="images/profile.jpg" alt="Dhruv Dave" fetchpriority="high">
-        </div>
-      </div>
+        </li>
+        <li class="job">
+          <span class="job-when">2025</span>
+          <div class="job-body">
+            <h3>Mobility Technician · Bird</h3>
+            <p>
+              Diagnosed and repaired e-scooters — mechanical and software
+              faults both — and field-tested new features with the product and
+              engineering teams.
+            </p>
+          </div>
+        </li>
+        <li class="job">
+          <span class="job-when">2025</span>
+          <div class="job-body">
+            <h3>Deputy Returning Officer · Elections Canada</h3>
+            <p>Ran a polling station on federal election day.</p>
+          </div>
+        </li>
+        <li class="job">
+          <span class="job-when">2022, 2024</span>
+          <div class="job-body">
+            <h3>Research Assistant · COBWEB, University of Toronto</h3>
+            <p>
+              Built agent-based simulations of ecological adaptive systems with
+              Dr. Brad Bass, and wrote the Pandas and NumPy pipelines that
+              turned multi-run simulation output into something you could
+              actually read.
+            </p>
+          </div>
+        </li>
+        <li class="job">
+          <span class="job-when">2022–23</span>
+          <div class="job-body">
+            <h3>Software Engineer Intern · Digitera</h3>
+            <p>
+              Shipped websites for small-business clients and cut page loads
+              about 40% with the unglamorous stuff: minified assets, compressed
+              images, deferred scripts.
+            </p>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <!-- ── Work ── -->
-    <section id="work" class="section reveal">
-      <div class="wrapper section-header">
-        <span class="label">Work</span>
-        <h2>Selected Projects</h2>
-      </div>
-
-      <!-- Featured -->
-      <div class="wrapper">
-        <article class="project-featured reveal">
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="badge">Featured</span>
-              <span class="project-year">2025</span>
-            </div>
-            <h3>Markr — Stock Screener</h3>
-            <p>Stock screener with a FastAPI backend, Redis cache, and PostgreSQL for range-partitioned price history. Pulls data from 6 sources (Finnhub → Yahoo Finance → FMP → Alpha Vantage → Stooq → Twelve Data) with per-source rate limiting via an atomic Redis Lua script across 12 REST endpoints. RSI(14), MACD, Bollinger Bands, MA50, and MA200 all compute client-side from raw price history; candle writes go async to a monthly-partitioned Postgres table.</p>
-            <div class="stack-pills">
-              <span>React 19</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
-            </div>
-            <div class="project-links">
-              <a href="https://stock-screener-kappa-one.vercel.app" target="_blank" rel="noopener noreferrer">
-                Live Demo
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
-              </a>
-              <a href="https://github.com/dhruvvdave/stock-screener" target="_blank" rel="noopener noreferrer">
-                Source
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Grid -->
-      <div class="wrapper projects-grid">
-
-        <article class="project-card reveal">
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-year">2024</span>
-            </div>
-            <h3>Password Security Analyzer &amp; Manager</h3>
-            <p>Password manager with AES-256-GCM encryption (per-entry keys via PBKDF2 at 600k iterations), bcrypt auth, JWT rotation, TOTP 2FA, and HaveIBeenPwned breach checking via SHA-1 k-anonymity. 18 REST endpoints across auth, vault, password tools, and a security dashboard; containerized behind nginx with a pytest suite.</p>
-            <div class="stack-pills">
-              <span>React 18</span><span>Flask</span><span>Python</span><span>SQLite</span><span>Docker</span>
-            </div>
-            <div class="project-links">
-              <a href="https://securevault.dhruvdave.ca" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/securevault" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-year">2025</span>
-            </div>
-            <h3>ctx — Browser Session Tracker</h3>
-            <p>Local-first browser session tracker as a TypeScript npm workspace monorepo: Chrome MV3 extension, Hono/Node.js backend, and a CLI. Sessions batch via chrome.alarms and persist to chrome.storage.local with no server required. A privacy guard in the content script checks URL patterns, a sensitive-domain list, and live DOM fields (password inputs, credit card autocomplete) before capturing anything.</p>
-            <div class="stack-pills">
-              <span>TypeScript</span><span>Node.js</span><span>Hono</span><span>SQLite</span><span>Chrome MV3</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/dhruvvdave/ctx-saver" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="images/wavvy-preview.png" alt="Wavvy beat-making platform" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-year">2024</span>
-            </div>
-            <h3>Wavvy</h3>
-            <p>Beat-making and audio visualization app with a 16-step sequencer, melody pads, five visualizer modes, and Spotify integration.</p>
-            <div class="stack-pills">
-              <span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Tone.js</span>
-            </div>
-            <div class="project-links">
-              <a href="https://wavvy-flax.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/wavvy" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="project2.jpg" alt="Weather web app interface" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-year">2023</span>
-            </div>
-            <h3>Weather Web App</h3>
-            <p>Weather app with live conditions, a 5-day forecast, location autocomplete, unit toggle, and geolocation via the OpenWeather API.</p>
-            <div class="stack-pills">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>OpenWeather API</span>
-            </div>
-            <div class="project-links">
-              <a href="https://dhruvdave.ca/weather-app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/weather-app" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="project4.jpg" alt="Finance tracker dashboard" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-year">2023</span>
-            </div>
-            <h3>Finance Tracker</h3>
-            <p>Personal finance app for tracking income and expenses, with chart visualizations, monthly filtering, dark mode, and CSV export.</p>
-            <div class="stack-pills">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Chart.js</span>
-            </div>
-            <div class="project-links">
-              <a href="https://dhruvdave.ca/finance-tracker/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/finance-tracker" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="project1.jpg" alt="Oppenheimer Minesweeper game" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-year">2023</span>
-            </div>
-            <h3>Minesweeper — Java</h3>
-            <p>Oppenheimer-themed remake of classic Minesweeper with custom splash screens, recursive flood-fill, and a fully redesigned UI in Java Swing.</p>
-            <div class="stack-pills">
-              <span>Java</span><span>Swing</span>
-            </div>
-            <div class="project-links">
-              <a href="https://dhruvvdave.github.io/Minesweeper-Oppenheimer/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
-              <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>
+        The fastest way to reach me is
+        <a href="mailto:davedhruv2006@gmail.com">davedhruv2006@gmail.com</a> —
+        I read everything. I'm also on
+        <a href="https://github.com/dhruvvdave" rel="noopener">GitHub</a> and
+        <a href="https://www.linkedin.com/in/dhruvdave06" rel="noopener">LinkedIn</a>.
+      </p>
+      <p>
+        Away from a keyboard I'm usually on the ice, on a trail, or in an
+        airport.
+      </p>
     </section>
-
-    <!-- ── Experience ── -->
-    <section id="experience" class="section reveal">
-      <div class="wrapper section-header">
-        <span class="label">Experience</span>
-        <h2>Where I've Worked</h2>
-      </div>
-      <div class="wrapper exp-list">
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Cerebro AI Technical Specialist</span>
-            <span class="exp-company">FGF Brands</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">May 2026 – Present</span>
-            <ul class="exp-bullets">
-              <li>Built internal tooling in Node.js and Python to document Cerebro's OEE telemetry models, changeover logic, and troubleshooting decision trees; built Power BI dashboards fed by Cerebro's production data to track manufacturing performance across FGF's 22 facilities.</li>
-              <li>Write and optimize SQL diagnostic queries against Cerebro's production database to detect and reconcile data anomalies; work to date has surfaced systemic misconfigurations in workflow state transitions and upstream pipeline gaps across over 2,000 production records.</li>
-              <li>Configure and maintain Cerebro platform environments across FGF's Canadian facilities; debug and resolve discrepancies at the boundary between Cerebro's production monitoring layer and upstream ERP systems.</li>
-            </ul>
-            <div class="exp-tags">
-              <span>Node.js</span><span>Python</span><span>SQL</span><span>Power BI</span><span>ERP Integration</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Mobility Technician</span>
-            <span class="exp-company">Bird</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Jul 2025 – Aug 2025</span>
-            <ul class="exp-bullets">
-              <li>Diagnosed and repaired e-scooters, covering both mechanical and software faults.</li>
-              <li>Ran tests on new features with the product and engineering teams.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Deputy Returning Officer</span>
-            <span class="exp-company">Elections Canada</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Apr 2025</span>
-            <ul class="exp-bullets">
-              <li>Opened and closed the polling station; managed day-to-day operations on election day.</li>
-              <li>Monitored compliance of candidates' representatives with federal election guidelines.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Research Assistant</span>
-            <span class="exp-company">COBWEB, University of Toronto</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Jan 2024 – Aug 2024</span>
-            <ul class="exp-bullets">
-              <li>Implemented agent-based simulations on the COBWEB platform (Dr. Brad Bass) to model emergent behaviour in ecological adaptive systems; configured multi-condition experiments comparing control and experimental agent populations.</li>
-              <li>Wrote Python data-processing pipelines using Pandas and NumPy to clean, normalize, and visualize multi-run simulation outputs; analysis revealed population dynamics and threshold-crossing patterns across experimental conditions.</li>
-            </ul>
-            <div class="exp-tags">
-              <span>Python</span><span>Pandas</span><span>NumPy</span><span>Agent-Based Modelling</span><span>Simulation</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Software Engineer Intern</span>
-            <span class="exp-company">Digitera</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Sep 2022 – Feb 2023</span>
-            <ul class="exp-bullets">
-              <li>Developed and shipped web applications for small business clients using JavaScript, HTML, and CSS; cut page load times by 40% through asset minification, image compression, and deferred script loading.</li>
-              <li>Built accessible, performant websites using HTML, CSS, JavaScript, and WordPress.</li>
-              <li>Worked with designers and clients to make sure the final product matched what was needed.</li>
-            </ul>
-            <div class="exp-tags">
-              <span>JavaScript</span><span>HTML</span><span>CSS</span><span>WordPress</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="exp-item reveal">
-          <div class="exp-left">
-            <span class="exp-role">Research Assistant</span>
-            <span class="exp-company">COBWEB</span>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Summer 2022</span>
-            <ul class="exp-bullets">
-              <li>Designed agent-based models to simulate adaptive systems in ecosystems and urban environments.</li>
-              <li>Worked with interdisciplinary teams spanning ecology, urban planning, and computer science.</li>
-            </ul>
-            <div class="exp-tags">
-              <span>Python</span><span>Research</span><span>Simulation</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ── Stack ── -->
-    <section id="stack" class="section section-alt reveal">
-      <div class="wrapper section-header">
-        <span class="label">Stack</span>
-        <h2>Technologies</h2>
-      </div>
-      <div class="wrapper stack-rows">
-
-        <div class="stack-row reveal">
-          <span class="stack-cat">Languages</span>
-          <div class="stack-pills">
-            <span>JavaScript</span>
-            <span>TypeScript</span>
-            <span>Java</span>
-            <span>Python</span>
-            <span>C</span>
-            <span>C++</span>
-            <span>SQL</span>
-            <span>HTML / CSS</span>
-          </div>
-        </div>
-
-        <div class="stack-row reveal">
-          <span class="stack-cat">Frontend</span>
-          <div class="stack-pills">
-            <span>React</span>
-            <span>Next.js</span>
-            <span>Vue.js</span>
-            <span>Tailwind CSS</span>
-            <span>Bootstrap</span>
-          </div>
-        </div>
-
-        <div class="stack-row reveal">
-          <span class="stack-cat">Backend</span>
-          <div class="stack-pills">
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>Flask</span>
-            <span>FastAPI</span>
-            <span>Hono</span>
-            <span>REST APIs</span>
-            <span>GraphQL</span>
-            <span>Pandas</span>
-            <span>NumPy</span>
-            <span>SQLAlchemy</span>
-          </div>
-        </div>
-
-        <div class="stack-row reveal">
-          <span class="stack-cat">Database</span>
-          <div class="stack-pills">
-            <span>PostgreSQL</span>
-            <span>Redis</span>
-            <span>SQLite</span>
-            <span>MongoDB</span>
-            <span>MySQL</span>
-          </div>
-        </div>
-
-        <div class="stack-row reveal">
-          <span class="stack-cat">Tools</span>
-          <div class="stack-pills">
-            <span>Git</span>
-            <span>Docker</span>
-            <span>Bash</span>
-            <span>Power BI</span>
-            <span>Chrome Extension APIs</span>
-            <span>AWS</span>
-            <span>JWT</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
 
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="wrapper footer-inner">
-      <p>Designed &amp; built by Dhruv Dave</p>
-      <div class="footer-links">
-        <a href="https://github.com/dhruvvdave" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/dhruvdave06" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:davedhruv2006@gmail.com">Email</a>
-      </div>
-      <p class="footer-copy">© 2025 Dhruv Dave</p>
-    </div>
+  <footer class="site-footer">
+    <p>© 2026 Dhruv Dave · Plain HTML and CSS — no framework, no build step, no analytics.</p>
   </footer>
 
-  <!-- Scroll to top -->
-  <button id="scroll-top" aria-label="Back to top" title="Back to top">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </button>
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
