@@ -206,8 +206,31 @@ h1 {
 }
 
 /* ── Work ── */
-.project { margin-bottom: 2.75rem; }
+.project { margin-bottom: 3rem; }
 .project:last-of-type { margin-bottom: 0; }
+
+.visual { margin: 0 0 1rem; }
+
+.shot,
+.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.shot { aspect-ratio: 16 / 10; object-fit: cover; background: var(--code-bg); }
+
+/* Architecture diagrams: same frame as the screenshots, drawn in
+   theme colours so they hold up in dark mode. */
+.diagram { background: var(--code-bg); }
+.d-box   { fill: var(--bg); stroke: var(--faint); }
+.d-line  { stroke: var(--faint); stroke-width: 1.25; }
+.d-dash  { stroke-dasharray: 4 4; }
+.d-arrow { fill: var(--faint); }
+.d-label { fill: var(--text); font-family: var(--mono); font-size: 13px; }
+.d-note  { fill: var(--faint); font-family: var(--mono); font-size: 11px; }
 
 .project h3 {
   font-size: 1rem;
@@ -303,6 +326,21 @@ h1 {
 #contact p { color: var(--muted); }
 #contact p + p { margin-top: 1rem; }
 #contact a { color: var(--text); }
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--muted);
+}
+.contact-links a:hover { color: var(--text); }
 
 /* ── Footer ── */
 .site-footer {
