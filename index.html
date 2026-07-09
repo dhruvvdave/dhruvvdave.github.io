@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dhruv Dave</title>
 
-  <meta name="description" content="Dhruv Dave — computer science student at Queen's University. I build web apps and data tools, and I'm looking for software engineering internships.">
+  <meta name="description" content="Dhruv Dave, computer science student at Queen's University. I build web apps and data tools, and I'm looking for software engineering internships.">
   <meta name="author" content="Dhruv Dave">
 
   <meta property="og:title" content="Dhruv Dave">
@@ -55,7 +55,7 @@
   <a href="#main" class="skip-link">Skip to content</a>
 
   <header class="site-header">
-    <a href="/" class="brand" aria-label="Dhruv Dave — home">
+    <a href="/" class="brand" aria-label="Dhruv Dave, home">
       <svg width="16" height="21" viewBox="0 0 20 26" fill="none" aria-hidden="true">
         <rect x="0" y="0" width="6" height="26" rx="3" fill="currentColor"/>
         <path d="M6 4C8.5 4 18 6 18 13C18 20 8.5 22 6 22" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
@@ -85,18 +85,14 @@
 
       <p>
         I'm a computer science student at Queen's, currently at
-        <a href="https://fgfbrands.com" rel="noopener">FGF Brands</a> working on Cerebro,
-        the platform that monitors production lines across its 22 bakery plants.
+        <a href="https://fgfbrands.com" rel="noopener">FGF Brands</a> working on
+        Cerebro, the platform that monitors production across its 22 bakery plants.
       </p>
       <p>
-        I like the parts of software most people never look at — rate limiters,
-        encryption schemes, cache layers, the seams between systems. Most of the
-        projects below started with wanting to know how one of those things
-        actually works.
-      </p>
-      <p>
-        I'm looking for a software engineering internship.
-        If you're hiring, <a href="mailto:davedhruv2006@gmail.com">email me</a>.
+        I like the parts of software most people never look at: rate limiters,
+        encryption schemes, the seams between systems. I'm looking for a
+        software engineering internship. If you're hiring,
+        <a href="mailto:davedhruv2006@gmail.com">email me</a>.
       </p>
 
       <p class="toolbox" aria-label="Tools I use most">
@@ -108,16 +104,56 @@
       <h2 id="work-title">Work</h2>
 
       <article class="project">
-        <h3><a href="https://stock-screener-kappa-one.vercel.app" rel="noopener">Markr</a> <span class="desc">— stock screener</span></h3>
+        <figure class="visual">
+          <svg class="diagram" viewBox="0 0 640 400" role="img" aria-label="Architecture diagram: a React client calls a FastAPI backend guarded by an atomic Redis rate limiter, which falls through six market-data sources when one hits its limit.">
+            <defs>
+              <marker id="m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0L8 4L0 8z" class="d-arrow"/>
+              </marker>
+            </defs>
+            <rect class="d-box" x="36" y="170" width="120" height="56" rx="6"/>
+            <text class="d-label" x="96" y="203" text-anchor="middle">React client</text>
+
+            <line class="d-line" x1="156" y1="198" x2="218" y2="198" marker-end="url(#m-arrow)"/>
+
+            <rect class="d-box" x="226" y="170" width="140" height="56" rx="6"/>
+            <text class="d-label" x="296" y="203" text-anchor="middle">FastAPI</text>
+
+            <line class="d-line" x1="296" y1="226" x2="296" y2="260"/>
+            <rect class="d-box" x="226" y="262" width="140" height="60" rx="6"/>
+            <text class="d-label" x="296" y="287" text-anchor="middle">Redis limiter</text>
+            <text class="d-note" x="296" y="305" text-anchor="middle">Lua · atomic</text>
+
+            <line class="d-line" x1="366" y1="192" x2="442" y2="56" marker-end="url(#m-arrow)"/>
+
+            <rect class="d-box" x="450" y="30" width="150" height="40" rx="6"/>
+            <text class="d-label" x="525" y="55" text-anchor="middle">Finnhub</text>
+            <rect class="d-box" x="450" y="86" width="150" height="40" rx="6"/>
+            <text class="d-label" x="525" y="111" text-anchor="middle">Yahoo Finance</text>
+            <rect class="d-box" x="450" y="142" width="150" height="40" rx="6"/>
+            <text class="d-label" x="525" y="167" text-anchor="middle">FMP</text>
+            <rect class="d-box" x="450" y="198" width="150" height="40" rx="6"/>
+            <text class="d-label" x="525" y="223" text-anchor="middle">Alpha Vantage</text>
+            <rect class="d-box" x="450" y="254" width="150" height="40" rx="6"/>
+            <text class="d-label" x="525" y="279" text-anchor="middle">Stooq</text>
+            <rect class="d-box" x="450" y="310" width="150" height="40" rx="6"/>
+            <text class="d-label" x="525" y="335" text-anchor="middle">Twelve Data</text>
+
+            <line class="d-line d-dash" x1="525" y1="70" x2="525" y2="84" marker-end="url(#m-arrow)"/>
+            <line class="d-line d-dash" x1="525" y1="126" x2="525" y2="140" marker-end="url(#m-arrow)"/>
+            <line class="d-line d-dash" x1="525" y1="182" x2="525" y2="196" marker-end="url(#m-arrow)"/>
+            <line class="d-line d-dash" x1="525" y1="238" x2="525" y2="252" marker-end="url(#m-arrow)"/>
+            <line class="d-line d-dash" x1="525" y1="294" x2="525" y2="308" marker-end="url(#m-arrow)"/>
+
+            <text class="d-note" x="525" y="376" text-anchor="middle">falls through on 429s</text>
+          </svg>
+        </figure>
+        <h3><a href="https://stock-screener-kappa-one.vercel.app" rel="noopener">Markr</a> <span class="desc">· stock screener</span></h3>
         <p>
-          Free market-data APIs cap you hard, and every provider caps you
-          differently. Markr chains six of them — Finnhub through Yahoo Finance,
-          FMP, Alpha Vantage, Stooq, and Twelve Data — behind a FastAPI backend
-          that enforces per-source rate limits with an atomic Redis Lua script,
-          so a burst of traffic fails over instead of failing. Candles land
-          asynchronously in a monthly-partitioned Postgres table, and the
-          indicators (RSI, MACD, Bollinger Bands) are computed client-side from
-          raw history, which keeps the backend a dumb, fast cache.
+          Six market-data APIs behind one FastAPI backend. A Redis Lua script
+          enforces each source's rate limit atomically, so a burst of traffic
+          falls through the chain instead of dying on a 429. Candles land in
+          monthly-partitioned Postgres; indicators are computed client-side.
         </p>
         <p class="project-foot">
           <span class="tech">React · FastAPI · PostgreSQL · Redis · Docker</span>
@@ -129,15 +165,15 @@
       </article>
 
       <article class="project">
-        <h3><a href="https://securevault.dhruvdave.ca" rel="noopener">SecureVault</a> <span class="desc">— password manager</span></h3>
+        <figure class="visual">
+          <img class="shot" src="images/securevault.webp" alt="SecureVault landing page: password analyzer, generator, and breach checker" width="1312" height="820" loading="lazy">
+        </figure>
+        <h3><a href="https://securevault.dhruvdave.ca" rel="noopener">SecureVault</a> <span class="desc">· password manager</span></h3>
         <p>
-          Built to understand what 1Password is actually doing. Every vault
-          entry is encrypted with its own AES-256-GCM key, derived with PBKDF2
-          at 600,000 iterations, so cracking one entry buys you nothing else.
-          Breach checks use HaveIBeenPwned's k-anonymity model — five characters
-          of a hash leave the machine, never the password. Rounded out with
-          bcrypt logins, rotating JWTs, TOTP two-factor, and a pytest suite,
-          deployed behind nginx.
+          Built to understand what 1Password actually does. Every vault entry
+          gets its own AES-256-GCM key (PBKDF2, 600k iterations), and breach
+          checks use HaveIBeenPwned's k-anonymity model, so no password ever
+          leaves the machine.
         </p>
         <p class="project-foot">
           <span class="tech">Flask · React · SQLite · Docker</span>
@@ -149,15 +185,45 @@
       </article>
 
       <article class="project">
-        <h3><a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">ctx</a> <span class="desc">— browser session tracker</span></h3>
+        <figure class="visual">
+          <svg class="diagram" viewBox="0 0 640 400" role="img" aria-label="Architecture diagram: a privacy guard sits between the page and the Chrome extension; sessions persist to chrome.storage.local, and the Hono API and CLI are optional.">
+            <defs>
+              <marker id="m-arrow2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0L8 4L0 8z" class="d-arrow"/>
+              </marker>
+            </defs>
+            <rect class="d-box" x="36" y="102" width="120" height="56" rx="6"/>
+            <text class="d-label" x="96" y="135" text-anchor="middle">page DOM</text>
+
+            <line class="d-line" x1="156" y1="130" x2="208" y2="130" marker-end="url(#m-arrow2)"/>
+
+            <rect class="d-box" x="216" y="102" width="150" height="56" rx="6"/>
+            <text class="d-label" x="291" y="127" text-anchor="middle">privacy guard</text>
+            <text class="d-note" x="291" y="145" text-anchor="middle">password + card scan</text>
+
+            <line class="d-line" x1="366" y1="130" x2="418" y2="130" marker-end="url(#m-arrow2)"/>
+
+            <rect class="d-box" x="426" y="102" width="150" height="56" rx="6"/>
+            <text class="d-label" x="501" y="127" text-anchor="middle">MV3 extension</text>
+            <text class="d-note" x="501" y="145" text-anchor="middle">chrome.alarms batches</text>
+
+            <line class="d-line" x1="501" y1="158" x2="501" y2="258" marker-end="url(#m-arrow2)"/>
+            <rect class="d-box" x="416" y="266" width="170" height="60" rx="6"/>
+            <text class="d-label" x="501" y="291" text-anchor="middle">storage.local</text>
+            <text class="d-note" x="501" y="309" text-anchor="middle">works offline</text>
+
+            <line class="d-line d-dash" x1="440" y1="158" x2="296" y2="258" marker-end="url(#m-arrow2)"/>
+            <rect class="d-box d-dash" x="196" y="266" width="160" height="60" rx="6"/>
+            <text class="d-label" x="276" y="291" text-anchor="middle">Hono API · CLI</text>
+            <text class="d-note" x="276" y="309" text-anchor="middle">optional</text>
+          </svg>
+        </figure>
+        <h3><a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">ctx</a> <span class="desc">· browser session tracker</span></h3>
         <p>
-          A session tracker designed to work with the network unplugged. The
-          Chrome extension batches sessions with <code>chrome.alarms</code> and
-          persists them locally, so the Hono backend and CLI — same TypeScript
-          monorepo — are optional extras. The part that took longest is the
-          privacy guard: before anything is captured, a content script checks
-          the URL against a sensitive-domain list and scans the live DOM for
-          password and credit-card fields.
+          A session tracker that works with the network unplugged. The Chrome
+          extension stores everything locally, the server and CLI are optional,
+          and a privacy guard scans each page for password and card fields
+          before anything is captured.
         </p>
         <p class="project-foot">
           <span class="tech">TypeScript · Chrome MV3 · Hono · SQLite</span>
@@ -168,12 +234,13 @@
       </article>
 
       <article class="project">
-        <h3><a href="https://wavvy-flax.vercel.app" rel="noopener">Wavvy</a> <span class="desc">— drum machine for the browser</span></h3>
+        <figure class="visual">
+          <img class="shot" src="images/wavvy.webp" alt="Wavvy: step sequencer grid with playback controls and a waveform visualizer" width="1312" height="820" loading="lazy">
+        </figure>
+        <h3><a href="https://wavvy-flax.vercel.app" rel="noopener">Wavvy</a> <span class="desc">· drum machine for the browser</span></h3>
         <p>
-          A 16-step sequencer and melody pads scheduled with Tone.js, with five
-          visualizer modes drawn in real time from the Web Audio analyser node.
-          Made for making noise; kept because the scheduling was a genuinely
-          hard timing problem.
+          A 16-step sequencer and melody pads scheduled with Tone.js, plus five
+          visualizer modes drawn live from the Web Audio analyser node.
         </p>
         <p class="project-foot">
           <span class="tech">React · TypeScript · Tone.js · PostgreSQL</span>
@@ -188,15 +255,15 @@
       <ul class="earlier">
         <li>
           <a href="https://github.com/dhruvvdave/weather-app" rel="noopener">Weather app</a>
-          <span> — five-day forecasts on the OpenWeather API; the first thing I ever deployed.</span>
+          <span> · five-day forecasts on the OpenWeather API; the first thing I ever deployed.</span>
         </li>
         <li>
           <a href="https://github.com/dhruvvdave/finance-tracker" rel="noopener">Finance tracker</a>
-          <span> — income and expenses with Chart.js and CSV export.</span>
+          <span> · income and expenses with Chart.js and CSV export.</span>
         </li>
         <li>
           <a href="https://github.com/dhruvvdave/Minesweeper-Oppenheimer" rel="noopener">Minesweeper</a>
-          <span> — Oppenheimer-themed, in Java Swing; recursive flood fill and custom splash screens.</span>
+          <span> · Oppenheimer-themed, in Java Swing.</span>
         </li>
       </ul>
     </section>
@@ -210,11 +277,9 @@
           <div class="job-body">
             <h3>Cerebro AI Technical Specialist · FGF Brands</h3>
             <p>
-              I keep Cerebro honest: writing SQL to chase anomalies through
-              production data — which has turned up misconfigured workflow
-              states across 2,000+ records — building Power BI dashboards for
-              22 plants, and debugging the seam between Cerebro and the ERP
-              systems upstream of it.
+              SQL anomaly hunting across Cerebro's production data, Power BI
+              dashboards for 22 plants, and debugging the seam between Cerebro
+              and the ERP systems upstream of it.
             </p>
           </div>
         </li>
@@ -222,11 +287,7 @@
           <span class="job-when">2025</span>
           <div class="job-body">
             <h3>Mobility Technician · Bird</h3>
-            <p>
-              Diagnosed and repaired e-scooters — mechanical and software
-              faults both — and field-tested new features with the product and
-              engineering teams.
-            </p>
+            <p>Diagnosed and repaired e-scooters, both mechanical and software faults.</p>
           </div>
         </li>
         <li class="job">
@@ -241,10 +302,8 @@
           <div class="job-body">
             <h3>Research Assistant · COBWEB, University of Toronto</h3>
             <p>
-              Built agent-based simulations of ecological adaptive systems with
-              Dr. Brad Bass, and wrote the Pandas and NumPy pipelines that
-              turned multi-run simulation output into something you could
-              actually read.
+              Agent-based simulations of ecological systems with Dr. Brad Bass,
+              plus the Pandas pipelines that made multi-run output readable.
             </p>
           </div>
         </li>
@@ -253,9 +312,8 @@
           <div class="job-body">
             <h3>Software Engineer Intern · Digitera</h3>
             <p>
-              Shipped websites for small-business clients and cut page loads
-              about 40% with the unglamorous stuff: minified assets, compressed
-              images, deferred scripts.
+              Shipped client websites and cut page loads about 40% with minified
+              assets, compressed images and deferred scripts.
             </p>
           </div>
         </li>
@@ -266,11 +324,19 @@
       <h2 id="contact-title">Contact</h2>
       <p>
         The fastest way to reach me is
-        <a href="mailto:davedhruv2006@gmail.com">davedhruv2006@gmail.com</a> —
-        I read everything. I'm also on
-        <a href="https://github.com/dhruvvdave" rel="noopener">GitHub</a> and
-        <a href="https://www.linkedin.com/in/dhruvdave06" rel="noopener">LinkedIn</a>.
+        <a href="mailto:davedhruv2006@gmail.com">davedhruv2006@gmail.com</a>.
+        I read everything.
       </p>
+      <div class="contact-links">
+        <a href="https://github.com/dhruvvdave" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/dhruvdave06" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+      </div>
       <p>
         Away from a keyboard I'm usually on the ice, on a trail, or in an
         airport.
@@ -280,7 +346,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Dhruv Dave · Plain HTML and CSS — no framework, no build step, no analytics.</p>
+    <p>© 2026 Dhruv Dave · Plain HTML and CSS. No framework, no build step, no analytics.</p>
   </footer>
 
   <script src="script.js" defer></script>
