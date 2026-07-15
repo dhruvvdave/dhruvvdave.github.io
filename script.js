@@ -22,3 +22,29 @@
     label();
   });
 })();
+
+// Sidebar nav: mark the section currently in view.
+(function () {
+  var links = document.querySelectorAll('.side-nav a[href^="#"]');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      links.forEach(function (a) {
+        var active = a === byId[entry.target.id];
+        a.classList.toggle('active', active);
+        if (active) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  Object.keys(byId).forEach(function (id) {
+    var section = document.getElementById(id);
+    if (section) observer.observe(section);
+  });
+})();
