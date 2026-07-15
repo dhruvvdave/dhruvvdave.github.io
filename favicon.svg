@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
   <style>
-    rect, path { color: #1c1c1c; }
-    @media (prefers-color-scheme: dark) { rect, path { color: #e6e6e6; } }
+    line { stroke: #1c1c1c; }
+    @media (prefers-color-scheme: dark) { line { stroke: #e6e6e6; } }
   </style>
-  <g transform="translate(3 0)">
-    <rect x="0" y="0" width="6" height="26" rx="3" fill="currentColor"/>
-    <path d="M6 4C8.5 4 18 6 18 13C18 20 8.5 22 6 22" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
+  <g stroke-width="4.25" stroke-linecap="round">
+    <line x1="6.6" y1="21" x2="12.4" y2="5"/>
+    <line x1="13.6" y1="21" x2="19.4" y2="5"/>
   </g>
 </svg>
