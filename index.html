@@ -60,13 +60,14 @@
       <div class="sidebar-top">
         <img class="portrait" src="images/profile.jpg" alt="Dhruv Dave, smiling, in a black t-shirt" width="72" height="72">
         <h1>Dhruv Dave</h1>
-        <p class="role">Computer science student at Queen's University</p>
+        <p class="role">Computer Science Student at Queen's University</p>
         <p class="pitch">I like the parts of software most people never look at.</p>
 
         <nav class="side-nav" aria-label="Sections">
           <a href="#about"><span class="nav-line" aria-hidden="true"></span>About</a>
           <a href="#work"><span class="nav-line" aria-hidden="true"></span>Work</a>
           <a href="#experience"><span class="nav-line" aria-hidden="true"></span>Experience</a>
+          <a href="#education"><span class="nav-line" aria-hidden="true"></span>Education</a>
           <a href="#contact"><span class="nav-line" aria-hidden="true"></span>Contact</a>
         </nav>
       </div>
@@ -104,9 +105,12 @@
           looking for a software engineering internship. If you're hiring,
           <a href="mailto:davedhruv2006@gmail.com">email me</a>.
         </p>
-        <p class="toolbox" aria-label="Tools I use most">
-          Mostly: TypeScript · Python · Java · React · FastAPI · PostgreSQL · Redis · Docker
-        </p>
+        <dl class="toolbox" aria-label="Technical skills">
+          <div><dt>Languages</dt><dd>Python · JavaScript · TypeScript · Java · C · SQL</dd></div>
+          <div><dt>Frameworks</dt><dd>React · FastAPI · Node.js · Hono · Flask · SQLAlchemy · Tailwind CSS · Pandas · NumPy</dd></div>
+          <div><dt>Databases</dt><dd>PostgreSQL · Redis · SQLite</dd></div>
+          <div><dt>Tools</dt><dd>Git · Docker · Bash · Power BI · Chrome Extension APIs</dd></div>
+        </dl>
       </section>
 
       <section id="work" aria-labelledby="work-title">
@@ -161,8 +165,11 @@
           <p>
             Six market-data APIs behind one FastAPI backend. A Redis Lua script
             enforces each source's rate limit atomically, so a burst of traffic
-            falls through the chain instead of dying on a 429. Candles land in
-            monthly-partitioned Postgres; indicators are computed client-side.
+            falls through the chain instead of dying on a 429. Candles write
+            asynchronously to monthly-partitioned Postgres with per-resolution
+            Redis TTLs; RSI, MACD, and Bollinger Bands are computed client-side.
+            A Vitest suite covers the fallback chain, the indicators, and the
+            limiter.
           </p>
           <p class="project-foot">
             <span class="tech">React · FastAPI · PostgreSQL · Redis · Docker</span>
@@ -179,10 +186,13 @@
           </figure>
           <h3><a href="https://securevault.dhruvdave.ca" rel="noopener">SecureVault</a> <span class="desc">· password manager</span></h3>
           <p>
-            Built to understand what 1Password actually does. Every vault entry
-            gets its own AES-256-GCM key (PBKDF2, 600k iterations), and breach
-            checks use HaveIBeenPwned's k-anonymity model, so no password ever
-            leaves the machine.
+            Built to understand what 1Password actually does. The analyzer
+            computes entropy, catches keyboard walks and date patterns, and
+            scores passwords 0 to 100. Every vault entry gets its own
+            AES-256-GCM key (PBKDF2, 600k iterations), breach checks use
+            HaveIBeenPwned's k-anonymity model so no password ever leaves the
+            machine, and auth is bcrypt with rotating JWTs and TOTP 2FA, all
+            covered by a pytest suite.
           </p>
           <p class="project-foot">
             <span class="tech">Flask · React · SQLite · Docker</span>
@@ -232,7 +242,8 @@
             A session tracker that works with the network unplugged. The Chrome
             extension stores everything locally, the server and CLI are optional,
             and a privacy guard scans each page for password and card fields
-            before anything is captured.
+            before anything is captured. Blocked pages are logged with no URL,
+            title, or content.
           </p>
           <p class="project-foot">
             <span class="tech">TypeScript · Chrome MV3 · Hono · SQLite</span>
@@ -285,18 +296,21 @@
             <span class="job-when">2026–</span>
             <div class="job-body">
               <h3>Cerebro AI Technical Specialist · FGF Brands</h3>
-              <p>
-                SQL anomaly hunting across Cerebro's production data, Power BI
-                dashboards for 22 plants, and debugging the seam between Cerebro
-                and the ERP systems upstream of it.
-              </p>
+              <ul>
+                <li>Built internal tooling in Node.js and Python documenting Cerebro's OEE telemetry models, changeover logic, and troubleshooting decision trees, plus Power BI dashboards tracking manufacturing performance across FGF's 22 facilities.</li>
+                <li>Write and optimize SQL diagnostic queries against Cerebro's production database; the work has identified systemic misconfigurations in workflow state transitions and pipeline gaps across over 2,000 production records.</li>
+                <li>Configure and maintain Cerebro environments across FGF's Canadian facilities, debugging the integration boundary between Cerebro and upstream ERP systems.</li>
+              </ul>
             </div>
           </li>
           <li class="job">
             <span class="job-when">2025</span>
             <div class="job-body">
-              <h3>Mobility Technician · Bird</h3>
-              <p>Diagnosed and repaired e-scooters, both mechanical and software faults.</p>
+              <h3>Mobility Hardware and Software Technician · Bird</h3>
+              <ul>
+                <li>Performed inspections, diagnostics, and repairs on e-scooters to address mechanical and software issues.</li>
+                <li>Ensured safety compliance through standardized procedures, maintained accurate spare parts inventory, and supported product and engineering teams with testing new features and innovations.</li>
+              </ul>
             </div>
           </li>
           <li class="job">
@@ -310,10 +324,10 @@
             <span class="job-when">2022, 2024</span>
             <div class="job-body">
               <h3>Research Assistant · COBWEB, University of Toronto</h3>
-              <p>
-                Agent-based simulations of ecological systems with Dr. Brad Bass,
-                plus the Pandas pipelines that made multi-run output readable.
-              </p>
+              <ul>
+                <li>Implemented agent-based simulations modelling emergent behaviour in ecological adaptive systems with Dr. Brad Bass; configured multi-condition experiments whose results fed the team's research.</li>
+                <li>Wrote Pandas and NumPy pipelines to clean, normalize, and visualize multi-run simulation outputs, revealing population dynamics and threshold-crossing patterns across conditions.</li>
+              </ul>
             </div>
           </li>
           <li class="job">
@@ -321,12 +335,26 @@
             <div class="job-body">
               <h3>Software Engineer Intern · Digitera</h3>
               <p>
-                Shipped client websites and cut page loads about 40% with minified
-                assets, compressed images and deferred scripts.
+                Developed and shipped web applications for small-business clients
+                using JavaScript, HTML, and CSS; optimized page performance by
+                40% through asset minification, image compression, and deferred
+                script loading.
               </p>
             </div>
           </li>
         </ol>
+      </section>
+
+      <section id="education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <div class="job">
+          <span class="job-when">2024–</span>
+          <div class="job-body">
+            <h3>Queen's University · Kingston, ON</h3>
+            <p>Bachelor of Computer Science (Honours), Mathematics minor. GPA 3.8.</p>
+            <p class="coursework">Coursework: Data Structures &amp; Algorithms · Computer Architecture · Discrete Structures · Linear Algebra · Differential Equations</p>
+          </div>
+        </div>
       </section>
 
       <section id="contact" aria-labelledby="contact-title">
