@@ -118,48 +118,7 @@
 
         <article class="project">
           <figure class="visual">
-            <svg class="diagram" viewBox="0 0 640 400" role="img" aria-label="Architecture diagram: a React client calls a FastAPI backend guarded by an atomic Redis rate limiter, which falls through six market-data sources when one hits its limit.">
-              <defs>
-                <marker id="m-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                  <path d="M0 0L8 4L0 8z" class="d-arrow"/>
-                </marker>
-              </defs>
-              <rect class="d-box" x="36" y="170" width="120" height="56" rx="6"/>
-              <text class="d-label" x="96" y="203" text-anchor="middle">React client</text>
-
-              <line class="d-line" x1="156" y1="198" x2="218" y2="198" marker-end="url(#m-arrow)"/>
-
-              <rect class="d-box" x="226" y="170" width="140" height="56" rx="6"/>
-              <text class="d-label" x="296" y="203" text-anchor="middle">FastAPI</text>
-
-              <line class="d-line" x1="296" y1="226" x2="296" y2="260"/>
-              <rect class="d-box" x="226" y="262" width="140" height="60" rx="6"/>
-              <text class="d-label" x="296" y="287" text-anchor="middle">Redis limiter</text>
-              <text class="d-note" x="296" y="305" text-anchor="middle">Lua · atomic</text>
-
-              <line class="d-line" x1="366" y1="192" x2="442" y2="56" marker-end="url(#m-arrow)"/>
-
-              <rect class="d-box" x="450" y="30" width="150" height="40" rx="6"/>
-              <text class="d-label" x="525" y="55" text-anchor="middle">Finnhub</text>
-              <rect class="d-box" x="450" y="86" width="150" height="40" rx="6"/>
-              <text class="d-label" x="525" y="111" text-anchor="middle">Yahoo Finance</text>
-              <rect class="d-box" x="450" y="142" width="150" height="40" rx="6"/>
-              <text class="d-label" x="525" y="167" text-anchor="middle">FMP</text>
-              <rect class="d-box" x="450" y="198" width="150" height="40" rx="6"/>
-              <text class="d-label" x="525" y="223" text-anchor="middle">Alpha Vantage</text>
-              <rect class="d-box" x="450" y="254" width="150" height="40" rx="6"/>
-              <text class="d-label" x="525" y="279" text-anchor="middle">Stooq</text>
-              <rect class="d-box" x="450" y="310" width="150" height="40" rx="6"/>
-              <text class="d-label" x="525" y="335" text-anchor="middle">Twelve Data</text>
-
-              <line class="d-line d-dash" x1="525" y1="70" x2="525" y2="84" marker-end="url(#m-arrow)"/>
-              <line class="d-line d-dash" x1="525" y1="126" x2="525" y2="140" marker-end="url(#m-arrow)"/>
-              <line class="d-line d-dash" x1="525" y1="182" x2="525" y2="196" marker-end="url(#m-arrow)"/>
-              <line class="d-line d-dash" x1="525" y1="238" x2="525" y2="252" marker-end="url(#m-arrow)"/>
-              <line class="d-line d-dash" x1="525" y1="294" x2="525" y2="308" marker-end="url(#m-arrow)"/>
-
-              <text class="d-note" x="525" y="376" text-anchor="middle">falls through on 429s</text>
-            </svg>
+            <img class="shot" src="images/markr.webp" alt="Markr dashboard: ticker table with live price for AAPL, watchlist alerts, and a portfolio tracker panel" width="1312" height="820" loading="lazy">
           </figure>
           <h3><a href="https://stock-screener-kappa-one.vercel.app" rel="noopener">Markr</a> <span class="desc">· stock screener</span></h3>
           <p>
