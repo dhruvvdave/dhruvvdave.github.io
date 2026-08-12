@@ -7,19 +7,21 @@
 
   --bg:     #fcfcfc;
   --text:   #1c1c1c;
-  --muted:  #565656;
-  --faint:  #757575;
+  --muted:  #444444;   /* body copy — 9.5:1 on --bg */
+  --faint:  #6b6b6b;
   --border: #e4e4e4;
   --code-bg: #f0f0f0;
+  --accent: #0c6b64;   /* links only */
 }
 
 :root[data-theme="dark"] {
   --bg:     #111111;
   --text:   #e6e6e6;
-  --muted:  #a8a8a8;
-  --faint:  #818181;
+  --muted:  #b8b8b8;   /* body copy — 9.5:1 on --bg */
+  --faint:  #8f8f8f;
   --border: #2a2a2a;
   --code-bg: #1f1f1f;
+  --accent: #5fbdb2;   /* links only */
 }
 
 /* JS off: no data-theme attribute is ever set, so follow the OS. */
@@ -27,10 +29,11 @@
   :root:not([data-theme]) {
     --bg:     #111111;
     --text:   #e6e6e6;
-    --muted:  #a8a8a8;
-    --faint:  #818181;
+    --muted:  #b8b8b8;   /* body copy — 9.5:1 on --bg */
+    --faint:  #8f8f8f;
     --border: #2a2a2a;
     --code-bg: #1f1f1f;
+    --accent: #5fbdb2;   /* links only */
   }
 }
 
@@ -48,7 +51,7 @@ body {
   margin: 0;
   font-family: var(--sans);
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.55;
   color: var(--text);
   background: var(--bg);
 }
@@ -58,6 +61,19 @@ body {
 h1, h2, h3, p, ul, ol, figure { margin: 0; }
 
 img { max-width: 100%; display: block; }
+
+/* Readable by screen readers, invisible on screen. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 
 code {
   font-family: var(--mono);
@@ -77,6 +93,18 @@ a {
   transition: text-decoration-color 0.15s ease;
 }
 a:hover { text-decoration-color: var(--text); }
+
+/* The one colour on the page. Links only — headings, section labels,
+   and body copy stay monochrome in both themes. */
+.links a,
+#about p a,
+#contact a,
+.sidebar-foot .resume-link { color: var(--accent); }
+
+.links a:hover,
+#about p a:hover,
+#contact a:hover,
+.sidebar-foot .resume-link:hover { text-decoration-color: var(--accent); }
 
 :focus-visible {
   outline: 2px solid var(--text);
@@ -203,6 +231,16 @@ h1 {
 }
 .sidebar-foot a:hover { color: var(--text); }
 
+/* Spelled out rather than an icon: nobody guesses a document glyph. */
+.sidebar-foot .resume-link {
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-decoration-color: var(--faint);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  margin-left: 0.25rem;
+}
+
 #theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -247,7 +285,6 @@ h2 {
 
 #about p { color: var(--muted); }
 #about p + p { margin-top: 1rem; }
-#about p a { color: var(--text); }
 
 /* Skills, resume-style but quiet: mono rows, no pills */
 .toolbox {
@@ -284,7 +321,6 @@ h2 {
 
 .visual { margin-bottom: 1rem; }
 
-.shot,
 .diagram {
   display: block;
   width: 100%;
@@ -292,8 +328,6 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 8px;
 }
-
-.shot { aspect-ratio: 16 / 10; object-fit: cover; background: var(--code-bg); }
 
 /* Architecture diagrams: same frame as the screenshots, drawn in
    theme colours so they hold up in dark mode. */
@@ -333,10 +367,11 @@ h2 {
   margin-top: 0.625rem;
 }
 
+/* The keywords people actually scan for: same weight as body copy. */
 .tech {
   font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--faint);
+  font-size: 0.8125rem;
+  color: var(--muted);
 }
 
 .links { display: inline-flex; gap: 1rem; }
@@ -346,22 +381,6 @@ h2 {
   font-size: 0.75em;
   color: var(--faint);
 }
-
-.earlier-title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--muted);
-  margin: 2.75rem 0 0.875rem;
-}
-
-.earlier {
-  list-style: none;
-  padding: 0;
-  font-size: 0.9375rem;
-  color: var(--muted);
-}
-.earlier li + li { margin-top: 0.5rem; }
-.earlier a { color: var(--text); }
 
 /* ── Experience ── */
 .jobs {
@@ -429,7 +448,6 @@ h2 {
 /* ── Contact ── */
 #contact p { color: var(--muted); }
 #contact p + p { margin-top: 1rem; }
-#contact a { color: var(--text); }
 
 /* ── Footer ── */
 .site-footer {
@@ -451,15 +469,24 @@ h2 {
   .sidebar {
     position: static;
     height: auto;
-    padding-block: clamp(2.5rem, 8vw, 4rem) 0;
-    gap: 1.75rem;
+    padding-block: clamp(2rem, 6vw, 3rem) 0;
+    gap: 1.25rem;
   }
 
   .side-nav { display: none; }
 
   .portrait { width: 64px; height: 64px; margin-bottom: 1.25rem; }
 
-  main { padding-block: clamp(2.5rem, 8vw, 4rem) 1.5rem; }
+  main { padding-block: clamp(1.75rem, 5vw, 3rem) 1.5rem; }
+}
+
+/* Phones: the gaps between sections read as dead screens, so cut them
+   by about a third. Desktop spacing is unchanged. */
+@media (max-width: 600px) {
+  main > section { margin-bottom: 3rem; }
+  h2 { margin-bottom: 1.25rem; }
+  .project { margin-bottom: 2.25rem; }
+  .job + .job { margin-top: 1.5rem; }
 }
 
 @media (max-width: 480px) {
