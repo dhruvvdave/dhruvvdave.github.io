@@ -293,10 +293,19 @@ section { padding-top: 6.5rem; }
   margin: 0 0 1.4rem;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.hero-main { min-width: 0; }
+
 .hero h1 {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(3.6rem, 12vw, 8rem);
+  font-size: clamp(2.9rem, 7vw, 5.8rem);
   line-height: 0.92;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -386,6 +395,49 @@ section { padding-top: 6.5rem; }
   font-size: 0.92rem;
 }
 
+/* ---------- hero portrait ---------- */
+
+.plate { position: relative; }
+
+.plate figure {
+  margin: 0;
+  border: 1px solid var(--border-hi);
+  border-radius: 4px;
+  padding: 0.7rem 0.7rem 0;
+  background: var(--surface);
+}
+
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.plate figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.1rem 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.plate .corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--accent);
+  opacity: 0.55;
+}
+.plate .tl { top: -5px; left: -5px; border-right: 0; border-bottom: 0; }
+.plate .br { bottom: -5px; right: -5px; border-left: 0; border-top: 0; }
+
 /* ---------- project cards ---------- */
 
 .card {
@@ -416,9 +468,8 @@ section { padding-top: 6.5rem; }
 .card-meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.1rem;
 }
 
 .index {
@@ -426,24 +477,6 @@ section { padding-top: 6.5rem; }
   font-size: 0.75rem;
   letter-spacing: 0.28em;
   color: var(--faint);
-}
-
-.pill {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--faint);
-  border: 1px solid var(--border-hi);
-  border-radius: 999px;
-  padding: 0.3rem 0.85rem;
-  white-space: nowrap;
-}
-
-.pill-featured {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-dim);
 }
 
 .card h3 {
@@ -554,7 +587,7 @@ section { padding-top: 6.5rem; }
 
 .entry {
   display: grid;
-  grid-template-columns: 7rem minmax(0, 1fr);
+  grid-template-columns: 10.5rem minmax(0, 1fr);
   gap: 2rem;
   padding: 1.9rem 0;
   border-top: 1px solid var(--border);
@@ -643,6 +676,111 @@ section { padding-top: 6.5rem; }
 
 .site-footer p { margin: 0; }
 
+/* ---------- responsive ---------- */
+
+/* Nothing should ever be able to push the page sideways. Note: `clip` rather than
+   `hidden`, because `overflow: hidden` on an ancestor kills position: sticky and the
+   top bar depends on it. */
+img, svg, video, picture { max-width: 100%; }
+body { overflow-x: clip; }
+
+/* Respect notches and rounded display corners. */
+.topbar-inner,
+main {
+  padding-left: max(2rem, env(safe-area-inset-left));
+  padding-right: max(2rem, env(safe-area-inset-right));
+}
+
+/* Touch devices: no hover lift (it sticks after a tap), bigger targets. */
+@media (hover: none) {
+  .card:hover { transform: none; box-shadow: none; border-color: var(--border); }
+  #theme-toggle:hover { transform: none; }
+  .site-nav a,
+  .hero-links a,
+  .card-links a { padding-top: 0.35rem; padding-bottom: 0.35rem; }
+}
+
+/* Laptops and small desktops: pull the portrait in before it crowds the name. */
+@media (max-width: 1080px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr) 270px; gap: 2.75rem; }
+}
+
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .plate { max-width: 300px; }
+  .card-wide { grid-template-columns: 1fr; gap: 1.75rem; }
+  .card-wide .card-visual { order: -1; }
+  .card-grid { grid-template-columns: 1fr; }
+  .entry { grid-template-columns: 9rem minmax(0, 1fr); gap: 1.5rem; }
+}
+
+/* Tablets and large phones. */
+@media (max-width: 760px) {
+  .topbar-inner {
+    padding: 0.7rem max(1.15rem, env(safe-area-inset-left));
+    gap: 0.9rem;
+  }
+  .wordmark { font-size: 1.15rem; }
+
+  /* Keep the nav rather than hiding it: let it scroll sideways instead. */
+  .site-nav {
+    gap: 1.1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to right, transparent, #000 10px, #000 calc(100% - 14px), transparent);
+  }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .site-nav a { white-space: nowrap; font-size: 0.68rem; letter-spacing: 0.12em; }
+
+  main {
+    padding-left: max(1.15rem, env(safe-area-inset-left));
+    padding-right: max(1.15rem, env(safe-area-inset-right));
+    padding-bottom: 4rem;
+  }
+  section { padding-top: 4.25rem; }
+  .hero { padding-top: 3.25rem; }
+
+  .lede { max-width: none; }
+  .hero-copy { max-width: none; }
+  .plate { max-width: 260px; }
+
+  .card { padding: 1.4rem; border-radius: 14px; }
+  .card-diagram { padding: 0.5rem; }
+
+  .entry { grid-template-columns: 1fr; gap: 0.55rem; padding: 1.5rem 0; }
+  .entry-when { padding-top: 0; }
+
+  .toolbox > div { grid-template-columns: 1fr; gap: 0.2rem; }
+  .section-head { flex-wrap: wrap; gap: 0.75rem; }
+  .section-head .rule { display: none; }
+
+  .site-footer { margin-top: 4.5rem; }
+}
+
+/* Small phones. */
+@media (max-width: 420px) {
+  .hero h1 { font-size: clamp(2.4rem, 12vw, 3.2rem); }
+  .plate { max-width: 100%; }
+  .card h3 { font-size: 1.65rem; }
+  .big-email { font-size: 1.4rem; word-break: break-all; }
+  .hero-links { gap: 0.6rem; font-size: 0.72rem; }
+  .tags li { font-size: 0.6rem; padding: 0.28rem 0.6rem; }
+}
+
+/* Very wide screens: stop the measure getting unreadable. */
+@media (min-width: 1500px) {
+  .topbar-inner, main { max-width: 1240px; }
+}
+
+/* Print: flatten everything to ink on paper. */
+@media print {
+  .topbar, .grain, #theme-toggle, .skip-link { display: none !important; }
+  body { background: #fff; color: #000; }
+  .card, .entry { break-inside: avoid; border-color: #ccc; }
+  a { text-decoration: underline; }
+}
+
 /* ---------- entrance ---------- */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -652,34 +790,13 @@ section { padding-top: 6.5rem; }
     animation: rise 0.75s cubic-bezier(0.22, 0.8, 0.3, 1) forwards;
   }
   .hero.reveal { animation-delay: 0.05s; }
-  #work .reveal:nth-child(1) { animation-delay: 0.1s; }
-  #work .reveal:nth-child(2) { animation-delay: 0.16s; }
-  #work .reveal:nth-child(3) { animation-delay: 0.22s; }
+  #projects .reveal:nth-child(1) { animation-delay: 0.1s; }
+  #projects .reveal:nth-child(2) { animation-delay: 0.16s; }
+  #projects .reveal:nth-child(3) { animation-delay: 0.22s; }
   .card-grid .reveal:nth-child(1) { animation-delay: 0.28s; }
   .card-grid .reveal:nth-child(2) { animation-delay: 0.34s; }
 
   @keyframes rise {
     to { opacity: 1; transform: none; }
   }
-}
-
-/* ---------- responsive ---------- */
-
-@media (max-width: 900px) {
-  .card-wide { grid-template-columns: 1fr; gap: 1.75rem; }
-  .card-wide .card-visual { order: -1; }
-  .card-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 720px) {
-  .topbar-inner { padding: 0.8rem 1.25rem; gap: 1rem; }
-  .site-nav { display: none; }
-  main { padding: 0 1.25rem 4rem; }
-  section { padding-top: 4.5rem; }
-  .hero { padding-top: 4rem; }
-  .card { padding: 1.5rem; border-radius: 14px; }
-  .entry { grid-template-columns: 1fr; gap: 0.6rem; }
-  .entry-when { padding-top: 0; }
-  .toolbox > div { grid-template-columns: 1fr; gap: 0.25rem; }
-  .section-head { flex-wrap: wrap; }
 }

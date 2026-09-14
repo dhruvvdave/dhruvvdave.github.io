@@ -56,9 +56,9 @@
   // alone leaves the highlight stale when a section leaves the band and its
   // neighbour was already sitting in it.
   //
-  // Work is several screens tall, so it overlaps the band long after the next
-  // section has reached it. When several overlap, the furthest down the page
-  // is the one just scrolled into, so walk the list backwards.
+  // Projects is several screens tall, so it overlaps the band long after the
+  // next section has reached it. When several overlap, the furthest down the
+  // page is the one just scrolled into, so walk the list backwards.
   var visible = {};
 
   var observer = new IntersectionObserver(function (entries) {
