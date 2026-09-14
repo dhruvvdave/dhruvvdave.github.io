@@ -51,12 +51,27 @@
       document.documentElement.scrollHeight - 2;
   }
 
+  // A callback only carries the sections whose state just changed, so track
+  // them all and re-derive the active one every time; reading the entries
+  // alone leaves the highlight stale when a section leaves the band and its
+  // neighbour was already sitting in it.
+  //
+  // Work is several screens tall, so it overlaps the band long after the next
+  // section has reached it. When several overlap, the furthest down the page
+  // is the one just scrolled into, so walk the list backwards.
+  var visible = {};
+
   var observer = new IntersectionObserver(function (entries) {
-    if (atBottom()) return;
     entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      setActive(entry.target.id);
+      visible[entry.target.id] = entry.isIntersecting;
     });
+    if (atBottom()) return;
+    for (var i = ids.length - 1; i >= 0; i--) {
+      if (visible[ids[i]]) {
+        setActive(ids[i]);
+        return;
+      }
+    }
   }, { rootMargin: '-25% 0px -65% 0px' });
 
   ids.forEach(function (id) {
