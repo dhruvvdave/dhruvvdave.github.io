@@ -560,6 +560,16 @@ section { padding-top: 6.5rem; }
   padding: 0.75rem;
 }
 
+.card-shot {
+  margin: 0 0 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-lift);
+  overflow: hidden;
+}
+
+.card-shot img { display: block; width: 100%; height: auto; }
+
 .diagram { display: block; width: 100%; height: auto; }
 .d-box { fill: var(--surface-2); stroke: var(--border-hi); stroke-width: 1; }
 .d-box.d-dash { stroke-dasharray: 4 4; }

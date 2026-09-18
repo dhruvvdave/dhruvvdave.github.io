@@ -201,39 +201,8 @@
           </div>
           <h3><a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">ctx</a></h3>
           <p class="desc">Local-first browser session tracker.</p>
-          <figure class="card-diagram">
-            <svg class="diagram" viewBox="0 0 640 360" role="img" aria-label="ctx architecture diagram">
-              <defs>
-                <marker id="m-arrow2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                  <path d="M0 0L8 4L0 8z" class="d-arrow"/>
-                </marker>
-              </defs>
-              <rect class="d-box" x="24" y="72" width="118" height="54" rx="8"/>
-              <text class="d-label" x="83" y="104" text-anchor="middle">page DOM</text>
-
-              <line class="d-line" x1="142" y1="99" x2="196" y2="99" marker-end="url(#m-arrow2)"/>
-
-              <rect class="d-box" x="204" y="72" width="150" height="54" rx="8"/>
-              <text class="d-label" x="279" y="96" text-anchor="middle">privacy guard</text>
-              <text class="d-note" x="279" y="114" text-anchor="middle">password + card scan</text>
-
-              <line class="d-line" x1="354" y1="99" x2="408" y2="99" marker-end="url(#m-arrow2)"/>
-
-              <rect class="d-box" x="416" y="72" width="150" height="54" rx="8"/>
-              <text class="d-label" x="491" y="96" text-anchor="middle">MV3 extension</text>
-              <text class="d-note" x="491" y="114" text-anchor="middle">chrome.alarms batches</text>
-
-              <line class="d-line" x1="491" y1="126" x2="491" y2="234" marker-end="url(#m-arrow2)"/>
-              <rect class="d-box" x="406" y="242" width="170" height="58" rx="8"/>
-              <text class="d-label" x="491" y="266" text-anchor="middle">storage.local</text>
-              <text class="d-note" x="491" y="284" text-anchor="middle">works offline</text>
-
-              <line class="d-line d-dash" x1="430" y1="126" x2="286" y2="234" marker-end="url(#m-arrow2)"/>
-              <rect class="d-box d-dash" x="186" y="242" width="160" height="58" rx="8"/>
-              <text class="d-label" x="266" y="266" text-anchor="middle">Hono API &middot; CLI</text>
-              <text class="d-note" x="266" y="284" text-anchor="middle">optional</text>
-            </svg>
-            <figcaption class="sr-only">The page DOM is read through a privacy guard that scans for password and card fields before anything is captured. The guard feeds a Chrome MV3 extension, which batches writes with chrome.alarms into chrome.storage.local so the tracker works offline. A Hono API and CLI sit on an optional second path.</figcaption>
+          <figure class="card-shot">
+            <img src="images/ctx.webp" alt="ctx's live session view: a dark panel listing the pages of the current session ranked by time spent, each with its domain, a scroll-depth meter, and a duration, above discard and save controls" width="1280" height="800" loading="lazy" decoding="async">
           </figure>
           <p>
             A session tracker that operates entirely offline. The Chrome extension stores
