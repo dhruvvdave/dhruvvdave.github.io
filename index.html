@@ -172,17 +172,18 @@
             <span class="index">02</span>
           </div>
           <h3><a href="https://securevault.dhruvdave.ca" rel="noopener">SecureVault</a></h3>
-          <p class="desc">Password analyzer and encrypted vault.</p>
+          <p class="desc">Password strength analyzer, breach check, and generator.</p>
           <p>
-            Built to understand how a password manager such as 1Password works internally.
-            The analyzer computes entropy, detects keyboard walks and date patterns, and
-            scores passwords from 0 to 100. Each vault entry has its own AES-256-GCM key
-            (PBKDF2, 600,000 iterations), breach checks use HaveIBeenPwned's k-anonymity
-            model so no password leaves the machine, and authentication is bcrypt with
-            rotating JWTs and TOTP 2FA, all covered by a pytest suite.
+            The analyzer charges each guessable part of a password what it costs to
+            guess: dictionary words (leet swaps included), keyboard walks, sequences,
+            and dates. Summer2024! has 72 naive bits but scores 22. The breach check
+            hashes with SHA-1 in the browser and sends Have I Been Pwned only a
+            5-character prefix; the CSP blocks every other host. A CSPRNG generator
+            reports exact entropy, and Playwright tests fail if any request carries the
+            password or its full hash.
           </p>
           <ul class="tags">
-            <li>Flask</li><li>React</li><li>SQLite</li><li>Docker</li>
+            <li>React</li><li>Vite</li><li>Web Crypto</li><li>Playwright</li><li>Docker</li>
           </ul>
           <p class="card-links">
             <a href="https://securevault.dhruvdave.ca" rel="noopener">Live demo</a><span aria-hidden="true">/</span>
@@ -190,7 +191,7 @@
           </p>
         </div>
         <figure class="card-visual">
-          <img src="images/securevault.webp" alt="SecureVault's analyzer: a password field that scores entropy and structure as you type, with a numbered sidebar for analyzer, generator, and breach check" width="1440" height="863" loading="lazy" decoding="async">
+          <img src="images/securevault.webp" alt="SecureVault's analyzer scoring Summer2024! at 22 out of 100, with effective vs naive entropy and time-to-crack estimates" width="1440" height="864" loading="lazy" decoding="async">
         </figure>
       </article>
 
