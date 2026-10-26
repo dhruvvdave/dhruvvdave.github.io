@@ -135,7 +135,7 @@
       <div class="section-head reveal">
         <h2 id="projects-title">Projects</h2>
         <span class="rule" aria-hidden="true"></span>
-        <span class="count">Four of them</span>
+        <span class="count">Three of them</span>
       </div>
 
       <article class="card card-wide reveal">
@@ -195,47 +195,13 @@
         </figure>
       </article>
 
-      <div class="card-grid">
-        <article class="card reveal">
+      <article class="card card-wide reveal">
+        <div class="card-text">
           <div class="card-meta">
             <span class="index">03</span>
           </div>
           <h3><a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">ctx</a></h3>
           <p class="desc">Local-first browser session tracker.</p>
-          <figure class="card-diagram">
-            <svg class="diagram" viewBox="0 0 640 360" role="img" aria-label="ctx architecture diagram">
-              <defs>
-                <marker id="m-arrow2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                  <path d="M0 0L8 4L0 8z" class="d-arrow"/>
-                </marker>
-              </defs>
-              <rect class="d-box" x="24" y="72" width="118" height="54" rx="8"/>
-              <text class="d-label" x="83" y="104" text-anchor="middle">page DOM</text>
-
-              <line class="d-line" x1="142" y1="99" x2="196" y2="99" marker-end="url(#m-arrow2)"/>
-
-              <rect class="d-box" x="204" y="72" width="150" height="54" rx="8"/>
-              <text class="d-label" x="279" y="96" text-anchor="middle">privacy guard</text>
-              <text class="d-note" x="279" y="114" text-anchor="middle">password + card scan</text>
-
-              <line class="d-line" x1="354" y1="99" x2="408" y2="99" marker-end="url(#m-arrow2)"/>
-
-              <rect class="d-box" x="416" y="72" width="150" height="54" rx="8"/>
-              <text class="d-label" x="491" y="96" text-anchor="middle">MV3 extension</text>
-              <text class="d-note" x="491" y="114" text-anchor="middle">chrome.alarms batches</text>
-
-              <line class="d-line" x1="491" y1="126" x2="491" y2="234" marker-end="url(#m-arrow2)"/>
-              <rect class="d-box" x="406" y="242" width="170" height="58" rx="8"/>
-              <text class="d-label" x="491" y="266" text-anchor="middle">storage.local</text>
-              <text class="d-note" x="491" y="284" text-anchor="middle">works offline</text>
-
-              <line class="d-line d-dash" x1="430" y1="126" x2="286" y2="234" marker-end="url(#m-arrow2)"/>
-              <rect class="d-box d-dash" x="186" y="242" width="160" height="58" rx="8"/>
-              <text class="d-label" x="266" y="266" text-anchor="middle">Hono API &middot; CLI</text>
-              <text class="d-note" x="266" y="284" text-anchor="middle">optional</text>
-            </svg>
-            <figcaption class="sr-only">The page DOM is read through a privacy guard that scans for password and card fields before anything is captured. The guard feeds a Chrome MV3 extension, which batches writes with chrome.alarms into chrome.storage.local so the tracker works offline. A Hono API and CLI sit on an optional second path.</figcaption>
-          </figure>
           <p>
             A session tracker that operates entirely offline. The Chrome extension stores
             everything locally and the server and CLI are optional. A privacy guard scans
@@ -248,65 +214,11 @@
           <p class="card-links">
             <a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">Source</a><span aria-hidden="true">/</span>
           </p>
-        </article>
-
-        <article class="card reveal">
-          <div class="card-meta">
-            <span class="index">04</span>
-          </div>
-          <h3><a href="https://wavvy-flax.vercel.app" rel="noopener">Wavvy</a></h3>
-          <p class="desc">Drum machine for the browser.</p>
-          <figure class="card-diagram">
-            <svg class="diagram" viewBox="0 0 640 360" role="img" aria-label="Wavvy architecture diagram">
-              <defs>
-                <marker id="m-arrow4" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                  <path d="M0 0L8 4L0 8z" class="d-arrow"/>
-                </marker>
-              </defs>
-              <rect class="d-box" x="24" y="44" width="146" height="54" rx="8"/>
-              <text class="d-label" x="97" y="76" text-anchor="middle">16-step grid</text>
-
-              <rect class="d-box" x="24" y="188" width="146" height="54" rx="8"/>
-              <text class="d-label" x="97" y="220" text-anchor="middle">melody pads</text>
-
-              <line class="d-line" x1="170" y1="71" x2="214" y2="120" marker-end="url(#m-arrow4)"/>
-              <line class="d-line" x1="170" y1="215" x2="214" y2="166" marker-end="url(#m-arrow4)"/>
-
-              <rect class="d-box" x="222" y="116" width="164" height="54" rx="8"/>
-              <text class="d-label" x="304" y="140" text-anchor="middle">Tone.js</text>
-              <text class="d-note" x="304" y="158" text-anchor="middle">transport clock</text>
-
-              <line class="d-line" x1="386" y1="143" x2="428" y2="143" marker-end="url(#m-arrow4)"/>
-
-              <rect class="d-box" x="436" y="116" width="156" height="54" rx="8"/>
-              <text class="d-label" x="514" y="140" text-anchor="middle">analyser node</text>
-              <text class="d-note" x="514" y="158" text-anchor="middle">Web Audio</text>
-
-              <line class="d-line" x1="514" y1="170" x2="514" y2="238" marker-end="url(#m-arrow4)"/>
-              <rect class="d-box" x="436" y="246" width="156" height="58" rx="8"/>
-              <text class="d-label" x="514" y="270" text-anchor="middle">visualizers</text>
-              <text class="d-note" x="514" y="288" text-anchor="middle">5 modes &middot; canvas</text>
-
-              <line class="d-line" x1="304" y1="170" x2="304" y2="238" marker-end="url(#m-arrow4)"/>
-              <rect class="d-box" x="222" y="246" width="164" height="58" rx="8"/>
-              <text class="d-label" x="304" y="270" text-anchor="middle">PostgreSQL</text>
-              <text class="d-note" x="304" y="288" text-anchor="middle">saved patterns</text>
-            </svg>
-            <figcaption class="sr-only">A 16-step sequencer grid and melody pads both feed the Tone.js transport clock, which drives a Web Audio analyser node; five canvas visualizer modes read from the analyser, and patterns are saved to PostgreSQL.</figcaption>
-          </figure>
-          <p>
-            A 16-step sequencer and melody pads scheduled with Tone.js, with five
-            visualizer modes drawn live from the Web Audio analyser node.
-          </p>
-          <ul class="tags">
-            <li>React</li><li>TypeScript</li><li>Tone.js</li><li>PostgreSQL</li>
-          </ul>
-          <p class="card-links">
-            <a href="https://wavvy-flax.vercel.app" rel="noopener">Live demo</a><span aria-hidden="true">/</span>
-            <a href="https://github.com/dhruvvdave/wavvy" rel="noopener">Source</a><span aria-hidden="true">/</span>
-          </p>
-        </article>
-      </div>
+        </div>
+        <figure class="card-visual">
+          <img src="images/ctx.webp" alt="ctx's extension popup showing the live session: seven pages ranked by time spent, each with its domain, scroll depth, and an attention meter, above Discard and Save session buttons" width="1280" height="800" loading="lazy" decoding="async">
+        </figure>
+      </article>
     </section>
 
     <section id="experience" aria-labelledby="experience-title">

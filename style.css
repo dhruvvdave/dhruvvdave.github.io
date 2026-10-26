@@ -552,31 +552,6 @@ section { padding-top: 6.5rem; }
   height: auto;
 }
 
-.card-diagram {
-  margin: 0 0 1.6rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--bg-lift);
-  padding: 0.75rem;
-}
-
-.diagram { display: block; width: 100%; height: auto; }
-.d-box { fill: var(--surface-2); stroke: var(--border-hi); stroke-width: 1; }
-.d-box.d-dash { stroke-dasharray: 4 4; }
-.d-line { stroke: var(--border-hi); stroke-width: 1.2; fill: none; }
-.d-line.d-dash { stroke-dasharray: 4 4; }
-.d-arrow { fill: var(--border-hi); }
-.d-label { fill: var(--text); font-family: var(--mono); font-size: 12px; }
-.d-note { fill: var(--faint); font-family: var(--mono); font-size: 10px; }
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
-.card-grid .card { margin-bottom: 0; display: flex; flex-direction: column; }
-
 /* ---------- experience / education ---------- */
 
 .entries {
@@ -710,7 +685,6 @@ main {
   .plate { max-width: 300px; }
   .card-wide { grid-template-columns: 1fr; gap: 1.75rem; }
   .card-wide .card-visual { order: -1; }
-  .card-grid { grid-template-columns: 1fr; }
   .entry { grid-template-columns: 9rem minmax(0, 1fr); gap: 1.5rem; }
 }
 
@@ -746,7 +720,6 @@ main {
   .plate { max-width: 260px; }
 
   .card { padding: 1.4rem; border-radius: 14px; }
-  .card-diagram { padding: 0.5rem; }
 
   .entry { grid-template-columns: 1fr; gap: 0.55rem; padding: 1.5rem 0; }
   .entry-when { padding-top: 0; }
@@ -793,8 +766,7 @@ main {
   #projects .reveal:nth-child(1) { animation-delay: 0.1s; }
   #projects .reveal:nth-child(2) { animation-delay: 0.16s; }
   #projects .reveal:nth-child(3) { animation-delay: 0.22s; }
-  .card-grid .reveal:nth-child(1) { animation-delay: 0.28s; }
-  .card-grid .reveal:nth-child(2) { animation-delay: 0.34s; }
+  #projects .reveal:nth-child(4) { animation-delay: 0.28s; }
 
   @keyframes rise {
     to { opacity: 1; transform: none; }
