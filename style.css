@@ -271,15 +271,6 @@ section { padding-top: 6.5rem; }
   background: linear-gradient(to right, var(--border-hi), transparent);
 }
 
-.section-head .count {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--faint);
-  white-space: nowrap;
-}
-
 /* ---------- hero ---------- */
 
 .hero { padding-top: 7rem; }
@@ -332,7 +323,8 @@ section { padding-top: 6.5rem; }
 
 .hero-copy a,
 .contact-body a,
-.card-text p a {
+.card-text p a,
+.entry-body li a {
   color: var(--text);
   text-decoration: none;
   background-image: linear-gradient(var(--accent), var(--accent));
@@ -343,7 +335,8 @@ section { padding-top: 6.5rem; }
   transition: color 0.2s ease, background-size 0.25s ease;
 }
 .hero-copy a:hover,
-.contact-body a:hover { color: var(--accent); }
+.contact-body a:hover,
+.entry-body li a:hover { color: var(--accent); }
 
 .hero-links {
   display: flex;
@@ -465,6 +458,10 @@ section { padding-top: 6.5rem; }
 
 .card-text { display: flex; flex-direction: column; height: 100%; }
 
+/* No screenshot: keep the text to a readable measure instead of leaving an
+   empty image column. */
+.card-solo .card-text { max-width: 68ch; }
+
 .card-meta {
   display: flex;
   align-items: center;
@@ -477,6 +474,18 @@ section { padding-top: 6.5rem; }
   font-size: 0.75rem;
   letter-spacing: 0.28em;
   color: var(--faint);
+}
+
+.badge {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-dim);
+  border-radius: 999px;
+  padding: 0.22rem 0.65rem;
 }
 
 .card h3 {
@@ -526,6 +535,8 @@ section { padding-top: 6.5rem; }
   border-radius: 999px;
   padding: 0.32rem 0.7rem;
 }
+
+.tags li.in-progress { border-style: dashed; color: var(--faint); }
 
 .card-links {
   display: flex;
@@ -610,6 +621,11 @@ section { padding-top: 6.5rem; }
 .entry-body > ul:not(.tags) li { margin-bottom: 0.7rem; }
 .entry-body > ul:not(.tags) li::marker { color: var(--border-hi); }
 .entry-body .tags { margin-bottom: 0; }
+
+/* Short roles: one line, no heading. */
+.entry-minor { padding: 1.2rem 0; }
+.entry-minor .entry-when { padding-top: 0.2rem; }
+.entry-minor .entry-body p { margin: 0; }
 
 /* ---------- contact ---------- */
 
@@ -767,6 +783,8 @@ main {
   #projects .reveal:nth-child(2) { animation-delay: 0.16s; }
   #projects .reveal:nth-child(3) { animation-delay: 0.22s; }
   #projects .reveal:nth-child(4) { animation-delay: 0.28s; }
+  #projects .reveal:nth-child(5) { animation-delay: 0.34s; }
+  #projects .reveal:nth-child(6) { animation-delay: 0.4s; }
 
   @keyframes rise {
     to { opacity: 1; transform: none; }

@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dhruv Dave</title>
+  <title>Dhruv Dave — Software Engineering Student, Queen's University</title>
 
-  <meta name="description" content="Dhruv Dave, computer science student at Queen's University. Web applications, data tooling, and backend systems. Currently seeking software engineering internships.">
+  <meta name="description" content="Dhruv Dave, third-year computer science student at Queen's University and incoming Software Engineering Intern at AMD (summer 2027). Backend systems, data tooling, and web applications.">
   <meta name="author" content="Dhruv Dave">
 
-  <meta property="og:title" content="Dhruv Dave">
-  <meta property="og:description" content="Computer science student at Queen's University. Web applications, data tooling, and backend systems.">
+  <meta property="og:title" content="Dhruv Dave — Software Engineering Student, Queen's University">
+  <meta property="og:description" content="Computer science student at Queen's University. Incoming Software Engineering Intern at AMD, summer 2027.">
   <meta property="og:image" content="https://dhruvdave.ca/images/og.jpg">
   <meta property="og:url" content="https://dhruvdave.ca">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dhruv Dave — Software Engineering Student, Queen's University">
+  <meta name="twitter:description" content="Computer science student at Queen's University. Incoming Software Engineering Intern at AMD, summer 2027.">
+  <meta name="twitter:image" content="https://dhruvdave.ca/images/og.jpg">
 
   <meta name="theme-color" content="#0a0a0b" id="theme-meta">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -50,6 +53,7 @@
       "https://www.linkedin.com/in/dhruvdave06"
     ],
     "jobTitle": "Computer Science Student",
+    "description": "Computer science student at Queen's University. Incoming Software Engineering Intern at AMD, summer 2027.",
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Queen's University" }
   }
   </script>
@@ -87,17 +91,17 @@
       <div class="hero-copy">
         <p>
           This past summer I worked at <a href="https://fgfbrands.com" rel="noopener">FGF Brands</a>
-          on Cerebro, the platform that monitors production across its 22 bakery plants.
-          The work covered OEE telemetry models, Power BI reporting, and SQL diagnostics
-          against a production database carrying long-standing inconsistencies. Before
-          that: research at the University of Toronto, a web development internship, and
-          a season repairing e-scooters.
+          on Cerebro, the platform that monitors production across its 22 bakery plants,
+          tracing silent OEE reporting errors through SQL back to misconfigured workflow
+          states and ETL gaps. On my own time I build the projects below: a trading bot
+          that runs 24/7 against a paper account, a stock screener that falls back across
+          six market-data APIs, and a password analyzer that never sends the password
+          anywhere. Most began as questions the documentation did not answer. Before all
+          that: research at the University of Toronto, web development, and e-scooter repair.
         </p>
         <p>
-          Most of the projects below began as questions the documentation did not answer:
-          how a rate limiter stays correct under concurrent load across six APIs, or what
-          a password manager actually does with a user's key. I am in my third year at
-          Queen's and looking for a software engineering internship. If you are hiring,
+          I am in my third year at Queen's. In summer 2027 I start at AMD as a Software
+          Engineering Intern, on a 16-month co-op. If you want to talk about any of this,
           please <a href="mailto:davedhruv2006@gmail.com">email me</a>.
         </p>
       </div>
@@ -106,7 +110,7 @@
         <a href="https://github.com/dhruvvdave" rel="noopener">GitHub</a><span aria-hidden="true">/</span>
         <a href="https://www.linkedin.com/in/dhruvdave06" rel="noopener">LinkedIn</a><span aria-hidden="true">/</span>
         <a href="mailto:davedhruv2006@gmail.com">Email</a><span aria-hidden="true">/</span>
-        <a href="/dhruv-dave-resume.pdf">Résumé</a><span aria-hidden="true">/</span>
+        <a href="/dhruv-dave-resume.pdf">Résumé</a>
       </p>
       </div>
 
@@ -124,10 +128,11 @@
       </div>
 
       <dl class="toolbox" aria-label="Technical skills">
-        <div><dt>Languages</dt><dd>Python, JavaScript, TypeScript, Java, C, SQL</dd></div>
-        <div><dt>Frameworks</dt><dd>React, FastAPI, Node.js, Hono, Flask, SQLAlchemy, Tailwind CSS, Pandas, NumPy</dd></div>
-        <div><dt>Databases</dt><dd>PostgreSQL, Redis, SQLite</dd></div>
-        <div><dt>Tools</dt><dd>Git, Docker, Bash, Power BI, Chrome Extension APIs</dd></div>
+        <div><dt>Languages</dt><dd>Python, TypeScript, JavaScript, Java, C, SQL</dd></div>
+        <div><dt>Backend &amp; APIs</dt><dd>FastAPI, Flask, Node.js, Express, Hono, SQLAlchemy, REST, JWT auth, Claude API</dd></div>
+        <div><dt>Data</dt><dd>PostgreSQL, Redis, SQLite, pandas, NumPy, ETL pipelines, Power BI</dd></div>
+        <div><dt>Frontend</dt><dd>React, Tailwind CSS, Chrome MV3</dd></div>
+        <div><dt>Delivery &amp; Testing</dt><dd>Docker Compose, DigitalOcean, Linux, nginx, GitHub Actions (CI/CD), Vercel, Git, Bash, pytest, Vitest</dd></div>
       </dl>
     </section>
 
@@ -135,13 +140,40 @@
       <div class="section-head reveal">
         <h2 id="projects-title">Projects</h2>
         <span class="rule" aria-hidden="true"></span>
-        <span class="count">Three of them</span>
       </div>
+
+      <article class="card card-solo reveal">
+        <div class="card-text">
+          <div class="card-meta">
+            <span class="index">01</span>
+          </div>
+          <h3>Algorithmic Trading Bot</h3>
+          <p class="desc">Trend-following system for US equities. Paper trading only.</p>
+          <p>
+            EMA(12/26) crossovers behind a 200-SMA filter, with ATR trailing stops. A risk
+            manager sizes each position by the equity it puts at risk, halts on a daily-loss
+            or drawdown limit, and persists the halt state so a restart does not clear it.
+            A backtester runs the same strategy code the bot runs live over 5 years of daily
+            bars and reports return, drawdown, Sharpe, and win rate.
+          </p>
+          <p>
+            Positions were being sized wrong across CAD and USD; async caching of FX rates
+            from IBKR forex data fixed it. Signals are only evaluated between 3:50 and
+            4:00pm ET, so the bot never trades on an unfinished daily bar. IB Gateway runs
+            headless (IBC, Xvfb) beside the bot in Docker Compose on DigitalOcean for 24/7
+            paper trading, and Telegram commands pause it, report P&amp;L, and close
+            positions. Tested with pytest.
+          </p>
+          <ul class="tags">
+            <li>Python (asyncio)</li><li>Interactive Brokers API</li><li>Docker Compose</li><li>DigitalOcean</li><li>Telegram</li>
+          </ul>
+        </div>
+      </article>
 
       <article class="card card-wide reveal">
         <div class="card-text">
           <div class="card-meta">
-            <span class="index">01</span>
+            <span class="index">02</span>
           </div>
           <h3><a href="https://stock-screener-kappa-one.vercel.app" rel="noopener">Markr</a></h3>
           <p class="desc">Stock screener with a six-source data fallback chain.</p>
@@ -158,7 +190,7 @@
           </ul>
           <p class="card-links">
             <a href="https://stock-screener-kappa-one.vercel.app" rel="noopener">Live demo</a><span aria-hidden="true">/</span>
-            <a href="https://github.com/dhruvvdave/stock-screener" rel="noopener">Source</a><span aria-hidden="true">/</span>
+            <a href="https://github.com/dhruvvdave/stock-screener" rel="noopener">Source</a>
           </p>
         </div>
         <figure class="card-visual">
@@ -169,7 +201,33 @@
       <article class="card card-wide reveal">
         <div class="card-text">
           <div class="card-meta">
-            <span class="index">02</span>
+            <span class="index">03</span>
+          </div>
+          <h3><a href="https://chromewebstore.google.com/detail/ctx-%E2%80%94-context-saver/lafdbcfdflbjkdlfgnnfpgfncodjobbk" rel="noopener">ctx</a></h3>
+          <p class="desc">Local-first browser session tracker.</p>
+          <p>
+            A session tracker that operates entirely offline. The Chrome extension stores
+            everything locally and the server and CLI are optional. A privacy guard scans
+            each page for password and card fields before anything is captured; blocked
+            pages are logged without a URL, title, or content.
+          </p>
+          <ul class="tags">
+            <li>TypeScript</li><li>Chrome MV3</li><li>Hono</li><li>SQLite</li>
+          </ul>
+          <p class="card-links">
+            <a href="https://chromewebstore.google.com/detail/ctx-%E2%80%94-context-saver/lafdbcfdflbjkdlfgnnfpgfncodjobbk" rel="noopener">Chrome Web Store</a><span aria-hidden="true">/</span>
+            <a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">Source</a>
+          </p>
+        </div>
+        <figure class="card-visual">
+          <img src="images/ctx.webp" alt="ctx's extension popup showing the live session: seven pages ranked by time spent, each with its domain, scroll depth, and an attention meter, above Discard and Save session buttons" width="1280" height="800" loading="lazy" decoding="async">
+        </figure>
+      </article>
+
+      <article class="card card-wide reveal">
+        <div class="card-text">
+          <div class="card-meta">
+            <span class="index">04</span>
           </div>
           <h3><a href="https://securevault.dhruvdave.ca" rel="noopener">SecureVault</a></h3>
           <p class="desc">Password strength analyzer, breach check, and generator.</p>
@@ -187,7 +245,7 @@
           </ul>
           <p class="card-links">
             <a href="https://securevault.dhruvdave.ca" rel="noopener">Live demo</a><span aria-hidden="true">/</span>
-            <a href="https://github.com/dhruvvdave/securevault" rel="noopener">Source</a><span aria-hidden="true">/</span>
+            <a href="https://github.com/dhruvvdave/securevault" rel="noopener">Source</a>
           </p>
         </div>
         <figure class="card-visual">
@@ -195,29 +253,24 @@
         </figure>
       </article>
 
-      <article class="card card-wide reveal">
+      <article class="card card-solo reveal" id="bakeryinsight">
         <div class="card-text">
           <div class="card-meta">
-            <span class="index">03</span>
+            <span class="index">05</span>
+            <span class="badge">Hackathon winner</span>
           </div>
-          <h3><a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">ctx</a></h3>
-          <p class="desc">Local-first browser session tracker.</p>
+          <h3>BakeryInsight</h3>
+          <p class="desc">1st place, 4th annual FGFLife Hackathon.</p>
           <p>
-            A session tracker that operates entirely offline. The Chrome extension stores
-            everything locally and the server and CLI are optional. A privacy guard scans
-            each page for password and card fields before anything is captured; blocked
-            pages are logged without a URL, title, or content.
+            Scores food trends from 9 sources and rates each on 6 feasibility factors
+            (manufacturing, supply chain, cost, safety, brand, shelf life) against real FGF
+            production-line and ingredient data. Built at FGF Brands; it is internal, so
+            there is no public link or screenshot.
           </p>
           <ul class="tags">
-            <li>TypeScript</li><li>Chrome MV3</li><li>Hono</li><li>SQLite</li>
+            <li>React</li><li>Node.js</li><li>Claude API</li>
           </ul>
-          <p class="card-links">
-            <a href="https://github.com/dhruvvdave/ctx-saver" rel="noopener">Source</a><span aria-hidden="true">/</span>
-          </p>
         </div>
-        <figure class="card-visual">
-          <img src="images/ctx.webp" alt="ctx's extension popup showing the live session: seven pages ranked by time spent, each with its domain, scroll depth, and an attention meter, above Discard and Save session buttons" width="1280" height="800" loading="lazy" decoding="async">
-        </figure>
       </article>
     </section>
 
@@ -225,7 +278,6 @@
       <div class="section-head reveal">
         <h2 id="experience-title">Experience</h2>
         <span class="rule" aria-hidden="true"></span>
-        <span class="count">05 roles</span>
       </div>
 
       <ol class="entries">
@@ -234,10 +286,11 @@
           <div class="entry-body">
             <h3>Cerebro AI Technical Specialist <span class="at">FGF Brands</span></h3>
             <ul>
-              <li>Won first place at FGF's 4th annual FGFLife Hackathon with BakeryInsight, a trend-intelligence dashboard that classifies emerging food trends across 9 data sources and scores them on growth, saturation, and regional spread. Each trend is paired with a 6-dimension feasibility assessment (manufacturing, supply chain, cost, safety, brand, shelf life) evaluated against FGF production-line and ingredient data. Built with React 19, TypeScript, Node.js, and Express.</li>
-              <li>Built internal tooling in Node.js and Python documenting Cerebro's OEE telemetry models, changeover logic, and troubleshooting decision trees, along with Power BI dashboards fed by Cerebro's production data across all 22 facilities.</li>
-              <li>Wrote and optimized SQL diagnostic queries against Cerebro's production database to detect and reconcile data anomalies. The queries identified systemic misconfigurations in workflow state transitions and gaps in the upstream pipeline across more than 2,000 production records.</li>
-              <li>Configured and maintained Cerebro environments across FGF's Canadian facilities, and debugged the integration boundary between Cerebro and upstream ERP systems.</li>
+              <li>Traced silent OEE reporting corruption at 22 bakery facilities to misconfigured workflow state transitions and ETL gaps in 2,000+ records, using SQL diagnostics against Cerebro's production database.</li>
+              <li>Built Node.js and Python tools documenting Cerebro's OEE telemetry models, changeover logic, and troubleshooting paths.</li>
+              <li>Shipped Power BI dashboards on Cerebro production data for plant teams tracking OEE, downtime, and changeover by site.</li>
+              <li>Configured Cerebro environments across FGF's Canadian facilities and debugged its integration with upstream ERP systems.</li>
+              <li>Won 1st place at FGF's 4th annual FGFLife Hackathon with <a href="#bakeryinsight">BakeryInsight</a> (React, Node.js, Claude API), which scores food trends from 9 sources against 6 feasibility factors.</li>
             </ul>
             <ul class="tags">
               <li>SQL</li><li>Node.js</li><li>Python</li><li>Power BI</li>
@@ -246,31 +299,15 @@
         </li>
 
         <li class="entry reveal">
-          <span class="entry-when">Jul &ndash; Aug 2025</span>
-          <div class="entry-body">
-            <h3>Mobility Hardware and Software Technician <span class="at">Bird</span></h3>
-            <p>Inspected, diagnosed, and repaired e-scooters; field-tested new features for the product and engineering teams.</p>
-          </div>
-        </li>
-
-        <li class="entry reveal">
-          <span class="entry-when">Apr 2025</span>
-          <div class="entry-body">
-            <h3>Deputy Returning Officer <span class="at">Elections Canada</span></h3>
-            <p>Administered a polling station on federal election day.</p>
-          </div>
-        </li>
-
-        <li class="entry reveal">
           <span class="entry-when">Jan &ndash; Aug 2024</span>
           <div class="entry-body">
             <h3>Research Assistant <span class="at">COBWEB, University of Toronto</span></h3>
             <ul>
-              <li>Implemented agent-based simulations modelling emergent behaviour in ecological adaptive systems with Dr. Brad Bass; configured multi-condition experiments whose results fed the team's research.</li>
-              <li>Wrote Pandas and NumPy pipelines to clean, normalize, and visualize multi-run simulation outputs, revealing population dynamics and threshold-crossing patterns across conditions.</li>
+              <li>Configured multi-condition agent-based experiments on the COBWEB platform with Dr. Brad Bass, comparing control and experimental populations in models of ecological adaptive systems.</li>
+              <li>Automated cleaning, normalization, and plotting of multi-run experiment output with pandas and NumPy pipelines, which the group used to compare population dynamics and threshold crossings.</li>
             </ul>
             <ul class="tags">
-              <li>Python</li><li>Pandas</li><li>NumPy</li>
+              <li>Python</li><li>pandas</li><li>NumPy</li>
             </ul>
           </div>
         </li>
@@ -279,7 +316,14 @@
           <span class="entry-when">Sep 2022 &ndash; Feb 2023</span>
           <div class="entry-body">
             <h3>Software Engineer Intern <span class="at">Digitera</span></h3>
-            <p>Developed and shipped web applications for small-business clients using JavaScript, HTML, and CSS; improved page performance by 40% through asset minification, image compression, and deferred script loading.</p>
+            <p>Delivered web applications for small-business clients in JavaScript, HTML, and CSS, and cut page load time ~40% with asset minification, image compression, and deferred script loading.</p>
+          </div>
+        </li>
+
+        <li class="entry entry-minor reveal">
+          <span class="entry-when">Also</span>
+          <div class="entry-body">
+            <p>Mobility hardware and software technician at Bird, Jul &ndash; Aug 2025: diagnosed and repaired e-scooters and field-tested new features.</p>
           </div>
         </li>
       </ol>
@@ -289,7 +333,6 @@
       <div class="section-head reveal">
         <h2 id="education-title">Education</h2>
         <span class="rule" aria-hidden="true"></span>
-        <span class="count">Sep 2024 &ndash; Present</span>
       </div>
 
       <ol class="entries">
@@ -297,9 +340,9 @@
           <span class="entry-when">Sep 2024 &ndash; Present</span>
           <div class="entry-body">
             <h3>Queen's University <span class="at">Kingston, ON</span></h3>
-            <p>Bachelor of Computer Science (Honours), Mathematics minor. GPA 3.8.</p>
+            <p>Bachelor of Computer Science (Honours), Mathematics minor.</p>
             <ul class="tags">
-              <li>Data Structures &amp; Algorithms</li><li>Computer Architecture</li><li>Discrete Structures</li><li>Linear Algebra</li><li>Differential Equations</li>
+              <li>Data Structures</li><li>Computer Architecture</li><li>System-Level Programming (C)</li><li>Software Specifications</li><li>Linear Algebra</li><li class="in-progress">Operating Systems (in progress)</li><li class="in-progress">Software Quality Assurance (in progress)</li>
             </ul>
           </div>
         </li>
@@ -310,16 +353,7 @@
       <div class="section-head reveal">
         <h2 id="contact-title">Contact</h2>
         <span class="rule" aria-hidden="true"></span>
-        <span class="count">open to internships</span>
       </div>
-      <div class="contact-body reveal">
-        <a class="big-email" href="mailto:davedhruv2006@gmail.com">davedhruv2006@gmail.com</a>
-        <p>
-          Email is the best way to reach me. I read every message. Away from a keyboard,
-          I am usually playing hockey, out on a trail, or travelling.
-        </p>
-      </div>
-    </section>
 
     <footer class="site-footer">
       <p>&copy; 2026 Dhruv Dave</p>
